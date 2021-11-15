@@ -1,0 +1,12 @@
+{
+    "name": "wertigo",
+    "version": "1.0.0",
+    "description": "A website for finding local places, new and old!",
+    "scripts": {
+      "start": "serve"
+    },
+    "dependencies": {
+      "serve": "^13.0.2"
+    },
+    "author": "Tony Alas"
+  }

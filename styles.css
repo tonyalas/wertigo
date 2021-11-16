@@ -8,3 +8,8 @@
 .jumbotron h1 {
     font-size: 72px;
 }
+
+.centeredText {
+    text-align: center;
+    padding-top: 10px;
+}

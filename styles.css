@@ -8,10 +8,3 @@
 .jumbotron h1 {
     font-size: 72px;
 }
-
-@media (prefers-color-scheme: dark) {
-    body {
-      color: #eee;
-      background: #121212;
-    }
-  }

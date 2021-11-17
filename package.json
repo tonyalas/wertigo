@@ -3,10 +3,11 @@
     "version": "1.0.0",
     "description": "A website for finding local places, new and old!",
     "scripts": {
-      "start": "serve"
+        "start": "serve"
     },
     "dependencies": {
-      "serve": "^13.0.2"
+        "fastify": "^3.24.0",
+        "serve": "^13.0.2"
     },
     "author": "Tony Alas"
-  }
+}

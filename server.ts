@@ -1,4 +1,3 @@
-
 import fast from 'fastify'
 const fastify = fast({ logger: true })
 

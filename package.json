@@ -6,8 +6,13 @@
         "start": "serve"
     },
     "dependencies": {
+        "express": "^4.17.1",
         "fastify": "^3.24.0",
         "serve": "^13.0.2"
     },
-    "author": "Tony Alas"
+    "author": "Tony Alas",
+    "devDependencies": {
+        "@types/express": "^4.17.13",
+        "@types/node": "^16.11.7"
+    }
 }

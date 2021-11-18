@@ -8,6 +8,7 @@
     "dependencies": {
         "express": "^4.17.1",
         "fastify": "^3.24.0",
+        "nodemailer": "^6.7.1",
         "serve": "^13.0.2"
     },
     "author": "Tony Alas",

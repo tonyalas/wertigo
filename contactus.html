@@ -11,7 +11,8 @@
     <title> Wertigo - Contact Us</title>
   </head>
   <body>
-      
+      <!-- -->
+      <!-- Navbar Code -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
 
@@ -32,11 +33,12 @@
         </div>
     </nav>
 
-
+    <!-- Header Code -->
     <div class="jumbotron">
         <h1>Contact Us</h1>
     </div>
 
+    <!-- Main Body Content -->
     <div class="container">
         <div class="row justify-content-center">
             <div class="col">
@@ -46,13 +48,16 @@
                 </div>
             </div>
         </div>
+        <!-- Section for the first form -->
         <div class="row justify-content-center">
+            <!-- Form Info -->
             <form
-              id="contact-form"
+              id="owner-contact-form"
               method="POST"
               action="send"
               enctype="multipart/form-data"
             >
+            <!-- First row of form 1 -->
               <div class="form-group">
                 <div class="row">
                   <div class="col-md-6">
@@ -79,20 +84,133 @@
                 </div>
               </div>
               <br>
+              <!-- Row 2 of Form 1 -->
               <div class="form-group">
-                <input
-                  placeholder="Subject"
-                  id="subject"
-                  name="subject"
-                  type="text"
-                  class="form-control"
-                  required
-                />
+                  <div class="row">
+                    <div class="col-md-4">
+                        <input
+                        placeholder="Business Name"
+                        id="businessName"
+                        name="businessName"
+                        type="text"
+                        class="form-control"
+                        required
+                        />
+                    </div>
+                    <div class="col-md-4">
+                        <select
+                        placeholder="Business Category"
+                        id="category"
+                        name="category"
+                        class="form-control"
+                        required
+                        >
+                        <option>Business Category</option>
+                        <option>Restaurant</option>
+                        <option>Self Care/Aesthetics</option>
+                        <option>Shopping</option>
+                        <option>Accessories</option>
+                        <option>Entertainment</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                        <input
+                        placeholder="Subcategory (ex: Cafe, Chinese food, Service type)"
+                        id="businessName"
+                        name="businessName"
+                        type="text"
+                        class="form-control"
+                        required
+                        />
+                    </div>
+                  </div>
+              </div>
+              <br>
+              <!-- Row 3 of Form 1 -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input
+                      placeholder="Website URL"
+                      id="websiteURL"
+                      name="websiteURL"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-md-4">
+                    <input
+                      placeholder="Instagram Account URL"
+                      id="instagramName"
+                      name="instagramName"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-md-4">
+                    <input
+                      placeholder="Other Social Media URL"
+                      id="otherURL"
+                      name="otherURL"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+              <br>
+              <!-- Row 4 of Form 1 -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input
+                      placeholder="Address"
+                      id="address"
+                      name="address"
+                      type="text"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-4">
+                    <input
+                      placeholder="City"
+                      id="city"
+                      name="city"
+                      type="text"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-4">
+                    <input
+                      placeholder="Zip Code"
+                      id="zipCode"
+                      name="zipCode"
+                      type="text"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                  <!--  Add the select toggle
+                  <div class="col-md-4">
+                    <select
+                    placeholder="Province"
+                    id="province"
+                    name="province"
+                    class="form-control"
+                    required
+                    >
+                        <option>Province</option>
+                        <option>Ontario</option>
+                      </select>
+                  </div> -->
+                </div>
               </div>
               <br>
               <div class="form-group">
                 <textarea
-                  placeholder="Message"
+                  placeholder="Have other information to let us know? Leave your message here."
                   id="message"
                   name="message"
                   class="form-control"
@@ -118,7 +236,7 @@
 
         <div class="row justify-content-center">
             <form
-              id="contact-form"
+              id="customer-contact-form"
               method="POST"
               action="send"
               enctype="multipart/form-data"
@@ -135,6 +253,7 @@
                       required
                     />
                   </div>
+                  <br>
                   <div class="col-md-6">
                     <input
                       placeholder="Email"

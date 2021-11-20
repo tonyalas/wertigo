@@ -15,7 +15,7 @@ const formEvent = form.addEventListener("submit", (event) => {
 // defining the sendMail function
 const sendMail = (mail) => {
     // supply the base url with /send for the fetch(). 
-    fetch("https://wertigo.herokuapp.com/contactus", {
+    fetch("https://www.wertigo.ca/contactus", {
         method: "post", //  specify the method as post since it is sending data, not getting
         body: mail,     //  specify the body as mail because we are sending this data in the request
     }).then((res) => {

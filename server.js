@@ -39,7 +39,7 @@ transporter.verify(function (error, success) {
     }
 });
 
-app.post("/send", (req, res) => {
+app.post("/contactus", (req, res) => {
     // accepts the form data submitted and parse it using multiparty
     let form = new multiparty.Form();
     let data = {};

@@ -18,7 +18,7 @@ const sendMail = (mail) => {
     fetch("https://www.wertigo.ca/contactus", {
         method: "post", //  specify the method as post since it is sending data, not getting
         body: mail,     //  specify the body as mail because we are sending this data in the request
-    }).then((response) => {
-        return response.json();
+    }).then((res) => {
+        console.log(res)
     });
 };

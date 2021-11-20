@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 // get the form by its id
 const form = document.getElementById("owner-contact-form");
 
@@ -15,10 +17,12 @@ const formEvent = form.addEventListener("submit", (event) => {
 // defining the sendMail function
 const sendMail = (mail) => {
     // supply the base url with /send for the fetch(). 
-    fetch("https://www.wertigo.ca/send", {
+    fetch("https://www.wertigo.ca/contactus", {
         method: "post", //  specify the method as post since it is sending data, not getting
         body: mail,     //  specify the body as mail because we are sending this data in the request
-    }).then((response) => {
-        return response.json();
-    });
+    }).then((response) => response.text())
+    .then(text => console.log(text))
+    //((response) => {
+        //return response.json();
+    //});
 };

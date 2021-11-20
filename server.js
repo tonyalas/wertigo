@@ -47,7 +47,7 @@ app.post("/send", (req, res) => {
 
         // 
         const mail = {
-            sender: `${data.name} <${data.email}>`,
+            sender: `${data.name} ${data.email}`,
             to: process.env.GMAIL,
             subject: `Business owner inquiry`,
             text: `${data.name}\n ${data.email}\n ${data.phoneNumber}\n ${data.businessName}`,

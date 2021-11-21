@@ -1,14 +1,14 @@
-const express = require("express");
-const cors = require("cors");
-const nodemailer = require("nodemailer");
-const multiparty = require("multiparty");
-const bodyParser = require('body-parser')
+import express from "express";
+import cors from "cors";
+import { createTransport } from "nodemailer";
+import multiparty from "multiparty";
+import { urlencoded } from 'body-parser';
 require("dotenv").config();
 
 // instantiate an express app
 const app = express()
 
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(urlencoded({extended: true}))
 
 // cors
 app.use(cors({ origin: "*" }));
@@ -20,7 +20,7 @@ app.use(cors({ origin: "*" }));
 
 app.post('/contactus', (req, res) => {
     //instantiate the SMTP server
-    const smtpTrans = nodemailer.createTransport({
+    const smtpTrans = createTransport({
         host: 'smtp.gmail.com',
         port: 465,
         secure: true,

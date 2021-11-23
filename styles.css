@@ -13,3 +13,17 @@
     text-align: center;
     padding-top: 10px;
 }
+
+.tagline-text {
+    float: left;
+    width: 40%;
+}
+
+.carousel-right {
+    float: right;
+    width: 60%;
+}
+
+.tagline-div h1 {
+    font-size: 64px;
+}

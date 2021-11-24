@@ -1,35 +1,40 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title> Wertigo - Contact Us</title>
-  </head>
-  <body>
-      <!-- -->
-      <!-- Navbar Code -->
+</head>
+
+<body>
+    <!-- -->
+    <!-- Navbar Code -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
 
             <a class="navbar-brand" href="index.html">Wertigo</a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
-            
+            </button>
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="navbar-nav">
-                  <a class="nav-link" href="index.html">Home</a>
-                  <a class="nav-link" href="discover.html">Discover</a>
-                  <a class="nav-link active" aria-current="page" href="contactus.html">Contact Us</a>
-                  <a class="nav-link" href="faq.html">FAQ</a>
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="discover.html">Discover</a>
+                    <a class="nav-link active" aria-current="page" href="contactus.html">Contact Us</a>
+                    <a class="nav-link" href="faq.html">FAQ</a>
                 </div>
-              </div>
+            </div>
         </div>
     </nav>
 
@@ -44,181 +49,107 @@
             <div class="col">
                 <div class="centeredText">
                     <h1>Do you own a business?</h1>
-                    <p>We want to have you join us! Please fill out the form below and we will act quickly to add your business to Wertigo.</p>
+                    <p>We want to have you join us! Please fill out the form below and we will act quickly to add your
+                        business to Wertigo.</p>
                 </div>
             </div>
         </div>
         <!-- Section for the first form -->
         <div class="row justify-content-center">
-            <!-- Form Info -->
-            <form
-              id="owner-contact-form"
-              method="POST"
-              action="/contactus"
-              enctype="multipart/form-data"
-            >
-            <!-- First row of form 1 -->
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-md-4">
-                    <input
-                      placeholder="Full Name"
-                      id="name"
-                      name="name"
-                      type="text"
-                      class="form-control"
-                      required
-                    />
-                  </div>
-                  <br>
-                  <br>
-                  <div class="col-md-4">
-                    <input
-                      placeholder="Email"
-                      id="email"
-                      type="email"
-                      name="email"
-                      class="form-control"
-                      aria-describedby="emailHelp"
-                      required
-                    />
-                  </div>
-                  <br>
-                  <br>
-                  <div class="col-md-4">
-                    <input
-                      placeholder="Phone Number"
-                      id="phoneNumber"
-                      type="text"
-                      name="phoneNumber"
-                      class="form-control"
-                      required
-                    />
-                  </div>
+            <!-- Contact form for owners of local businesses to contact me -->
+            <form id="owner-contact-form" method="POST" action="/contactus" enctype="multipart/form-data">
+                <!-- Row 1 of Form 1 -->
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input placeholder="Full Name*" id="name" name="name" type="text" class="form-control"
+                                required />
+                        </div>
+                        <br>
+                        <br>
+                        <div class="col-md-4">
+                            <input placeholder="Email*" id="email" type="email" name="email" class="form-control"
+                                aria-describedby="emailHelp" required />
+                        </div>
+                        <br>
+                        <br>
+                        <div class="col-md-4">
+                            <input placeholder="Phone Number*" id="phoneNumber" type="text" name="phoneNumber"
+                                class="form-control" required />
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <br>
-              <!-- Row 2 of Form 1 -->
-              <div class="form-group">
-                  <div class="row">
-                    <div class="col-md-4">
-                        <input
-                        placeholder="Business Name"
-                        id="businessName"
-                        name="businessName"
-                        type="text"
-                        class="form-control"
-                        required
-                        />
+                <br>
+                <!-- Row 2 of Form 1 -->
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input placeholder="Business Name*" id="businessName" name="businessName" type="text"
+                                class="form-control" required />
+                        </div>
+                        <br>
+                        <br>
+                        <div class="col-md-4">
+                            <select placeholder="Business Category" id="category" name="category" class="form-control"
+                                required>
+                                <option>Business Category*</option>
+                                <option>Restaurant</option>
+                                <option>Self Care/Aesthetics</option>
+                                <option>Shopping</option>
+                                <option>Accessories</option>
+                                <option>Entertainment</option>
+                            </select>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="col-md-4">
+                            <input placeholder="Subcategory (ex: Cafe, Chinese food, Service type)" id="businessName"
+                                name="businessName" type="text" class="form-control"/>
+                        </div>
                     </div>
-                    <br>
-                    <br>
-                    <div class="col-md-4">
-                        <select
-                        placeholder="Business Category"
-                        id="category"
-                        name="category"
-                        class="form-control"
-                        required
-                        >
-                        <option>Business Category</option>
-                        <option>Restaurant</option>
-                        <option>Self Care/Aesthetics</option>
-                        <option>Shopping</option>
-                        <option>Accessories</option>
-                        <option>Entertainment</option>
-                      </select>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="col-md-4">
-                        <input
-                        placeholder="Subcategory (ex: Cafe, Chinese food, Service type)"
-                        id="businessName"
-                        name="businessName"
-                        type="text"
-                        class="form-control"
-                        required
-                        />
-                    </div>
-                  </div>
-              </div>
-              <br>
-              <!-- Row 3 of Form 1 -->
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-md-4">
-                    <input
-                      placeholder="Website URL"
-                      id="websiteURL"
-                      name="websiteURL"
-                      type="text"
-                      class="form-control"
-                    />
-                  </div>
-                  <br>
-                  <br>
-                  <div class="col-md-4">
-                    <input
-                      placeholder="Instagram Account URL"
-                      id="instagramName"
-                      name="instagramName"
-                      type="text"
-                      class="form-control"
-                    />
-                  </div>
-                  <br>
-                  <br>
-                  <div class="col-md-4">
-                    <input
-                      placeholder="Other Social Media URL"
-                      id="otherURL"
-                      name="otherURL"
-                      type="text"
-                      class="form-control"
-                    />
-                  </div>
                 </div>
-              </div>
-              <br>
-              <!-- Row 4 of Form 1 -->
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-md-4">
-                    <input
-                      placeholder="Address"
-                      id="address"
-                      name="address"
-                      type="text"
-                      class="form-control"
-                      required
-                    />
-                  </div>
-                  <br>
-                  <br>
-                  <div class="col-md-4">
-                    <input
-                      placeholder="City"
-                      id="city"
-                      name="city"
-                      type="text"
-                      class="form-control"
-                      required
-                    />
-                  </div>
-                  <br>
-                  <br>
-                  <div class="col-md-4">
-                    <input
-                      placeholder="Zip Code"
-                      id="zipCode"
-                      name="zipCode"
-                      type="text"
-                      class="form-control"
-                      required
-                    />
-                  </div>
-                  <!--  Add the select toggle
+                <br>
+                <!-- Row 3 of Form 1 -->
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input placeholder="Website URL" id="websiteURL" name="websiteURL" type="text"
+                                class="form-control" />
+                        </div>
+                        <br>
+                        <br>
+                        <div class="col-md-4">
+                            <input placeholder="Instagram Account URL" id="instagramName" name="instagramName"
+                                type="text" class="form-control" />
+                        </div>
+                        <br>
+                        <br>
+                        <div class="col-md-4">
+                            <input placeholder="Other Social Media URL" id="otherURL" name="otherURL" type="text"
+                                class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- Row 4 of Form 1 -->
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input placeholder="Address*" id="address" name="address" type="text" class="form-control"
+                                required />
+                        </div>
+                        <br>
+                        <br>
+                        <div class="col-md-4">
+                            <input placeholder="City*" id="city" name="city" type="text" class="form-control" required />
+                        </div>
+                        <br>
+                        <br>
+                        <div class="col-md-4">
+                            <input placeholder="Zip Code*" id="zipCode" name="zipCode" type="text" class="form-control"
+                                required />
+                        </div>
+                        <!--  Add the select toggle
                   <div class="col-md-4">
                     <select
                     placeholder="Province"
@@ -231,26 +162,21 @@
                         <option>Ontario</option>
                       </select>
                   </div> -->
+                    </div>
                 </div>
-              </div>
-              <br>
-              <div class="form-group">
-                <textarea
-                  placeholder="Have other information to let us know? Leave your message here."
-                  id="message"
-                  name="message"
-                  class="form-control"
-                  rows="3"
-                  required
-                ></textarea>
-              </div>
-              <br>
-              <button type="submit" value="submit" class="btn btn-primary">
-                Submit
-              </button>
+                <br>
+                <div class="form-group">
+                    <textarea placeholder="Have other information to let us know? Leave your message here." id="message"
+                        name="message" class="form-control" rows="3"></textarea>
+                </div>
+                <br>
+                <button type="submit" value="submit" class="btn btn-primary">
+                    Submit
+                </button>
             </form>
         </div>
 
+        <!-- Start of the next part for people to recommend other places -->
         <div class="row justify-content-center">
             <div class="col">
                 <div class="centeredText">
@@ -259,79 +185,54 @@
                 </div>
             </div>
         </div>
-
+        
+        <!-- Contact form for other people to nominate local businesses -->
         <div class="row justify-content-center">
-            <form
-              id="customer-contact-form"
-              method="POST"
-              action="send"
-              enctype="multipart/form-data"
-            >
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-md-6">
-                    <input
-                      placeholder="Name"
-                      id="name"
-                      name="name"
-                      type="text"
-                      class="form-control"
-                      required
-                    />
-                  </div>
-                  <br>
-                  <br>
-                  <div class="col-md-6">
-                    <input
-                      placeholder="Email"
-                      id="email"
-                      type="email"
-                      name="email"
-                      class="form-control"
-                      aria-describedby="emailHelp"
-                      required
-                    />
-                  </div>
+            <form id="customer-contact-form" method="POST" action="send" enctype="multipart/form-data">
+                <div class="form-group">
+                    <!-- Row 1 of Form 2 -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input placeholder="Full Name*" id="name" name="name" type="text" class="form-control" required />
+                        </div>
+                        <br>
+                        <br>
+                        <div class="col-md-6">
+                            <input placeholder="Email*" id="email" type="email" name="email" class="form-control"
+                                aria-describedby="emailHelp" required />
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <br>
-              <div class="form-group">
-                <input
-                  placeholder="Subject"
-                  id="subject"
-                  name="subject"
-                  type="text"
-                  class="form-control"
-                  required
-                />
-              </div>
-              <br>
-              <div class="form-group">
-                <textarea
-                  placeholder="Message"
-                  id="message"
-                  name="message"
-                  class="form-control"
-                  rows="3"
-                  required
-                ></textarea>
-              </div>
-              <br>
-              <button type="submit" value="submit" class="btn btn-primary">
-                Submit
-              </button>
+                <br>
+                <!-- Row 2 of Form 2 -->
+                <div class="form-group">
+                    <input placeholder="Business Name*" id="businessName" name="businessName" type="text" class="form-control"
+                        required />
+                </div>
+                <br>
+                <!-- Row 3 of Form 2 -->
+                <div class="form-group">
+                    <textarea placeholder="Please leave your message and information about the business you wish to nominate here." id="message" name="message" class="form-control" rows="3" required></textarea>
+                </div>
+                <br>
+                <button type="submit" value="submit" class="btn btn-primary">
+                    Submit
+                </button>
             </form>
         </div>
         <br><br>
     </div>
-    
-    
-    
+
+
+
     <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
     <!-- this script will get the client-side function to work -->
     <script src="./server.js"></script>
 
-  </body>
+</body>
+
 </html>

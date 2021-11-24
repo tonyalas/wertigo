@@ -6,7 +6,7 @@
 }
 
 .jumbotron h1 {
-    font-size: 72px;
+    font-size: 78px;
 }
 
 .centeredText {
@@ -14,16 +14,10 @@
     padding-top: 10px;
 }
 
-.tagline-text {
-    float: left;
-    width: 40%;
-}
-
-.carousel-right {
-    float: right;
-    width: 60%;
-}
-
 .tagline-div h1 {
-    font-size: 64px;
+    font-size: 48px;
+}
+
+.tagline-div {
+    padding-top: 25px;
 }

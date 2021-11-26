@@ -1,8 +1,13 @@
 .jumbotron {
     text-align: center;
-    background-color: antiquewhite;
+    background-color: #2F343F;
     height: auto;
     padding: 50px;
+    color: white;
+}
+
+body {
+    background-color: #EEEEEE;
 }
 
 .jumbotron h1 {
@@ -20,4 +25,53 @@
 
 .tagline-div {
     padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+.indexDiv2 {
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.getstartednow {
+    padding-bottom: 10px;
+}
+
+.indexDiv3 {
+    height: auto;
+    padding: 10px;
+}
+
+.indexDiv4 {
+    height: auto;
+    padding: 10px;
+}
+
+.indexDiv5 {
+    height: auto;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+
+.vector_image {
+    max-width: 30%;
+    padding-bottom: 10px;
+}
+
+.info_text {
+    float: inherit;
+    font-size: 20px;
+}
+
+.discoverDiv {
+    padding-bottom: 50px;
+}
+
+.page-footer {
+    background-color: #2F343F;
+    color: white;
+}
+
+.item {
+    text-align: center;
 }

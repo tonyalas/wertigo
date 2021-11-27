@@ -74,4 +74,24 @@ body {
 
 .item {
     text-align: center;
+    padding-bottom: 15px;
+}
+
+.business_image {
+    width: 175px;
+    height: 175px;
+}
+
+.phonenumber {
+    text-decoration: none;
+}
+
+.businessLinks {
+    text-decoration: none;
+    color: #2F343F;
+}
+
+.linkLogos {
+    width: 25px;
+    height: 25px;
 }

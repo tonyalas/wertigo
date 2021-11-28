@@ -64,7 +64,7 @@
         <!-- Section for the first form -->
         <div class="row justify-content-center">
             <!-- Contact form for owners of local businesses to contact me -->
-            <form id="owner-contact-form" method="POST" action="/contactus" enctype="multipart/form-data">
+            <form class="owner-contact-form" method="POST" action="/contactus" enctype="multipart/form-data">
                 <!-- Row 1 of Form 1 -->
                 <div class="form-group">
                     <div class="row">
@@ -99,7 +99,7 @@
                         <div class="col-md-4">
                             <select placeholder="Business Category" id="category" name="category" class="form-control"
                                 required>
-                                <option>Business Category*</option>
+                                <option>-Select a Business Category- *</option>
                                 <option>Restaurant</option>
                                 <option>Self Care/Aesthetics</option>
                                 <option>Shopping</option>
@@ -156,19 +156,6 @@
                             <input placeholder="Zip Code*" id="zipCode" name="zipCode" type="text" class="form-control"
                                 required />
                         </div>
-                        <!--  Add the select toggle
-                  <div class="col-md-4">
-                    <select
-                    placeholder="Province"
-                    id="province"
-                    name="province"
-                    class="form-control"
-                    required
-                    >
-                        <option>Province</option>
-                        <option>Ontario</option>
-                      </select>
-                  </div> -->
                     </div>
                 </div>
                 <br>
@@ -177,12 +164,15 @@
                         name="message" class="form-control" rows="3"></textarea>
                 </div>
                 <br>
-                <button type="submit" value="submit" class="btn btn-primary">
-                    Submit
-                </button>
+                <div class="centeredText">
+                    <button type="submit" value="submit" class="btn btn-primary submit">
+                        Submit
+                    </button>
+                </div>
             </form>
         </div>
 
+        <br>
         <!-- Start of the next part for people to recommend other places -->
         <div class="row justify-content-center">
             <div class="col">
@@ -222,9 +212,11 @@
                     <textarea placeholder="Please leave your message and information about the business you wish to nominate here." id="message" name="message" class="form-control" rows="3" required></textarea>
                 </div>
                 <br>
-                <button type="submit" value="submit" class="btn btn-primary">
-                    Submit
-                </button>
+                <div class="centeredText">
+                    <button type="submit" value="submit" class="btn btn-primary">
+                        Submit
+                    </button>
+                </div>
             </form>
         </div>
         <br><br>
@@ -245,7 +237,7 @@
         crossorigin="anonymous"></script>
 
     <!-- this script will get the client-side function to work -->
-    <script src="server.js"></script>
+    <script src="/js/app.js"></script>
 
 </body>
 

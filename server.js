@@ -1,5 +1,5 @@
 const express = require("express");
-const cors = require("cors");
+//const cors = require("cors");
 const nodemailer = require("nodemailer");
 const multiparty = require("multiparty");
 const bodyParser = require('body-parser')
@@ -8,6 +8,22 @@ require("dotenv").config();
 // instantiate an express app
 const app = express()
 
+const PORT = process.env.PORT || 3000;
+
+// Middleware
+app.use(express.static('public'))
+app.use('/images', express.static('images'));
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html ')
+})
+
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`)
+})
+
+/*  How it was before the changes
 app.use(bodyParser.urlencoded({extended: true}))
 
 // cors
@@ -17,6 +33,8 @@ app.use(cors({ origin: "*" }));
 //app.route("/").get(function (req, res) {
 //    res.sendFile(process.cwd() + "/index.html");
 //});
+
+
 
 app.post('/contactus', (req, res) => {
     //instantiate the SMTP server
@@ -47,4 +65,4 @@ app.post('/contactus', (req, res) => {
             console.log("success!")
         }
     })
-})
+}) */

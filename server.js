@@ -23,18 +23,18 @@ app.post('/', (req, res) => {
     console.log(req.body)
 
     const transporter = nodemailer.createTransport({
-        host: 'smtp.live.com',
-        port: 587,
-        //secure: true,
+        service: 'gmail',
+        port: 465,
+        secure: true,
         auth: {
-            user: process.env.HOTMAIL,
-            pass: process.env.HOTMAILPASS
+            user: process.env.GMAIL,
+            pass: process.env.PASSWORD
         }
     })
 
     const mailOptions = {
         from: req.body.email,
-        to: process.env.HOTMAIL,
+        to: process.env.GMAIL,
         subject: `Message from ${req.body.email}: ${req.body.subject}`,
         text: req.body.message
     }

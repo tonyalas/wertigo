@@ -27,13 +27,13 @@ app.post('/', (req, res) => {
         port: 465,
         secure: true,
         auth: {
-            //type: 'OAuth2',
+            type: 'OAuth2',
             user: process.env.GMAIL,
-            pass: process.env.GMAILPASSWORD,
-            //clientId: process.env.CLIENTID,
-            //clientSecret: process.env.CLIENTSECRET,
-            //refreshToken: process.env.REFRESHTOKEN,
-            //accessToken: process.env.ACCESSTOKEN,
+            //pass: process.env.GMAILPASSWORD,
+            clientId: process.env.CLIENTID,
+            clientSecret: process.env.CLIENTSECRET,
+            refreshToken: process.env.REFRESHTOKEN,
+            accessToken: process.env.ACCESSTOKEN,
             //expires: 1484314697598
         }
     })

@@ -23,7 +23,7 @@ app.post('/', (req, res) => {
     console.log(req.body)
 
     const transporter = nodemailer.createTransport({
-        service: 'smtp.gmail.com',
+        host: 'smtp.gmail.com',
         port: 465,
         secure: true,
         auth: {
@@ -35,9 +35,6 @@ app.post('/', (req, res) => {
             refreshToken: process.env.REFRESHTOKEN,
             accessToken: process.env.ACCESSTOKEN,
             //expires: 1484314697598
-        },
-        tls:{
-            rejectUnauthorized: true
         }
     })
 

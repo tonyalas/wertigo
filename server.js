@@ -23,18 +23,18 @@ app.post('/', (req, res) => {
     console.log(req.body)
 
     const transporter = nodemailer.createTransport({
-        service: 'gmail',
+        service: 'smtp.gmail.com',
         port: 465,
         secure: true,
         auth: {
             type: 'OAuth2',
             user: process.env.GMAIL,
-            pass: process.env.GMAILPASSWORD,
+            //pass: process.env.GMAILPASSWORD,
             clientId: process.env.CLIENTID,
             clientSecret: process.env.CLIENTSECRET,
             refreshToken: process.env.REFRESHTOKEN,
             accessToken: process.env.ACCESSTOKEN,
-            expires: 1484314697598
+            //expires: 1484314697598
         }
     })
 

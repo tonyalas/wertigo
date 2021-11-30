@@ -2,7 +2,7 @@ const express = require("express");
 //const cors = require("cors");
 const nodemailer = require("nodemailer");
 const multiparty = require("multiparty");
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 require("dotenv").config();
 
 // instantiate an express app

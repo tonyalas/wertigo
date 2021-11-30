@@ -23,19 +23,10 @@ app.post('/', (req, res) => {
     console.log(req.body)
 
     const transporter = nodemailer.createTransport({
-        host: "smtp.live.com",
-        port: 587,
-        auth: {
-            user: process.env.HOTMAIL,
-            pass: process.env.HOTMAILAPPPASSWORD
-        }
-    })
-
-    /*
-    const transporter = nodemailer.createTransport({
+        service: 'Gmail',
         host: 'smtp.gmail.com',
-        port: 465,
-        secure: true,
+        //port: 465,
+        //secure: true,
         auth: {
             type: 'OAuth2',
             user: process.env.GMAIL,
@@ -46,11 +37,11 @@ app.post('/', (req, res) => {
             accessToken: process.env.ACCESSTOKEN,
             //expires: 1484314697598
         }
-    }) */
+    })
 
     const mailOptions = {
-        from: process.env.HOTMAIL,
-        to: process.env.HOTMAIL,
+        from: req.body.email,
+        to: process.env.GMAIL,
         subject: `Message from ${req.body.email}: ${req.body.subject}`,
         text: `Full name: ${req.body.name}\nEmail: ${req.body.email}\nPhone Number: ${req.body.phoneNumber}\nBusiness Name: ${req.body.businessName}\nBusiness Category: ${req.body.businessCategory}\nBusiness Subcategory: ${req.body.businessSubcategory}\nWebsite URL: ${req.body.websiteURL}\nInstagram Account: ${req.body.instagramName}\nOther URL: ${req.body.otherURL}\nAddress: ${req.body.address} ${req.body.city} ${req.body.zipcode}\nMessage: ${req.body.message}`
     }

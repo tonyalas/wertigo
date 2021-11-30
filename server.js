@@ -23,12 +23,16 @@ app.post('/', (req, res) => {
     console.log(req.body)
 
     const transporter = nodemailer.createTransport({
-        service: 'gmail',
+        service: 'smtp.gmail.com',
         port: 465,
         secure: true,
         auth: {
+            type: 'OAuth2',
             user: process.env.GMAIL,
-            pass: process.env.PASSWORD
+            clientId: process.env.CLIENTID,
+            clientSecret: process.env.CLIENTSECRET,
+            accessToken: process.env.ACCESSTOKEN,
+            //pass: process.env.PASSWORD
         }
     })
 

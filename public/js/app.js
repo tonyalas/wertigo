@@ -13,6 +13,7 @@ let address = document.getElementById('address');
 let city = document.getElementById('city');
 let zipcode = document.getElementById('zipCode');
 let message = document.getElementById('message');
+let toEmail = 'alastony99@gmail.com';
 
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -32,7 +33,8 @@ contactForm.addEventListener('submit', (e) => {
         address: address.value,
         city: city.value,
         zipcode: zipcode.value,
-        message: message.value
+        message: message.value,
+        toEmail: toEmail
     }
 
     console.log(formData);

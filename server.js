@@ -40,7 +40,7 @@ app.post('/', (req, res) => {
 
     const mailOptions = {
         from: req.body.email,
-        to: process.env.GMAIL,
+        to: req.body.email,
         subject: `Message from ${req.body.email}: ${req.body.subject}`,
         text: `Full name: ${req.body.name}\nEmail: ${req.body.email}\nPhone Number: ${req.body.phoneNumber}\nBusiness Name: ${req.body.businessName}\nBusiness Category: ${req.body.businessCategory}\nBusiness Subcategory: ${req.body.businessSubcategory}\nWebsite URL: ${req.body.websiteURL}\nInstagram Account: ${req.body.instagramName}\nOther URL: ${req.body.otherURL}\nAddress: ${req.body.address} ${req.body.city} ${req.body.zipcode}\nMessage: ${req.body.message}`
     }

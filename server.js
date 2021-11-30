@@ -26,15 +26,16 @@ app.post('/', (req, res) => {
         host: 'smtp.gmail.com',
         port: 465,
         secure: true,
+        service: 'gmail',
         auth: {
-            type: 'OAuth2',
+            type: 'OAUTH2',
             user: process.env.GMAIL,
             //pass: process.env.GMAILPASSWORD,
             clientId: process.env.CLIENTID,
             clientSecret: process.env.CLIENTSECRET,
             refreshToken: process.env.REFRESHTOKEN,
             accessToken: process.env.ACCESSTOKEN,
-            //expires: 1484314697598
+            expires: 1484314697598
         }
     })
 

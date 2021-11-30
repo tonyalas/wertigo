@@ -26,7 +26,6 @@ app.post('/', (req, res) => {
         service: 'smtp.gmail.com',
         port: 465,
         secure: true,
-        ignoreTLS: true,
         auth: {
             type: 'OAuth2',
             user: process.env.GMAIL,
@@ -36,6 +35,9 @@ app.post('/', (req, res) => {
             refreshToken: process.env.REFRESHTOKEN,
             accessToken: process.env.ACCESSTOKEN,
             //expires: 1484314697598
+        },
+        tls:{
+            rejectUnauthorized: true
         }
     })
 

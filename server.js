@@ -23,7 +23,8 @@ app.post('/', (req, res) => {
     console.log(req.body)
 
     const transporter = nodemailer.createTransport({
-        service: "Hotmail",
+        host: "smtp.live.com",
+        port: 587,
         auth: {
             user: process.env.HOTMAIL,
             pass: process.env.HOTMAILAPPPASSWORD

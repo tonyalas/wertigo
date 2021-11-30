@@ -26,7 +26,7 @@ app.post('/', (req, res) => {
         service: "hotmail",
         auth: {
             user: process.env.HOTMAIL,
-            pass: process.env.HOTMAILPASSWORD
+            pass: process.env.HOTMAILAPPPASSWORD
         }
     })
 

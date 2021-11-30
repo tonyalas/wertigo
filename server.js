@@ -26,6 +26,7 @@ app.post('/', (req, res) => {
         service: 'smtp.gmail.com',
         port: 465,
         secure: true,
+        ignoreTLS: true,
         auth: {
             type: 'OAuth2',
             user: process.env.GMAIL,

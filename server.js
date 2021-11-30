@@ -29,18 +29,18 @@ app.post('/', (req, res) => {
         auth: {
             type: 'OAuth2',
             user: process.env.GMAIL,
+            pass: process.env.GMAILPASSWORD,
             clientId: process.env.CLIENTID,
             clientSecret: process.env.CLIENTSECRET,
             refreshToken: process.env.REFRESHTOKEN,
             accessToken: process.env.ACCESSTOKEN,
             expires: 1484314697598
-            //pass: process.env.PASSWORD
         }
     })
 
     const mailOptions = {
         from: req.body.email,
-        to: 'alastony99@gmail.com',
+        to: process.env.GMAIL,
         subject: `Message from ${req.body.email}: ${req.body.subject}`,
         text: `Full name: ${req.body.name}\nEmail: ${req.body.email}\nPhone Number: ${req.body.phoneNumber}\nBusiness Name: ${req.body.businessName}\nBusiness Category: ${req.body.businessCategory}\nBusiness Subcategory: ${req.body.businessSubcategory}\nWebsite URL: ${req.body.websiteURL}\nInstagram Account: ${req.body.instagramName}\nOther URL: ${req.body.otherURL}\nAddress: ${req.body.address} ${req.body.city} ${req.body.zipcode}\nMessage: ${req.body.message}`
     }

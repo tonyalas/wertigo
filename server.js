@@ -29,11 +29,11 @@ app.post('/', (req, res) => {
         auth: {
             type: 'OAuth2',
             user: process.env.GMAIL,
-            //clientId: process.env.CLIENTID,
-            //clientSecret: process.env.CLIENTSECRET,
-            //refreshToken: process.env.REFRESHTOKEN,
+            clientId: process.env.CLIENTID,
+            clientSecret: process.env.CLIENTSECRET,
+            refreshToken: process.env.REFRESHTOKEN,
             accessToken: process.env.ACCESSTOKEN,
-            //expires: 1484314697598
+            expires: 1484314697598
             //pass: process.env.PASSWORD
         }
     })

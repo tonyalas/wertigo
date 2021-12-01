@@ -43,7 +43,7 @@ contactForm.addEventListener('submit', (e) => {
     xhr.onload = function() {
         console.log(xhr.responseText);
         if(xhr.responseText == 'success') {
-            alert('email sent');
+            alert('Email sent!');
             name.value = '';
             email.value = '';
             phoneNumber.value = '';
@@ -58,7 +58,7 @@ contactForm.addEventListener('submit', (e) => {
             zipcode.value = '';
             message.value = '';
         } else {
-            alert('Something went wrong!');
+            alert('Something went wrong! Please refresh the page and try again.');
         }
     }
 

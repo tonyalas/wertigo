@@ -1,3 +1,4 @@
+// this will be for the main OWNER contact form
 const contactForm = document.querySelector('.owner-contact-form');
 
 let name = document.getElementById('name');
@@ -63,5 +64,48 @@ contactForm.addEventListener('submit', (e) => {
     }
 
     xhr.send(JSON.stringify(formData));
+
+})
+
+// this will be for the user/customer contact form
+const customerContactForm = document.querySelector('.customer-contact-form');
+
+let customerName = document.getElementById('customerName');
+let customerbusinessName = document.getElementById('customerbusinessName');
+let customerEmail = document.getElementById('customerEmail');
+let customerMessage = document.getElementById('customerMessage');
+
+customerContactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log('submit clicked')
+
+    let customerFormData = {
+        customerName: customerName.value,
+        subject: 'Wertigo Contact Form',
+        customerbusinessName: customerbusinessName.value,
+        customerEmail: customerEmail.value,
+        customerMessage: customerMessage.value
+    }
+
+    console.log(customerFormData);
+
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', '/');
+    xhr.setRequestHeader('content-type', 'application/json');
+
+    xhr.onload = function() {
+        console.log(xhr.responseText);
+        if(xhr.responseText == 'success') {
+            alert('Email sent!');
+            customerName.value = '';
+            customerbusinessName.value = '';
+            customerEmail.value = '';
+            customerMessage.value = '';
+        } else {
+            alert('Something went wrong! Please refresh the page and try again.');
+        }
+    }
+
+    xhr.send(JSON.stringify(customerFormData));
 
 })

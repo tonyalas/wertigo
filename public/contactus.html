@@ -185,17 +185,17 @@
         
         <!-- Contact form for other people to nominate local businesses -->
         <div class="row justify-content-center">
-            <form id="customer-contact-form" method="POST" action="send" enctype="multipart/form-data">
+            <form class="customer-contact-form" method="POST" action="send" enctype="multipart/form-data">
                 <div class="form-group">
                     <!-- Row 1 of Form 2 -->
                     <div class="row">
                         <div class="col-md-6">
-                            <input placeholder="Full Name*" id="name" name="name" type="text" class="form-control" required />
+                            <input placeholder="Full Name*" id="customerName" name="name" type="text" class="form-control" required />
                         </div>
                         <br>
                         <br>
                         <div class="col-md-6">
-                            <input placeholder="Email*" id="email" type="email" name="email" class="form-control"
+                            <input placeholder="Email*" id="customerEmail" type="email" name="email" class="form-control"
                                 aria-describedby="emailHelp" required />
                         </div>
                     </div>
@@ -203,13 +203,13 @@
                 <br>
                 <!-- Row 2 of Form 2 -->
                 <div class="form-group">
-                    <input placeholder="Business Name*" id="businessName" name="businessName" type="text" class="form-control"
+                    <input placeholder="Business Name to Recommend*" id="customerbusinessName" name="businessName" type="text" class="form-control"
                         required />
                 </div>
                 <br>
                 <!-- Row 3 of Form 2 -->
                 <div class="form-group">
-                    <textarea placeholder="Please leave your message and information about the business you wish to nominate here." id="message" name="message" class="form-control" rows="3" required></textarea>
+                    <textarea placeholder="Please leave your message and information about the business you wish to recommend here." id="customerMessage" name="customerMessage" class="form-control" rows="3" required></textarea>
                 </div>
                 <br>
                 <div class="centeredText">

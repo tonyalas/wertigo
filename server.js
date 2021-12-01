@@ -41,8 +41,8 @@ app.post('/', (req, res) => {
     const mailOptions = {
         from: req.body.email,
         to: process.env.GMAIL,
-        subject: `${req.body.subject}: message from ${req.body.email}`,
-        text: `Full name: ${req.body.name}\nEmail: ${req.body.email}\nPhone Number: ${req.body.phoneNumber}\nBusiness Name: ${req.body.businessName}\nBusiness Category: ${req.body.businessCategory}\nBusiness Subcategory: ${req.body.businessSubcategory}\nWebsite URL: ${req.body.websiteURL}\nInstagram Account: ${req.body.instagramName}\nOther URL: ${req.body.otherURL}\nAddress: ${req.body.address} ${req.body.city} ${req.body.zipcode}\nMessage: ${req.body.message}`
+        subject: `${req.body.subject}: message from (Owner) ${req.body.email} (User) ${req.body.customerEmail}`,
+        text: `Full name: ${req.body.name} ${req.body.customerName}\nEmail: ${req.body.email} ${req.body.customerEmail}\nPhone Number: ${req.body.phoneNumber}\nBusiness Name: ${req.body.businessName} ${req.body.customerbusinessName}\nBusiness Category: ${req.body.businessCategory}\nBusiness Subcategory: ${req.body.businessSubcategory}\nWebsite URL: ${req.body.websiteURL}\nInstagram Account: ${req.body.instagramName}\nOther URL: ${req.body.otherURL}\nAddress: ${req.body.address} ${req.body.city} ${req.body.zipcode}\nMessage: ${req.body.message} ${req.body.customerMessage}`
     }
 
     transporter.sendMail(mailOptions, (error, info) => {

@@ -44,7 +44,7 @@ contactForm.addEventListener('submit', (e) => {
     xhr.onload = function() {
         console.log(xhr.responseText);
         if(xhr.responseText == 'success') {
-            alert('Email sent!');
+            alert('Email successfully sent! Thank you for your interest in Wertigo. We will get back to you as soon as possible!');
             name.value = '';
             email.value = '';
             phoneNumber.value = '';
@@ -59,7 +59,7 @@ contactForm.addEventListener('submit', (e) => {
             zipcode.value = '';
             message.value = '';
         } else {
-            alert('Something went wrong! Please refresh the page and try again.');
+            alert('Something went wrong! Please refresh the page and try again. Please note that the send process can take up to a minute depending on internet speeds.');
         }
     }
 
@@ -96,13 +96,13 @@ customerContactForm.addEventListener('submit', (e) => {
     xhr.onload = function() {
         console.log(xhr.responseText);
         if(xhr.responseText == 'success') {
-            alert('Email sent!');
+            alert('Email successfully sent! Thank you for your interest in Wertigo. We will get back to you as soon as possible!');
             customerName.value = '';
             customerbusinessName.value = '';
             customerEmail.value = '';
             customerMessage.value = '';
         } else {
-            alert('Something went wrong! Please refresh the page and try again.');
+            alert('Something went wrong! Please refresh the page and try again. Please note that the send process can take up to a minute depending on internet speeds.');
         }
     }
 

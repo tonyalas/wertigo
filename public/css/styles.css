@@ -86,6 +86,15 @@ body {
     text-decoration: none;
 }
 
+.businessLinkPic {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.businessLinkText {
+    display: inline-block;
+}
+
 .businessLinks {
     text-decoration: none;
     color: #2F343F;
@@ -94,8 +103,27 @@ body {
 .linkLogos {
     width: 25px;
     height: 25px;
+    
 }
 
 .submit-button-area {
     display: flex;
+}
+
+.filter-category-area {
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#filterResults {
+    text-align: left;
+}
+
+.button-section {
+    padding: 10px;
+}
+
+.category-button {
+    margin-right: 10px;
+    margin-top: 10px;
 }

@@ -59,30 +59,76 @@
             </div>
         </div>
         <hr>
+        <!-- * This div will be the section of the page that lets the user filter out by specific categories -->
+        <div class="filter-category-area">
+            <div class="button-section">
+                <h4 id="filterResults">Filter Results</h4>
+                <br>
+                <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                <label class="btn btn-secondary category-button" for="option1">Recently Added</label>
+
+                <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                <label class="btn btn-secondary category-button" for="option2">Restaurant</label>
+
+                <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                <label class="btn btn-secondary category-button" for="option3">Beauty</label>
+
+                <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+                <label class="btn btn-secondary category-button" for="option4">Shopping</label>
+
+                <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off">
+                <label class="btn btn-secondary category-button" for="option5">Accessories</label>
+
+                <input type="radio" class="btn-check" name="options" id="option6" autocomplete="off">
+                <label class="btn btn-secondary category-button" for="option6">Entertainment</label>
+            </div>
+        </div>
+        <hr>
+        <!-- * this div will be the section that contains the actual content once they filter out by category. If no filters are selected, it will simply show the most recently added businesses -->
         <div class="discoverDiv">
             <div class="row justify-content-center">
                     <div class="col-md-4 item">
                         <h1>Chez Test</h1>
-                        <h3>Restaurant, Italian</h3>
+                        <h3>Restaurant</h3>
+                        <h4>Italian</h4>
                         <h5><a href="tel:519-123-4567" class="phonenumber">519-123-4567</a></h5>
                         <img class="business_image" src="/images/test_italian.jpg" />
                         <hr>
                     </div>
+                    <!-- * This is what a complete div will look like for a single business object -->
                     <div class="col-md-4 item">
                         <h1>DeMarco's Fine Foods</h1>
-                        <h3>Grocery Store</h3>
+                        <h3>Shopping</h3>
+                        <h4>Grocery Store</h4>
                         <h5><a href="tel:519-123-4567" class="phonenumber">519-123-4567</a></h5>
                         <img class="business_image" src="/images/demarcosfinefoods.jpeg"/>
                         <br>
                         <br>
-                        <img src="/images/website_logo.png" class="linkLogos"/>
-                        <p><a href="https://www.demarcosfinefoods.com" target="_blank" rel="noopener noreferrer" class="businessLinks">Website</a></p>
-                        <img src="/images/instagramlogo.png" class="linkLogos"/>
-                        <p><a href="https://instagram.com/demarcosfinefoods?utm_medium=copy_link" target="_blank" rel="noopener noreferrer" class="businessLinks">Instagram</a></p>
-                        <img src="/images/pin-icon.jpeg" class="linkLogos"/>
-                        <p><a href="https://g.page/Demarcosfinefoods?share" target="_blank" rel="noopener noreferrer" class="businessLinks">1349 Grand Marais Rd W
-                            Windsor, N9E 1E2
-                            Canada</a></p>
+
+                        <div class="businessLinkPic">
+                            <img src="/images/website_logo.png" class="linkLogos"/>
+                            <div class="businessLinkText">
+                                <p><a href="https://www.demarcosfinefoods.com" target="_blank" rel="noopener noreferrer" class="businessLinks">Website</a></p>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="businessLinkPic">
+                            <img src="/images/instagramlogo.png" class="linkLogos"/>
+                            <div class="businessLinkText">
+                                <p><a href="https://instagram.com/demarcosfinefoods?utm_medium=copy_link" target="_blank" rel="noopener noreferrer" class="businessLinks">@demarcosfinefoods</a></p>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="businessLinkPic">
+                            <img src="/images/pin-icon.jpeg" class="linkLogos"/>
+                            <div class="businessLinkText">
+                                <p><a href="https://g.page/Demarcosfinefoods?share" target="_blank" rel="noopener noreferrer" class="businessLinks">1349 Grand Marais Rd W,
+                                    Windsor, N9E 1E2</a></p>
+                            </div>
+                        </div>
+
                         <hr>
                     </div>
                     <div class="col-md-4 item">

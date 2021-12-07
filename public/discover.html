@@ -60,34 +60,35 @@
         </div>
         <hr>
         <!-- * This div will be the section of the page that lets the user filter out by specific categories -->
+        <!-- ! the changes made below consist of the onclick function added to the labels and the addition of "filterDiv xx" class to each business object -->
         <div class="filter-category-area">
-            <div class="button-section">
+            <div class="button-section" id="button-section">
                 <h4 id="filterResults">Filter Results</h4>
-                <br>
+                
                 <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-                <label class="btn btn-secondary category-button" for="option1">Recently Added</label>
+                <label class="btn btn-secondary category-button" for="option1" onclick="filterSelection('All')">Recently Added</label>
 
                 <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-                <label class="btn btn-secondary category-button" for="option2">Restaurant</label>
+                <label class="btn btn-secondary category-button" for="option2" onclick="filterSelection('Restaurant')">Restaurant</label>
 
                 <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
-                <label class="btn btn-secondary category-button" for="option3">Beauty</label>
+                <label class="btn btn-secondary category-button" for="option3" onclick="filterSelection('Beauty')">Beauty</label>
 
                 <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
-                <label class="btn btn-secondary category-button" for="option4">Shopping</label>
+                <label class="btn btn-secondary category-button" for="option4" onclick="filterSelection('Shopping')">Shopping</label>
 
                 <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off">
-                <label class="btn btn-secondary category-button" for="option5">Accessories</label>
+                <label class="btn btn-secondary category-button" for="option5" onclick="filterSelection('Accessories')">Accessories</label>
 
                 <input type="radio" class="btn-check" name="options" id="option6" autocomplete="off">
-                <label class="btn btn-secondary category-button" for="option6">Entertainment</label>
+                <label class="btn btn-secondary category-button" for="option6" onclick="filterSelection('Entertainment')">Entertainment</label>
             </div>
         </div>
         <hr>
         <!-- * this div will be the section that contains the actual content once they filter out by category. If no filters are selected, it will simply show the most recently added businesses -->
         <div class="discoverDiv">
             <div class="row justify-content-center">
-                    <div class="col-md-4 item">
+                    <div class="col-md-4 item filterDiv Restaurant">
                         <h1>Chez Test</h1>
                         <h3>Restaurant</h3>
                         <h4>Italian</h4>
@@ -96,7 +97,7 @@
                         <hr>
                     </div>
                     <!-- * This is what a complete div will look like for a single business object -->
-                    <div class="col-md-4 item">
+                    <div class="col-md-4 item filterDiv Shopping">
                         <h1>DeMarco's Fine Foods</h1>
                         <h3>Shopping</h3>
                         <h4>Grocery Store</h4>
@@ -131,7 +132,7 @@
 
                         <hr>
                     </div>
-                    <div class="col-md-4 item">
+                    <div class="col-md-4 item filterDiv Beauty">
                         <h1>Nail Salon</h1>
                         <h3>Beauty</h3>
                         <h5><a href="tel:519-123-4567" class="phonenumber">519-123-4567</a></h5>
@@ -155,6 +156,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
+    <script src="/js/filterObjects.js"></script>
 
 </body>
 

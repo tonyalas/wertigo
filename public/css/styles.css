@@ -10,6 +10,12 @@ body {
     background-color: #EEEEEE;
 }
 
+#footer-links {
+    text-decoration: none;
+    margin: 5px;
+    color: white;
+}
+
 .jumbotron h1 {
     font-size: 78px;
 }
@@ -17,6 +23,11 @@ body {
 .centeredText {
     text-align: center;
     padding-top: 10px;
+}
+
+.block-text {
+    margin: auto;
+    width: 80%;
 }
 
 .tagline-div h1 {
@@ -103,7 +114,6 @@ body {
 .linkLogos {
     width: 25px;
     height: 25px;
-    
 }
 
 .submit-button-area {
@@ -126,8 +136,4 @@ body {
 .category-button {
     margin-right: 10px;
     margin-top: 10px;
-}
-
-.show {
-    display: block;
 }

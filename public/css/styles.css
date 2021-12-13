@@ -16,6 +16,10 @@ body {
     color: white;
 }
 
+#UnderConstruction {
+    color: red;
+}
+
 .jumbotron h1 {
     font-size: 78px;
 }

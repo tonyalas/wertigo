@@ -42,7 +42,7 @@ app.post('/', (req, res) => {
         from: req.body.email,
         to: process.env.GMAIL,
         subject: `${req.body.subject}: message from (Owner) ${req.body.email} (User) ${req.body.customerEmail}`,
-        text: `Business Owner Info\nFull name: ${req.body.name}\nEmail: ${req.body.email}\nPhone Number: ${req.body.phoneNumber}\nBusiness Name: ${req.body.businessName}\nBusiness Category: ${req.body.businessCategory}\nBusiness Subcategory: ${req.body.businessSubcategory}\nWebsite URL: ${req.body.websiteURL}\nInstagram Account: ${req.body.instagramName}\nOther URL: ${req.body.otherURL}\nAddress: ${req.body.address} ${req.body.city} ${req.body.zipcode}\nMessage: ${req.body.message}\n\nUser Recommendation Info\nFull Name: ${req.body.customerName}\nEmail: ${req.body.customerEmail}\nBusiness Recommendation: ${req.body.customerbusinessName}\nMessage: ${req.body.customerMessage}`
+        text: `Business Owner Info\nFull name: ${req.body.name}\nEmail: ${req.body.email}\nPhone Number: ${req.body.phoneNumber}\nBusiness Name: ${req.body.businessName}\nBusiness Category: ${req.body.businessCategory}\nBusiness Subcategory: ${req.body.businessSubcategory}\nWebsite URL: ${req.body.websiteURL}\nInstagram Account: ${req.body.instagramName}\nOther URL: ${req.body.otherURL}\nAddress: ${req.body.address} ${req.body.city} ${req.body.postalCode}\nMessage: ${req.body.message}\n\nUser Recommendation Info\nFull Name: ${req.body.customerName}\nEmail: ${req.body.customerEmail}\nBusiness Recommendation: ${req.body.customerbusinessName}\nMessage: ${req.body.customerMessage}`
     }
 
     transporter.sendMail(mailOptions, (error, info) => {
@@ -60,47 +60,3 @@ app.post('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
 })
-
-/*  How it was before the changes
-app.use(bodyParser.urlencoded({extended: true}))
-
-// cors
-app.use(cors({ origin: "*" }));
-
-// make the contact page the first page on the app
-//app.route("/").get(function (req, res) {
-//    res.sendFile(process.cwd() + "/index.html");
-//});
-
-
-
-app.post('/contactus', (req, res) => {
-    //instantiate the SMTP server
-    const smtpTrans = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        port: 465,
-        secure: true,
-        auth: {
-            user: process.env.GMAIL,
-            pass: process.env.PASSWORD,
-        }
-    })
-
-    //specify what the email will look like
-    const mailOpts = {
-        from: 'alastony99@gmail.com',
-        to: process.env.GMAIL,
-        subject: 'New business inquiry email',
-        text: `${req.body.name} (${req.body.email}) says ${req.body.businessName}`
-    }
-
-    // attempt to send the email
-    smtpTrans.sendMail(mailOpts, (error, response) => {
-        if(error) {
-            console.log(error)
-        }
-        else {
-            console.log("success!")
-        }
-    })
-}) */

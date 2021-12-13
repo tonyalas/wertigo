@@ -12,7 +12,7 @@ let instagramName = document.getElementById('instagramName');
 let otherURL = document.getElementById('otherURL');
 let address = document.getElementById('address');
 let city = document.getElementById('city');
-let zipcode = document.getElementById('zipCode');
+let postalCode = document.getElementById('postalCode');
 let message = document.getElementById('message');
 
 contactForm.addEventListener('submit', (e) => {
@@ -32,7 +32,7 @@ contactForm.addEventListener('submit', (e) => {
         otherURL: otherURL.value,
         address: address.value,
         city: city.value,
-        zipcode: zipcode.value,
+        postalCode: postalCode.value,
         message: message.value
     }
 
@@ -56,7 +56,7 @@ contactForm.addEventListener('submit', (e) => {
             otherURL.value = '';
             address.value = '';
             city.value = '';
-            zipcode.value = '';
+            postalCode.value = '';
             message.value = '';
         } else {
             alert('Something went wrong! Please refresh the page and try again. Please note that the send process can take up to a minute depending on internet speeds.');

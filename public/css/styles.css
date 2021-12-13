@@ -95,6 +95,7 @@ body {
 .business_image {
     width: 175px;
     height: 175px;
+    padding-bottom: 10px;
 }
 
 .phonenumber {

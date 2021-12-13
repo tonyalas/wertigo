@@ -98,6 +98,10 @@ body {
     padding-bottom: 10px;
 }
 
+#indexFirstParagraph {
+    padding-top: 20px;
+}
+
 .phonenumber {
     text-decoration: none;
 }

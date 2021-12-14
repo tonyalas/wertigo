@@ -147,7 +147,7 @@ body {
     margin-top: 10px;
 }
 
-/*
-.collapseButtonArea {
-    padding-top: 10px;
-} */
+.card-body {
+    background-color: #EEEEEE;
+    border: #EEEEEE;
+}

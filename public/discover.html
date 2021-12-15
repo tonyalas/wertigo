@@ -71,9 +71,11 @@
                 <button class="btn btn-secondary category-button filter-button" data-filter="recentlyadded">Recently Added</button>
                 <button class="btn btn-secondary category-button filter-button" data-filter="restaurant">Restaurant</button>
                 <button class="btn btn-secondary category-button filter-button" data-filter="food">Food</button>
+                <button class="btn btn-secondary category-button filter-button" data-filter="bar">Bar</button>
                 <button class="btn btn-secondary category-button filter-button" data-filter="healthandwellness">Health & Wellness</button>
                 <button class="btn btn-secondary category-button filter-button" data-filter="shopping">Shopping</button>
                 <button class="btn btn-secondary category-button filter-button" data-filter="accessories">Accessories</button>
+                <button class="btn btn-secondary category-button filter-button" data-filter="events">Events</button>
                 <button class="btn btn-secondary category-button filter-button" data-filter="entertainment">Entertainment</button>
 
 
@@ -104,7 +106,8 @@
         <!-- * this div will be the section that contains the actual content once they filter out by category. If no filters are selected, it will simply show the most recently added businesses -->
         <!-- ! row 1 -->
         <div class="discoverDiv">
-            <div class="row justify-content-center">
+            <!-- ! This single ROW will allow infinite columns to be placed 3 in a row and will allow for the filter animation to work smoothly -->
+            <div class="row">
                 <!-- ! Item 1 -->
                 <div class="col-md-4 item filter shopping recentlyadded">
                     <!-- * Basic Info -->
@@ -226,7 +229,7 @@
 
                     <!-- * Website Link -->
                     <div class="businessLinkPic">
-                        <img src="/images/website_logo.png" class="linkLogos" />
+                        <img src="/images/etsy-logo.png" class="linkLogos" />
                         <div class="businessLinkText">
                             <p><a href="https://www.etsy.com/ca/shop/BellaArmandeJewelry" target="_blank"
                                     rel="noopener noreferrer" class="businessLinks">Etsy</a></p>
@@ -244,10 +247,10 @@
                     </div>
 
                 </div>
-            </div>
+            
 
             <!-- ! row 2 -->
-            <div class="row">
+            
                 <!-- ! Item 1 -->
                 <div class="col-md-4 item filter food recentlyadded">
                     <!-- * Basic Info-->
@@ -260,7 +263,7 @@
 
                     <!-- * Website Link -->
                     <div class="businessLinkPic">
-                        <img src="/images/website_logo.png" class="linkLogos" />
+                        <img src="/images/facebook-logo.png" class="linkLogos" />
                         <div class="businessLinkText">
                             <p><a href="https://www.facebook.com/felipesblazinbbq" target="_blank"
                                     rel="noopener noreferrer" class="businessLinks">Facebook</a></p>
@@ -300,7 +303,7 @@
 
                     <!-- * Website Link -->
                     <div class="businessLinkPic">
-                        <img src="/images/website_logo.png" class="linkLogos" />
+                        <img src="/images/etsy-logo.png" class="linkLogos" />
                         <div class="businessLinkText">
                             <p><a href="https://www.etsy.com/ca/shop/MikesThreeDeeLab?ref=simple-shop-header-name&listing_id=954504717"
                                     target="_blank" rel="noopener noreferrer" class="businessLinks">Etsy</a></p>
@@ -395,11 +398,15 @@
                         </div>
                     </div>
                 </div>
-            </div>
+                <!-- ! Row 3 -->
+                <!-- ! Item 1 -->
 
-            <!-- ! End of DiscoverDiv -->
+                
+            <!-- ! End of LARGE SINGLE Row below -->
+            </div>
+            <!-- ! End of DiscoverDiv below -->
         </div>
-        <!-- ! End of Container div -->
+        <!-- ! End of Container Div below -->
     </div>
 
     <!-- Footer -->

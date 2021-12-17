@@ -3,14 +3,10 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const multiparty = require("multiparty");
 const bodyParser = require('body-parser');
-import sslRedirect from 'heroku-ssl-redirect';
 require("dotenv").config();
 
 // instantiate an express app
 const app = express()
-
-// enable ssl redirect
-app.use(sslRedirect());
 
 const PORT = process.env.PORT || 3000;
 

@@ -1,5 +1,4 @@
 const express = require("express");
-const sslRedirect = require('heroku-ssl-redirect');
 //const cors = require("cors");
 const nodemailer = require("nodemailer");
 const multiparty = require("multiparty");
@@ -9,11 +8,9 @@ require("dotenv").config();
 // instantiate an express app
 const app = express()
 
-
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(sslRedirect())
 app.use(express.static('public'))
 app.use('/images', express.static('images'));
 app.use(express.json())

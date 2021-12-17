@@ -11,7 +11,8 @@ const app = express()
 const PORT = process.env.PORT || 3000;
 
 // Middleware
-
+// Having this section of code first will allow the backend to automatically redirect any http connections to https
+// previously, this section below was not included and the three app.use lines below were here instead.
 app.use((req, res, next) => {
     if (req.header('x-forwarded-proto') !== 'https') {
         res.redirect(`https://${req.header('host')}${req.url}`)
@@ -20,6 +21,7 @@ app.use((req, res, next) => {
     }
 });
 
+// Use these lines to load/serve the static HTML pages
 app.use(express.static('public'))
 app.use('/images', express.static('images'));
 app.use(express.json())

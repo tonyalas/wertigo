@@ -11,6 +11,15 @@ const app = express()
 const PORT = process.env.PORT || 3000;
 
 // Middleware
+
+app.use((req, res, next) => {
+    if (req.header('x-forwarded-proto') !== 'https') {
+        res.redirect(`https://${req.header('host')}${req.url}`)
+    } else {
+        next();
+    }
+});
+
 app.use(express.static('public'))
 app.use('/images', express.static('images'));
 app.use(express.json())

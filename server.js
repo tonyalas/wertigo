@@ -13,6 +13,10 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 // Having this section of code first will allow the backend to automatically redirect any http connections to https
 // previously, this section below was not included and the three app.use lines below were here instead.
+
+
+// COMMENT OUT THIS CODE BLOCK TO WORK LOCALLY. UNCOMMENT IT WHEN PUSHING TO PROD (HEROKU)
+
 app.use((req, res, next) => {
     if (req.header('x-forwarded-proto') !== 'https') {
         res.redirect(`https://${req.header('host')}${req.url}`)
@@ -20,6 +24,7 @@ app.use((req, res, next) => {
         next();
     }
 });
+
 
 // Use these lines to load/serve the static HTML pages
 app.use(express.static('public'))

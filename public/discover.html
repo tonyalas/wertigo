@@ -49,14 +49,14 @@
 
     <div class="jumbotron">
         <h1>Discover Local</h1>
-        <h4>From existing and fan-favourites, to new and upcoming, discover local businesses here!</h4>
+        <h4>From existing fan-favourites to hidden gems, discover great local businesses here!</h4>
     </div>
 
     <div class="container">
         <div class="row justify-content-center">
             <div class="col">
                 <div class="centeredText">
-                    <h1>Get started on discovering great local businesses!</h1>
+                    <!-- <h1>Get started on discovering great local businesses!</h1> -->
                     <br>
                     <h4 id="UnderConstruction">This page is still under construction! More features to come in the
                         following weeks.</h4>
@@ -67,7 +67,7 @@
         <!-- * This div will be the section of the page that lets the user filter out by specific categories -->
         <div class="filter-category-area">
             <div class="button-section">
-                <h4 id="filterResults">Filter Results</h4>
+                <h3 id="filterResults">Filter Results by Category</h3>
 
                 <button class="btn btn-secondary category-button filter-button" data-filter="recentlyadded">Recently Added</button>
                 <button class="btn btn-secondary category-button filter-button" data-filter="restaurant">Restaurant</button>
@@ -104,13 +104,45 @@
             </div>
         </div>
         <hr>
-        <!-- * this div will be the section that contains the actual content once they filter out by category. If no filters are selected, it will simply show the most recently added businesses -->
+        <!-- * TESTING Filter by Subcategory-->
+        <div class="filter-subcategory-area">
+            <!-- * TESTING the accordion Bootstrap feature -->
+            <div class="accordion accordion-flush" id="subcategoryAccordion">
+                <div class="accordion-item">
+                    <h4 class="accordion-header" id="flush-headerOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <h4>Filter Results by Subcategory</h4>
+                          </button>
+                    </h4>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
+                        <div class="accordion-body">
+                            <!-- ! The actual part where the filter buttons go -->
+                            <div class="button-section">
+                
+                                <button class="btn btn-secondary category-button filter-button" data-filter="recentlyadded">None</button>
+                                <button class="btn btn-secondary category-button filter-button" data-filter="art">Art</button>
+                                <button class="btn btn-secondary category-button filter-button" data-filter="grocerystore">Grocery Store</button>
+                                <button class="btn btn-secondary category-button filter-button" data-filter="jewelry">Jewelry</button>
+                                <button class="btn btn-secondary category-button filter-button" data-filter="sauces">Sauces & Condiments</button>
+                                <button class="btn btn-secondary category-button filter-button" data-filter="gifts">Gifts</button>
+                                <button class="btn btn-secondary category-button filter-button" data-filter="massagetherapy">Massage Therapy</button>
+                                <button class="btn btn-secondary category-button filter-button" data-filter="weddings">Weddings</button>
+                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <hr>
+        <!-- * this Div will be the section that contains the actual content once they filter out by category. If no filters are selected, it will simply show the most recently added businesses -->
         <!-- ! row 1 -->
         <div class="discoverDiv">
             <!-- ! This single ROW will allow infinite columns to be placed 3 in a row and will allow for the filter animation to work smoothly -->
             <div class="row">
                 <!-- ! START of Nancy Johns Gallery -->
-                <div class="col-md-4 border-bottom border-2 item filter shopping recentlyadded">
+                <div class="col-md-4 border-bottom border-2 item filter shopping recentlyadded art">
                     <!-- * Basic Info -->
                     <h1>Nancy Johns Gallery</h1>
                     <h3>Shopping</h3>
@@ -176,7 +208,7 @@
                 <!-- ! END of Nancy Johns Gallery -->
 
                 <!-- ! START of DeMarco's fine foods -->
-                <div class="col-md-4 border-bottom border-2 item filter food recentlyadded">
+                <div class="col-md-4 border-bottom border-2 item filter food recentlyadded grocerystore">
                     <!-- * Basic Info-->
                     <h1>DeMarco's Fine Foods</h1>
                     <h3>Food</h3>
@@ -219,7 +251,7 @@
                 <!-- ! END of DeMarco's fine foods -->
 
                 <!-- ! START of Bella Armande Jewelry -->
-                <div class="col-md-4 border-bottom border-2 item filter accessories recentlyadded">
+                <div class="col-md-4 border-bottom border-2 item filter accessories recentlyadded jewelry">
                     <!-- * Basic Info-->
                     <h1>Bella Armande Jewelry</h1>
                     <h3>Accessories</h3>
@@ -259,7 +291,7 @@
                 <!-- ! END of Bella Armande Jewelry -->
             
                 <!-- ! START of Felipe's Blazin BBQ -->
-                <div class="col-md-4 border-bottom border-2 item filter food recentlyadded">
+                <div class="col-md-4 border-bottom border-2 item filter food recentlyadded sauces">
                     <!-- * Basic Info-->
                     <h1>Felipe's Blazin BBQ</h1>
                     <h3>Food</h3>
@@ -300,7 +332,7 @@
                 <!-- ! END of Felipe's Blazin BBQ -->
 
                 <!-- ! START of Threedee Lab -->
-                <div class="col-md-4 border-bottom border-2 item filter recentlyadded accessories">
+                <div class="col-md-4 border-bottom border-2 item filter recentlyadded accessories gifts">
                     <!-- * Basic Info-->
                     <h1>Threedee Lab</h1>
                     <h3>Accessories</h3>
@@ -340,7 +372,7 @@
                 <!-- ! END of Threedee Lab -->
 
                 <!-- ! START of Manual Therapy Clinic -->
-                <div class="col-md-4 border-bottom border-2 item filter recentlyadded healthandwellness">
+                <div class="col-md-4 border-bottom border-2 item filter recentlyadded healthandwellness massagetherapy">
                     <!-- * Basic Info -->
                     <h1>Manual Therapy Clinic</h1>
                     <h3>Health & Wellness</h3>
@@ -409,7 +441,7 @@
                 <!-- ! END of Manual Therapy Clinic -->
 
                 <!-- ! START of Glamour Events -->
-                <div class="col-md-4 border-bottom border-2 item filter recentlyadded events">
+                <div class="col-md-4 border-bottom border-2 item filter recentlyadded events weddings">
                     <!-- * Basic Info -->
                     <h1>Glamour Events</h1>
                     <h3>Events</h3>

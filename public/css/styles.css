@@ -135,6 +135,11 @@ body {
     margin-bottom: 20px;
 }
 
+.filter-subcategory-area {
+    height: auto;
+    margin-bottom: 20px;
+}
+
 #filterResults {
     text-align: left;
 }
@@ -155,4 +160,17 @@ body {
 
 #wertigo-link {
     color: white;
+}
+
+.accordion-button {
+    background-color: #EEEEEE;
+}
+
+.accordion-body {
+    background-color: #EEEEEE;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #2F343F;
+    background-color: #EEEEEE;
 }

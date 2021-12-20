@@ -69,6 +69,8 @@
             <div class="button-section">
                 <h3 id="filterResults">Filter Results by Category</h3>
 
+                <!-- TEMPORARILY HIDDEN FOR NOW TO TEST OTHER THINGS -->
+                <!-- 
                 <button class="btn btn-secondary category-button filter-button" data-filter="recentlyadded">Recently Added</button>
                 <button class="btn btn-secondary category-button filter-button" data-filter="restaurant">Restaurant</button>
                 <button class="btn btn-secondary category-button filter-button" data-filter="food">Food</button>
@@ -79,28 +81,36 @@
                 <button class="btn btn-secondary category-button filter-button" data-filter="events">Events</button>
                 <button class="btn btn-secondary category-button filter-button" data-filter="entertainment">Entertainment</button>
 
+                <br> -->
 
-                <!--    TEMPORARILY HIDDEN FOR NOW TO TEST OTHER THINGS
+                <input type="radio" class="btn-check" name="options" id="recentlyadded" autocomplete="off" checked>
+                <label class="btn btn-secondary category-button filter-button" for="recentlyadded" data-filter="recentlyadded">Recently Added</label>
 
-                <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-                <label class="btn btn-secondary category-button" for="option1" onclick="filterSelection('All')">Recently Added</label>
-
-                <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-                <label class="btn btn-secondary category-button" for="option2" onclick="filterSelection('Restaurant')">Restaurant</label>
-
-                <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
-                <label class="btn btn-secondary category-button" for="option3" onclick="filterSelection('Beauty')">Beauty</label>
-
-                <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
-                <label class="btn btn-secondary category-button" for="option4" onclick="filterSelection('Shopping')">Shopping</label>
-
-                <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off">
-                <label class="btn btn-secondary category-button" for="option5" onclick="filterSelection('Accessories')">Accessories</label>
-
-                <input type="radio" class="btn-check" name="options" id="option6" autocomplete="off">
-                <label class="btn btn-secondary category-button" for="option6" onclick="filterSelection('Entertainment')">Entertainment</label>
+                <input type="radio" class="btn-check" name="options" id="restaurant" autocomplete="off">
+                <label class="btn btn-secondary category-button filter-button" for="restaurant" data-filter="restaurant">Restaurant</label>
                 
-                -->
+                <input type="radio" class="btn-check" name="options" id="food" autocomplete="off">
+                <label class="btn btn-secondary category-button filter-button" for="food" data-filter="food">Food</label>
+
+                <input type="radio" class="btn-check" name="options" id="bar" autocomplete="off">
+                <label class="btn btn-secondary category-button filter-button" for="bar" data-filter="bar">Bar</label>
+
+                <input type="radio" class="btn-check" name="options" id="healthandwellness" autocomplete="off">
+                <label class="btn btn-secondary category-button filter-button" for="healthandwellness" data-filter="healthandwellness">Health & Wellness</label>
+
+                <input type="radio" class="btn-check" name="options" id="shopping" autocomplete="off">
+                <label class="btn btn-secondary category-button filter-button" for="shopping" data-filter="shopping">Shopping</label>
+
+                <input type="radio" class="btn-check" name="options" id="accessories" autocomplete="off">
+                <label class="btn btn-secondary category-button filter-button" for="accessories" data-filter="accessories">Accessories</label>
+
+                <input type="radio" class="btn-check" name="options" id="events" autocomplete="off">
+                <label class="btn btn-secondary category-button filter-button" for="events" data-filter="events">Events</label>
+
+                <input type="radio" class="btn-check" name="options" id="entertainment" autocomplete="off">
+                <label class="btn btn-secondary category-button filter-button" for="entertainment" data-filter="entertainment">Entertainment</label>
+                
+                
             </div>
         </div>
         <hr>

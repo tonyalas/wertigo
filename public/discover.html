@@ -70,7 +70,7 @@
                 <h3 id="filterResults">Filter Results by Category</h3>
 
                 <!-- TEMPORARILY HIDDEN FOR NOW TO TEST OTHER THINGS -->
-                <!-- 
+                
                 <button class="btn btn-secondary category-button filter-button" data-filter="recentlyadded">Recently Added</button>
                 <button class="btn btn-secondary category-button filter-button" data-filter="restaurant">Restaurant</button>
                 <button class="btn btn-secondary category-button filter-button" data-filter="food">Food</button>
@@ -81,8 +81,9 @@
                 <button class="btn btn-secondary category-button filter-button" data-filter="events">Events</button>
                 <button class="btn btn-secondary category-button filter-button" data-filter="entertainment">Entertainment</button>
 
-                <br> -->
 
+
+                <!-- 
                 <input type="radio" class="btn-check" name="options" id="recentlyadded" autocomplete="off" checked>
                 <label class="btn btn-secondary category-button filter-button" for="recentlyadded" data-filter="recentlyadded">Recently Added</label>
 
@@ -109,7 +110,7 @@
 
                 <input type="radio" class="btn-check" name="options" id="entertainment" autocomplete="off">
                 <label class="btn btn-secondary category-button filter-button" for="entertainment" data-filter="entertainment">Entertainment</label>
-                
+                -->
                 
             </div>
         </div>
@@ -126,17 +127,43 @@
                     </h4>
                     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
                         <div class="accordion-body">
+                            <p class="filter recentlyadded">Please select a category from above to see subcategory options.</p>
+
+                            <p class="filter restaurant none-button">Restaurant</p>
+                            <p class="filter food sauces grocerystore none-button">Food</p>
+                            <p class="filter bar none-button">Bar</p>
+                            <p class="filter healthandwellness massagetherapy none-button">Health & Wellness</p>
+                            <p class="filter shopping art none-button">Shopping</p>
+                            <p class="filter accessories gifts jewelry none-button">Accessories</p>
+                            <p class="filter events weddings none-button">Events</p>
+                            <p class="filter entertainment none-button">Entertainment</p>
+                            
                             <!-- ! The actual part where the filter buttons go -->
                             <div class="button-section">
                 
-                                <button class="btn btn-secondary category-button filter-button" data-filter="recentlyadded">None</button>
-                                <button class="btn btn-secondary category-button filter-button" data-filter="art">Art</button>
-                                <button class="btn btn-secondary category-button filter-button" data-filter="grocerystore">Grocery Store</button>
-                                <button class="btn btn-secondary category-button filter-button" data-filter="jewelry">Jewelry</button>
-                                <button class="btn btn-secondary category-button filter-button" data-filter="sauces">Sauces & Condiments</button>
-                                <button class="btn btn-secondary category-button filter-button" data-filter="gifts">Gifts</button>
-                                <button class="btn btn-secondary category-button filter-button" data-filter="massagetherapy">Massage Therapy</button>
-                                <button class="btn btn-secondary category-button filter-button" data-filter="weddings">Weddings</button>
+                                <button class="btn btn-secondary category-button filter-button" data-filter="recentlyadded">Reset All</button>
+                                <!-- * These buttons will be the buttons that reset the filter for subcategories - labeled as the NONE buttons 
+                                    ! Include ALL subcategories within these 'none' buttons.
+                                -->
+
+                                <button class="btn btn-secondary category-button filter-button none-button filter restaurant" data-filter="restaurant">None</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter food sauces grocerystore" data-filter="food">None</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter bar" data-filter="bar">None</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter healthandwellness massagetherapy" data-filter="healthandwellness">None</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter shopping art" data-filter="shopping">None</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter accessories gifts jewelry" data-filter="accessories">None</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter events weddings" data-filter="events">None</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter entertainment" data-filter="entertainment">None</button>
+
+                                <!-- END -->
+                                <!-- * These are just the regular buttons that will sort the MAIN categories by SUBcategories -->
+                                <button class="btn btn-secondary category-button filter-button none-button filter shopping art" data-filter="art">Art</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter food grocerystore sauces" data-filter="grocerystore">Grocery Store</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter accessories jewelry gifts" data-filter="jewelry">Jewelry</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter food sauces grocerystore" data-filter="sauces">Sauces & Condiments</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter accessories gifts jewelry" data-filter="gifts">Gifts</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter healthandwellness massagetherapy" data-filter="massagetherapy">Massage Therapy</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter events weddings" data-filter="weddings">Weddings</button>
                 
                             </div>
                         </div>

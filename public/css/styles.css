@@ -153,6 +153,10 @@ body {
     margin-top: 10px;
 }
 
+.none-button {
+    display: none;
+}
+
 .card-body {
     background-color: #EEEEEE;
     border: #EEEEEE;

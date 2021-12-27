@@ -121,9 +121,24 @@ body {
     color: #2F343F;
 }
 
+.backToDiscoverLink {
+    text-decoration: none;
+    color: white;
+}
+
+.businessHeaderLink {
+    text-decoration: underline;
+    color: #2F343F;
+}
+
 .linkLogos {
     width: 25px;
     height: 25px;
+}
+
+.linkLogosPage {
+    width: 30px;
+    height: 30px;
 }
 
 .submit-button-area {
@@ -177,4 +192,8 @@ body {
 .accordion-button:not(.collapsed) {
     color: #2F343F;
     background-color: #EEEEEE;
+}
+
+#informationText {
+    font-size: 24px;
 }

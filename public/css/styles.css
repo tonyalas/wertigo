@@ -2,7 +2,10 @@
     text-align: center;
     background-color: #2F343F;
     height: auto;
-    padding: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
     color: white;
 }
 

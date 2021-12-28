@@ -6,6 +6,10 @@
     color: white;
 }
 
+.jumbotron #jtronSmallerFont {
+    font-size: 70px;
+}
+
 body {
     background-color: #EEEEEE;
 }

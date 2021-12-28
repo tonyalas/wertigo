@@ -6,6 +6,12 @@
     color: white;
 }
 
+@media screen and (max-width: 380px) {
+    .jumbotron {
+        word-wrap: break-word;
+    }
+}
+
 .jumbotron #jtronSmallerFont {
     font-size: 70px;
 }

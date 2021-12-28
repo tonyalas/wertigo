@@ -4,6 +4,7 @@ const contactForm = document.querySelector('.owner-contact-form');
 let name = document.getElementById('name');
 let email = document.getElementById('email');
 let phoneNumber = document.getElementById('phoneNumber');
+let privacyCheck = document.getElementById('privacyCheck');
 let businessName = document.getElementById('businessName');
 let businessCategory = document.getElementById('category');
 let businessSubcategory = document.getElementById('businessSubcategory');
@@ -24,6 +25,7 @@ contactForm.addEventListener('submit', (e) => {
         email: email.value,
         subject: 'Wertigo Contact Form',
         phoneNumber: phoneNumber.value,
+        privacyCheck: privacyCheck.value,
         businessName: businessName.value,
         businessCategory: businessCategory.value,
         businessSubcategory: businessSubcategory.value,
@@ -48,6 +50,7 @@ contactForm.addEventListener('submit', (e) => {
             name.value = '';
             email.value = '';
             phoneNumber.value = '';
+            privacyCheck.value = 'Share Your Email and Phone Number? *';
             businessName.value = '';
             businessCategory.value = '-Select a Business Category- *';
             businessSubcategory.value = '';

@@ -73,13 +73,15 @@
                 
                 <button class="btn btn-secondary category-button filter-button" data-filter="recentlyadded">Recently Added</button>
                 <button class="btn btn-secondary category-button filter-button" data-filter="restaurant">Restaurant</button>
-                <button class="btn btn-secondary category-button filter-button" data-filter="food">Food</button>
+                <button class="btn btn-secondary category-button filter-button" data-filter="food">Food (Other)</button>
                 <button class="btn btn-secondary category-button filter-button" data-filter="bar">Bar</button>
                 <button class="btn btn-secondary category-button filter-button" data-filter="healthandwellness">Health & Wellness</button>
                 <button class="btn btn-secondary category-button filter-button" data-filter="shopping">Shopping</button>
                 <button class="btn btn-secondary category-button filter-button" data-filter="accessories">Accessories</button>
                 <button class="btn btn-secondary category-button filter-button" data-filter="events">Events</button>
                 <button class="btn btn-secondary category-button filter-button" data-filter="entertainment">Entertainment</button>
+                <button class="btn btn-secondary category-button filter-button" data-filter="automotive">Automotive</button>
+                <button class="btn btn-secondary category-button filter-button" data-filter="contractors">Contractors</button>
 
 
 
@@ -134,14 +136,16 @@
                         <div class="accordion-body">
                             <p class="filter recentlyadded">Please select a category from above to see subcategory options.</p>
 
-                            <p class="filter restaurant none-button">Restaurant</p>
-                            <p class="filter food sauces grocerystore none-button">Food</p>
-                            <p class="filter bar none-button">Bar</p>
-                            <p class="filter healthandwellness massagetherapy none-button">Health & Wellness</p>
-                            <p class="filter shopping art none-button">Shopping</p>
+                            <p class="filter restaurant italian mexican chinese fastfood none-button">Restaurant</p>
+                            <p class="filter food sauces cafe grocerystore none-button">Food (Other)</p>
+                            <p class="filter bar sportsbar casual highend danceclub none-button">Bar</p>
+                            <p class="filter healthandwellness massagetherapy nails eyebrows eyelashes none-button">Health & Wellness</p>
+                            <p class="filter shopping art clothing shoes usedgoods none-button">Shopping</p>
                             <p class="filter accessories gifts jewelry none-button">Accessories</p>
                             <p class="filter events weddings none-button">Events</p>
                             <p class="filter entertainment none-button">Entertainment</p>
+                            <p class="filter automotive carrepairs oilchanges caraccessories none-button">Automotive</p>
+                            <p class="filter contractors none-button">Contractors</p>
                             
                             <!-- ! The actual part where the filter buttons go -->
                             <div class="button-section">
@@ -151,24 +155,66 @@
                                     ! Include ALL subcategories within these 'none' buttons.
                                 -->
 
-                                <button class="btn btn-secondary category-button filter-button none-button filter restaurant" data-filter="restaurant">None</button>
-                                <button class="btn btn-secondary category-button filter-button none-button filter food sauces grocerystore" data-filter="food">None</button>
-                                <button class="btn btn-secondary category-button filter-button none-button filter bar" data-filter="bar">None</button>
-                                <button class="btn btn-secondary category-button filter-button none-button filter healthandwellness massagetherapy" data-filter="healthandwellness">None</button>
-                                <button class="btn btn-secondary category-button filter-button none-button filter shopping art" data-filter="shopping">None</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter restaurant italian mexican chinese fastfood" data-filter="restaurant">None</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter food cafe sauces grocerystore" data-filter="food">None</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter bar sportsbar casual highend danceclub" data-filter="bar">None</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter healthandwellness massagetherapy nails eyebrows eyelashes" data-filter="healthandwellness">None</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter shopping art clothing shoes usedgoods" data-filter="shopping">None</button>
                                 <button class="btn btn-secondary category-button filter-button none-button filter accessories gifts jewelry" data-filter="accessories">None</button>
                                 <button class="btn btn-secondary category-button filter-button none-button filter events weddings" data-filter="events">None</button>
                                 <button class="btn btn-secondary category-button filter-button none-button filter entertainment" data-filter="entertainment">None</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter automotive carrepairs oilchanges caraccessories" data-filter="automotive">None</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter contractors" data-filter="contractors">None</button>
 
                                 <!-- END -->
+
                                 <!-- * These are just the regular buttons that will sort the MAIN categories by SUBcategories -->
-                                <button class="btn btn-secondary category-button filter-button none-button filter shopping art" data-filter="art">Art</button>
-                                <button class="btn btn-secondary category-button filter-button none-button filter food grocerystore sauces" data-filter="grocerystore">Grocery Store</button>
+
+                                <!-- ! Restaurant Subcategories -->
+                                <button class="btn btn-secondary category-button filter-button none-button filter restaurant italian mexican chinese fastfood" data-filter="italian">Italian</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter restaurant italian mexican chinese fastfood" data-filter="mexican">Mexican</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter restaurant italian mexican chinese fastfood" data-filter="chinese">Chinese</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter restaurant italian mexican chinese fastfood" data-filter="fastfood">Fast Food</button>
+
+                                <!-- ! Food Subcategories -->
+                                <button class="btn btn-secondary category-button filter-button none-button filter food grocerystore cafe sauces" data-filter="grocerystore">Grocery Store</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter food grocerystore cafe sauces" data-filter="cafe">Cafe</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter food sauces grocerystore cafe" data-filter="sauces">Sauces & Condiments</button>
+
+                                <!-- ! Bar Subcategories -->
+                                <button class="btn btn-secondary category-button filter-button none-button filter bar sportsbar casual highend danceclub" data-filter="sportsbar">Sports Bar</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter bar sportsbar casual highend danceclub" data-filter="casual">Casual</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter bar sportsbar casual highend danceclub" data-filter="highend">High End/Formal</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter bar sportsbar casual highend danceclub" data-filter="danceclub">Dance/Club</button>
+
+                                <!-- ! Health & Wellness Subcategories -->
+                                <button class="btn btn-secondary category-button filter-button none-button filter healthandwellness massagetherapy nails eyebrows eyelashes" data-filter="massagetherapy">Massage Therapy</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter healthandwellness massagetherapy nails eyebrows eyelashes" data-filter="nails">Nails</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter healthandwellness massagetherapy nails eyebrows eyelashes" data-filter="eyebrows">Eyebrows</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter healthandwellness massagetherapy nails eyebrows eyelashes" data-filter="eyelashes">Eyelashes</button>
+
+                                <!-- ! Shopping Subcategories -->
+                                <button class="btn btn-secondary category-button filter-button none-button filter shopping art clothing shoes usedgoods" data-filter="art">Art</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter shopping art clothing shoes usedgoods" data-filter="clothing">Clothing</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter shopping art clothing shoes usedgoods" data-filter="shoes">Shoes</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter shopping art clothing shoes usedgoods" data-filter="usedgoods">Used Goods</button>
+
+                                <!-- ! Accessories Subcategories -->
                                 <button class="btn btn-secondary category-button filter-button none-button filter accessories jewelry gifts" data-filter="jewelry">Jewelry</button>
-                                <button class="btn btn-secondary category-button filter-button none-button filter food sauces grocerystore" data-filter="sauces">Sauces & Condiments</button>
                                 <button class="btn btn-secondary category-button filter-button none-button filter accessories gifts jewelry" data-filter="gifts">Gifts</button>
-                                <button class="btn btn-secondary category-button filter-button none-button filter healthandwellness massagetherapy" data-filter="massagetherapy">Massage Therapy</button>
+
+                                <!-- ! Events Subcategories -->
                                 <button class="btn btn-secondary category-button filter-button none-button filter events weddings" data-filter="weddings">Weddings</button>
+
+                                <!-- ! Entertainment Subcategories -->
+
+                                <!-- ! Automotive Subcategories -->
+                                <button class="btn btn-secondary category-button filter-button none-button filter automotive carrepairs oilchanges caraccessories" data-filter="carrepairs">Services and Repairs</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter automotive carrepairs oilchanges caraccessories" data-filter="oilchanges">Oil Changes</button>
+                                <button class="btn btn-secondary category-button filter-button none-button filter automotive carrepairs oilchanges caraccessories" data-filter="caraccessories">Car Accessories</button>
+
+                                <!-- ! Contractors Subcategories -->
+
                 
                             </div>
                         </div>
@@ -403,7 +449,6 @@
                     <h4>Gifts</h4>
                     <img class="business_image" src="/images/3dlab.JPG" />
                     <br>
-                    <h5><a href="tel:226-347-5867" class="phonenumber">226-347-5867</a></h5>
 
                     <!-- * Website Link -->
                     <div class="businessLinkPic">
@@ -519,7 +564,7 @@
                         <img src="/images/facebook-logo.png" class="linkLogos" />
                         <div class="businessLinkText">
                             <p><a href="https://www.facebook.com/Glamour-Events-514389265312116" target="_blank" rel="noopener noreferrer"
-                                    class="businessLinks">Website</a></p>
+                                    class="businessLinks">Facebook</a></p>
                         </div>
                     </div>
                     <br>

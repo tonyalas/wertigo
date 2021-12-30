@@ -59,7 +59,7 @@ app.post('/', (req, res) => {
         from: req.body.email,
         to: process.env.GMAIL,
         subject: `${req.body.subject}: message from (Owner) ${req.body.email} (User) ${req.body.customerEmail}`,
-        text: `Business Owner Info\nFull name: ${req.body.name}\nEmail: ${req.body.email}\nPhone Number: ${req.body.phoneNumber}\nWants to Share Private Info: ${req.body.privacyCheck}\nBusiness Name: ${req.body.businessName}\nBusiness Category: ${req.body.businessCategory}\nBusiness Subcategory: ${req.body.businessSubcategory}\nWebsite URL: ${req.body.websiteURL}\nInstagram Account: ${req.body.instagramName}\nOther URL: ${req.body.otherURL}\nAddress: ${req.body.address} ${req.body.city} ${req.body.postalCode}\nMessage: ${req.body.message}\n\nUser Recommendation Info\nFull Name: ${req.body.customerName}\nEmail: ${req.body.customerEmail}\nBusiness Recommendation: ${req.body.customerbusinessName}\nMessage: ${req.body.customerMessage}`
+        html: `<b>Business Owner Info<b>\nFull name: ${req.body.name}\nEmail: ${req.body.email}\nPhone Number: ${req.body.phoneNumber}\nWants to Share Private Info: ${req.body.privacyCheck}\nBusiness Name: ${req.body.businessName}\nBusiness Category: ${req.body.businessCategory}\nBusiness Subcategory: ${req.body.businessSubcategory}\nWebsite URL: ${req.body.websiteURL}\nInstagram Account: ${req.body.instagramName}\nOther URL: ${req.body.otherURL}\nAddress: ${req.body.address} ${req.body.city} ${req.body.postalCode}\nMessage: ${req.body.message}\n\nUser Recommendation Info\nFull Name: ${req.body.customerName}\nEmail: ${req.body.customerEmail}\nBusiness Recommendation: ${req.body.customerbusinessName}\nMessage: ${req.body.customerMessage}`
     }
 
     transporter.sendMail(mailOptions, (error, info) => {

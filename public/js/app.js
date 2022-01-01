@@ -15,7 +15,7 @@ let address = document.getElementById('address');
 let city = document.getElementById('city');
 let postalCode = document.getElementById('postalCode');
 let message = document.getElementById('message');
-let logoFile = document.getElementById('businessLogoFile');
+//let logoFile = document.getElementById('businessLogoFile');
 
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -37,7 +37,7 @@ contactForm.addEventListener('submit', (e) => {
         city: city.value,
         postalCode: postalCode.value,
         message: message.value,
-        logoFile: logoFile.value,
+        //logoFile: logoFile.value,
     }
 
     console.log(formData);
@@ -63,7 +63,7 @@ contactForm.addEventListener('submit', (e) => {
             city.value = '';
             postalCode.value = '';
             message.value = '';
-            logoFile.value = '';
+            //logoFile.value = '';
         } else {
             alert('Something went wrong! Please refresh the page and try again. Please note that the send process can take up to a minute depending on internet speeds.');
         }

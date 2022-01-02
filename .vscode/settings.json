@@ -2,5 +2,9 @@
     "cSpell.words": [
         "manualtherapyclinic",
         "themtclinic"
+    ],
+    "spellchecker.ignoreWordsList": [
+        "REFRESHTOKEN",
+        "ACCESSTOKEN"
     ]
 }

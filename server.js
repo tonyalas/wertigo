@@ -3,6 +3,7 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const multiparty = require("multiparty");
 const bodyParser = require('body-parser');
+const multer = require('multer');
 require("dotenv").config();
 
 // instantiate an express app
@@ -16,7 +17,7 @@ const PORT = process.env.PORT || 3000;
 
 
 // COMMENT OUT THIS CODE BLOCK TO WORK LOCALLY. UNCOMMENT IT WHEN PUSHING TO PROD (HEROKU)
-
+/*
 app.use((req, res, next) => {
     if (req.header('x-forwarded-proto') !== 'https') {
         res.redirect(`https://${req.header('host')}${req.url}`)
@@ -24,7 +25,7 @@ app.use((req, res, next) => {
         next();
     }
 });
-
+*/
 
 // Use these lines to load/serve the static HTML pages
 app.use(express.static('public'))

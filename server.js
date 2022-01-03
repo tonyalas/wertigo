@@ -1,3 +1,9 @@
+// This is the new alternative to the "serverOLD.js" file. 
+// This new server file still does the same things as the old file but uses multer instead of only body-parser to get the form info and send the email.
+// This method is also different because it does require the additional "app.js" file that was required before.
+// ! If something goes wrong with image uploading, change the <script> tag in contactus.html to link to app.json, comment out the button in the html
+// ! AND inside of package.json, change the start key to "node serverOLD.js". That is all that should be necessary to revert back to how it was before.
+
 const express = require('express')
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
@@ -11,7 +17,7 @@ const app = express()
 const PORT = process.env.PORT || 3000;
 
 // COMMENT OUT THIS CODE BLOCK TO WORK LOCALLY. UNCOMMENT IT WHEN PUSHING TO PROD (HEROKU)
-
+/*
 app.use((req, res, next) => {
     if (req.header('x-forwarded-proto') !== 'https') {
         res.redirect(`https://${req.header('host')}${req.url}`)
@@ -19,7 +25,7 @@ app.use((req, res, next) => {
         next();
     }
 });
-
+*/
 
 // Middleware
 app.use(express.static('public'))
@@ -52,6 +58,7 @@ var customerbusinessName;
 var customerEmail;
 var customerMessage;
 
+// this allows multer to save the uploaded image "locally" and then upload it to get a path and then send it via Nodemailer
 var Storage = multer.diskStorage({
     destination: function(req, file, callback) {
         callback(null, "./uploads");
@@ -93,6 +100,7 @@ app.post('/contactus',(req,res) => {
             city = req.body.city
             postalCode = req.body.postalCode
             message = req.body.message
+            // ONLY IF there is a file uploaded, create the path variable to be used in Nodemailer
             if(req.file !== undefined) {
               path = req.file.path
             }
@@ -135,6 +143,7 @@ app.post('/contactus',(req,res) => {
                 html: `<b>Business Owner Info</b><br><b>Full name:</b> ${req.body.name}<br><b>Email:</b> ${req.body.email}<br><b>Phone Number:</b> ${req.body.phoneNumber}<br><b>Wants to Share Private Info:</b> ${req.body.privacyCheck}<br><b>Business Name:</b> ${req.body.businessName}<br><b>Business Category:</b> ${req.body.businessCategory}<br><b>Business Subcategory:</b> ${req.body.businessSubcategory}<br><b>Website URL:</b> ${req.body.websiteURL}<br><b>Instagram Account:</b> ${req.body.instagramName}<br><b>Other URL:</b> ${req.body.otherURL}<br><b>Address:</b> ${req.body.address} ${req.body.city} ${req.body.postalCode}<br><b>Message:</b> ${req.body.message}<br><br><b>User Recommendation Info</b><br><b>Full Name:</b> ${req.body.customerName}<br><b>Email:</b> ${req.body.customerEmail}<br><b>Business Recommendation:</b> ${req.body.customerbusinessName}<br><b>Message:</b> ${req.body.customerMessage}`,
                 attachments: [
                   {
+                    // the way it is right now, if someone sends (uploads) an image and then the next person goes to send a contact form but does NOT include an image, it will send the last image anyway. 
                    path: path
                   }
                ]
@@ -145,7 +154,10 @@ app.post('/contactus',(req,res) => {
                   console.log(error);
                 } else {
                   console.log('Email sent: ' + info.response);
-                  return res.redirect('/contactus.html')
+                  // on a successful email, redirect the user to a success screen since it won't let me do the javascript alert message.
+                  return res.redirect('/contactformsuccessfullysubmitted.html')
+                  // this code is technically unreachable since the page will return a different page before it ever gets to this 
+                  // the code below will delete the image that was just created in the "local system". It is commented out because it causes the user-Recommendation form to break. Heroku automatically clears any locally saved images/files every 24 hours anyway. (or I can manually restart all dynos to wipe the local storage)
                   if(req.file !== undefined) {
                     fs.unlink(path,function(err){
                       if(err){
@@ -155,6 +167,7 @@ app.post('/contactus',(req,res) => {
                       }
                     })
                   }
+                  // can also put the return line here
                 }
               });
         }

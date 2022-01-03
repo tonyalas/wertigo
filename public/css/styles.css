@@ -214,3 +214,7 @@ body {
 #informationTextLinks {
     font-size: 18px;
 }
+
+#successButton {
+    margin: 10px;
+}

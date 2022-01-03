@@ -1,3 +1,4 @@
+/*
 // get the form by its id
 const form = document.getElementById("owner-contact-form");
 
@@ -22,3 +23,4 @@ const sendMail = (mail) => {
         return res.json();
     });
 };
+*/

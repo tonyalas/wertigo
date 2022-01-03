@@ -17,7 +17,7 @@ const app = express()
 const PORT = process.env.PORT || 3000;
 
 // COMMENT OUT THIS CODE BLOCK TO WORK LOCALLY. UNCOMMENT IT WHEN PUSHING TO PROD (HEROKU)
-/*
+
 app.use((req, res, next) => {
     if (req.header('x-forwarded-proto') !== 'https') {
         res.redirect(`https://${req.header('host')}${req.url}`)
@@ -25,7 +25,7 @@ app.use((req, res, next) => {
         next();
     }
 });
-*/
+
 
 // Middleware
 app.use(express.static('public'))
@@ -152,7 +152,9 @@ app.post('/contactus',(req,res) => {
               transporter.sendMail(mailOptions, function(error, info){
                 if (error) {
                   console.log(error);
-                } else {
+                  return res.redirect('/contactformFailure.html')
+                } 
+                else {
                   console.log('Email sent: ' + info.response);
                   // on a successful email, redirect the user to a success screen since it won't let me do the javascript alert message.
                   return res.redirect('/contactformsuccessfullysubmitted.html')
@@ -167,7 +169,7 @@ app.post('/contactus',(req,res) => {
                       }
                     })
                   }
-                  // can also put the return line here
+                  // can also put the return line: 'return res.redirect('/contactformsuccessfullysubmitted.html')' here
                 }
               });
         }

@@ -98,8 +98,6 @@ body {
 .page-footer {
     background-color: #2F343F;
     color: white;
-    position: absolute;
-    width: 100%;
 }
 
 .item {

@@ -21,6 +21,9 @@
 
 body {
     background-color: #EEEEEE;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #footer-links {
@@ -98,6 +101,7 @@ body {
 .page-footer {
     background-color: #2F343F;
     color: white;
+    margin-top: auto;
 }
 
 .item {

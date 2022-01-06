@@ -21,9 +21,12 @@
 
 body {
     background-color: #EEEEEE;
+    /*
+    This fixes the footer issue on larger screens/monitors but then makes the Filter by Category section look weird (the buttons stack instead of being next to each other)
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    */
 }
 
 #footer-links {

@@ -1,6 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
 import BusinessTile from './components/BusinessTile/BusinessTile';
+import IndexCarousel from './components/IndexCarousel/IndexCarousel';
+import JumbotronHeader from './components/JumbotronHeader/JumbotronHeader';
+import Navbar from './components/Navbar/Navbar';
+import Container from 'react-bootstrap/Container';
+import IndexMainBody from './components/IndexMainBody/IndexMainBody';
+import Footer from './components/Footer/Footer';
 
 const businesses = [
   {
@@ -18,25 +23,36 @@ const businesses = [
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        {businesses.map(business => {
-          return (
-            <BusinessTile name={business.name} description={business.description} key= {business.id} />
-          )
-        })}
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+      <div>
+        <Navbar />
+      </div>
+
+      <header>
+        <JumbotronHeader />
       </header>
+
+      <Container>
+        <div>
+          <IndexCarousel />
+
+          <IndexMainBody />
+
+
+          {
+            /*
+          {businesses.map(business => {
+            return (
+              <BusinessTile name={business.name} description={business.description} key={business.id} />
+            )
+          })}
+
+            */
+          }
+
+        </div>
+      </Container>
+      <Footer />
     </div>
   );
 }

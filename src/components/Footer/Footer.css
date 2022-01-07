@@ -1,0 +1,11 @@
+.page-footer {
+  background-color: #2f343f;
+  color: white;
+  margin-top: auto;
+}
+
+#footer-links {
+  text-decoration: none;
+  margin: 5px;
+  color: white;
+}

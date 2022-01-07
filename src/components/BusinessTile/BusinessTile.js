@@ -1,23 +1,17 @@
-import { useState } from "react";
-import BusinessButton from "./BusinessButton";
 import './BusinessTile.css'
+import { Link } from 'react-router-dom';
+import { makeFriendlyURL } from '../../utils/urlUtils';
 
 function BusinessTile(props) {
-    console.log(props);
-    const onVisitedClick = () => {
-        setVisited(visited + 1)
-    }
-    const [visited, setVisited] = useState(0);
     return (
-        <div className="wrapper">
-            {props.name}
+        <div className='wrapper'>
+            <Link to={`/discover/businessPages/${makeFriendlyURL(props.name)}`}>
+                {props.name}
+            </Link>
             <br></br>
             {props.description}
             <br></br>
-            <div>
-                {visited}
-            </div>
-            <BusinessButton onVisitedClick={onVisitedClick} />
+
         </div>
     )
 }

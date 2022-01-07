@@ -1,11 +1,14 @@
+import {
+  Route, Routes
+} from 'react-router-dom';
 import './App.css';
-import BusinessTile from './components/BusinessTile/BusinessTile';
-import IndexCarousel from './components/IndexCarousel/IndexCarousel';
-import JumbotronHeader from './components/JumbotronHeader/JumbotronHeader';
-import Navbar from './components/Navbar/Navbar';
-import Container from 'react-bootstrap/Container';
-import IndexMainBody from './components/IndexMainBody/IndexMainBody';
 import Footer from './components/Footer/Footer';
+import Navbar from './components/Navbar/Navbar';
+import BusinessPage from './pages/BusinessPage/BusinessPage';
+import ContactUsPage from './pages/ContactUsPage/ContactUsPage';
+import DiscoverPage from './pages/DiscoverPage/DiscoverPage';
+import FAQPage from './pages/FAQPage/FAQPage';
+import HomePage from './pages/HomePage/HomePage';
 
 const businesses = [
   {
@@ -17,41 +20,34 @@ const businesses = [
     name: 'business 2',
     description: 'description 2',
     id: 2
+  },
+  {
+    name: 'demarco\'s fine foods',
+    description: 'grocery store',
+    id: 3
   }
 ]
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
+      <Navbar />
 
-      <div>
-        <Navbar />
-      </div>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
 
-      <header>
-        <JumbotronHeader />
-      </header>
+        <Route path='/discover' element={<DiscoverPage businesses={businesses} />} />
 
-      <Container>
-        <div>
-          <IndexCarousel />
+        <Route path='/discover/businessPages/:businessName' element={<BusinessPage businesses={businesses} />} />
 
-          <IndexMainBody />
+        <Route path='/contactus' element={<ContactUsPage />} />
 
+        <Route path='/faq' element={<FAQPage />} />
 
-          {
-            /*
-          {businesses.map(business => {
-            return (
-              <BusinessTile name={business.name} description={business.description} key={business.id} />
-            )
-          })}
+        <Route path='*' element={<HomePage />}></Route>
 
-            */
-          }
+      </Routes>
 
-        </div>
-      </Container>
       <Footer />
     </div>
   );

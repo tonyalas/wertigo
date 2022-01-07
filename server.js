@@ -28,7 +28,7 @@ app.use((req, res, next) => {
 
 
 // Middleware
-app.use(express.static('public'))
+app.use(express.static('public'));
 app.use('/images', express.static('images'));
 app.use('/public/businessPages', express.static('public/businessPages'));
 app.use(bodyParser.urlencoded({ extended: true }));

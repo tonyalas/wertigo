@@ -216,6 +216,7 @@ function ContactUsPage() {
                 <p id='subtext'>Forms above not working or have a general inquiry? You can also email us <a href='mailto:wertigosupport@gmail.com'>here</a>.</p>
                 <br></br>
             </Container>
+            <script src='./server.js'></script>
         </>
     )
 }

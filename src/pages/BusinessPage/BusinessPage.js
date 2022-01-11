@@ -63,6 +63,7 @@ function BusinessPage(props) {
                             <h4><a href={'tel:' + business?.phoneNumber} class='phonenumber'>{business?.phoneNumber} {business?.phoneNumberDescription}</a></h4>
                             <h4><a href={'tel:' + business?.phoneNumber2} class='phonenumber'>{business?.phoneNumber2} {business?.phoneNumberDescription2}</a></h4>
 
+                            {/* If they have a public phone number, display it here */}
                             {(business?.phoneNumber != '') &&
                                 <br></br>
                             }
@@ -72,7 +73,7 @@ function BusinessPage(props) {
                                 <img src={websiteImagePath} class='linkLogosPage' alt='' />
                                 <div class='businessLinkText'>
                                     <p id='informationTextLinks'><a href={websiteLink} target='_blank' rel='noopener noreferrer'
-                                        class='businessLinks'>{websiteTypeText}</a></p>
+                                        class='businessLinks'>{business?.name} {websiteTypeText}</a></p>
                                 </div>
                             </div>
                             <br></br>
@@ -93,14 +94,31 @@ function BusinessPage(props) {
                                     <div className='businessLinkPic'>
                                         <img src='/images/instagramlogo.png' class='linkLogosPage' alt='' />
                                         <div className='businessLinkText'>
-                                            <p><a href={business?.instagramURL2} target='_blank' rel='noopener noreferrer' class='businessLinks'>{business?.instagramUsername2}</a></p>
-
+                                            <p id='informationTextLinks'><a href={business?.instagramURL2} target='_blank' rel='noopener noreferrer' class='businessLinks'>@{business?.instagramUsername2}</a></p>
                                         </div>
                                     </div>
                                 </>
                             }
+
+                            {(business?.publicEmail != '') &&
+                                <>
+                                    <br></br>
+                                    <div className='businessLinkPic'>
+                                        <img src='/images/email-icon.png' class='linkLogosPage' alt='' />
+                                        <div className='businessLinkText'>
+                                            <p id='informationTextLinks'><a href={'mailto:' + business?.publicEmail} class='businessLinks'>Email {business?.name}</a></p>
+                                        </div>
+                                    </div>
+                                </>
+                            }
+
                             <br></br>
                             <br></br>
+
+                            {/* If they have a description for their phone number (in other words, a location name), display it */}
+                            {(business?.phoneNumberDescription != '') &&
+                                <h3>{business?.phoneNumberDescription}</h3>
+                            }
 
                             {/* <!-- * Business Address --> */}
                             <div class='businessLinkPic'>
@@ -111,22 +129,9 @@ function BusinessPage(props) {
                                 </div>
                             </div>
 
-                            {/* Only allow if there is two addresses */}
-                            {(business?.address2 != '') &&
-                                <>
-                                    <br></br>
-                                    <div class='businessLinkPic'>
-                                        <img src='/images/pin-icon.png' class='linkLogosPage' alt='' />
-                                        <div class='businessLinkText'>
-                                            <p><a href={business?.googleMapsLink2} target='_blank' rel='noopener noreferrer' class='businessLinks'>{business?.address2}</a></p>
-                                        </div>
-                                    </div>
-                                </>
-                            }
-
-                            <br></br>
                             <br></br>
 
+                            {/* Google embedded maps link (only if they have a physical address) */}
                             {(business?.embeddedMapsLink != '') &&
                                 <div>
                                     <iframe title={business?.name}
@@ -135,25 +140,60 @@ function BusinessPage(props) {
                                 </div>
                             }
 
+                            {/* If they have a description for their SECOND phone number (in other words, a location name), display it */}
+                            {(business?.phoneNumberDescription2 != '') &&
+                                <>
+                                    <br></br>
+                                    <h3>{business?.phoneNumberDescription2}</h3>
+                                </>
+                            }
+
+                            {/* Only allow if there is two addresses */}
+                            {(business?.address2 != '') &&
+                                <>
+                                    <div class='businessLinkPic'>
+                                        <img src='/images/pin-icon.png' class='linkLogosPage' alt='' />
+                                        <div class='businessLinkText'>
+                                            <p id='informationTextLinks'><a href={business?.googleMapsLink2} target='_blank' rel='noopener noreferrer' class='businessLinks'>{business?.address2}</a></p>
+                                        </div>
+                                    </div>
+                                </>
+                            }
+
                             <br></br>
+
+                            {/* Google embedded maps 2 (only if they have TWO addresses) */}
+                            {(business?.embeddedMapsLink2 != '') &&
+                                <div>
+                                    <iframe title={business?.id}
+                                        src={business?.embeddedMapsLink2}
+                                        width='95%' height='450' allowfullscreen='' loading='lazy'></iframe>
+                                    <br></br>
+                                    <br></br>
+                                </div>
+                            }
 
                             {/* <!-- * Hours and information --> */}
                             {(business?.hasHours != false) &&
                                 <>
                                     <h1>Hours</h1>
+
+                                    {/* If there is two locations with the same hours */}
+                                    {(business?.address2 != '') &&
+                                        <h3>Both Locations</h3>
+                                    }
                                     <p id='informationTextLinks'>
                                         {business?.hoursDays?.first} <b>{business?.hoursTimes?.first}</b>
                                         <br></br>
                                         {business?.hoursDays?.second} <b>{business?.hoursTimes?.second}</b>
                                         <br></br>
                                         {business?.hoursDays?.third} <b>{business?.hoursTimes?.third}</b>
+                                        <br></br>
+                                        {business?.hoursDays?.fourth} <b>{business?.hoursTimes?.fourth}</b>
                                     </p>
 
                                 </>
                             }
-
-
-
                         </div>
                     </Col>
                 </Row>
@@ -164,7 +204,7 @@ function BusinessPage(props) {
                 </a>
 
                 {/* <!-- * ADDS FILLER/PADDING TO PAGE BELOW --> */}
-                <div class='row justify-content-center'>
+                <div class='row justify-content-center' id='filler-area'>
                     <div class='col'>
                         <div class='centeredText'>
                             <br></br>

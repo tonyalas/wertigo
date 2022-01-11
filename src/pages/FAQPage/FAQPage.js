@@ -1,9 +1,14 @@
 import { Container } from 'react-bootstrap';
 import FAQMainBody from '../../components/FAQMainBody/FAQMainBody';
-import './FAQPage.css'
+import './FAQPage.css';
+import { useEffect } from 'react';
 
 
 function FAQPage() {
+    useEffect(() => {
+        document.title = 'Wertigo - FAQ'
+    }, []);
+
     return (
         <>
             <div className='Jumbotron'>

@@ -1,7 +1,12 @@
 import { Container } from 'react-bootstrap';
-import './ContactUsPage.css'
+import './ContactUsPage.css';
+import { useEffect } from 'react';
 
 function ContactUsPage() {
+    useEffect(() => {
+        document.title = 'Wertigo - Contact Us'
+    }, []);
+
     return (
         <>
             <div className='Jumbotron'>

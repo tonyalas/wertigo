@@ -16,9 +16,9 @@ function DiscoverPage(props) {
             </div>
 
             <Container>
-                <div class='row justify-content-center'>
-                    <div class='col'>
-                        <div class='centeredText'>
+                <div className='row justify-content-center'>
+                    <div className='col'>
+                        <div className='centeredText'>
                             <br></br>
                             <p><b>Want to add your own business? Register <a href='/contactus' target='_blank' rel='noopener noreferrer'>here</a> today!</b></p>
                         </div>

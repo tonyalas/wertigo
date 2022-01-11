@@ -12,7 +12,7 @@ function HomePage() {
             </header>
 
             <Container>
-                <div>
+                <div className='centeredText'>
                     <IndexCarousel />
 
                     <IndexMainBody />

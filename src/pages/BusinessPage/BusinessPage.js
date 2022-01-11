@@ -48,7 +48,7 @@ function BusinessPage(props) {
             <div className='Jumbotron'>
                 <h1>{business?.name}</h1>
                 <br></br>
-                <img class='business_image' src={business?.picturePath} alt='' />
+                <img className='business_image' src={business?.picturePath} alt='' />
             </div>
             <Container>
                 <Row className='justify-content-center'>
@@ -60,8 +60,8 @@ function BusinessPage(props) {
                             <h1>{business?.category}</h1>
                             <h2>{business?.subcategory}</h2>
                             <br></br>
-                            <h4><a href={'tel:' + business?.phoneNumber} class='phonenumber'>{business?.phoneNumber} {business?.phoneNumberDescription}</a></h4>
-                            <h4><a href={'tel:' + business?.phoneNumber2} class='phonenumber'>{business?.phoneNumber2} {business?.phoneNumberDescription2}</a></h4>
+                            <h4><a href={'tel:' + business?.phoneNumber} className='phonenumber'>{business?.phoneNumber} {business?.phoneNumberDescription}</a></h4>
+                            <h4><a href={'tel:' + business?.phoneNumber2} className='phonenumber'>{business?.phoneNumber2} {business?.phoneNumberDescription2}</a></h4>
 
                             {/* If they have a public phone number, display it here */}
                             {(business?.phoneNumber != '') &&
@@ -69,21 +69,21 @@ function BusinessPage(props) {
                             }
 
                             {/* <!-- * Website Link --> */}
-                            <div class='businessLinkPic'>
-                                <img src={websiteImagePath} class='linkLogosPage' alt='' />
-                                <div class='businessLinkText'>
+                            <div className='businessLinkPic'>
+                                <img src={websiteImagePath} className='linkLogosPage' alt='' />
+                                <div className='businessLinkText'>
                                     <p id='informationTextLinks'><a href={websiteLink} target='_blank' rel='noopener noreferrer'
-                                        class='businessLinks'>{business?.name} {websiteTypeText}</a></p>
+                                        className='businessLinks'>{business?.name} {websiteTypeText}</a></p>
                                 </div>
                             </div>
                             <br></br>
 
                             {/* <!-- * Instagram Section --> */}
-                            <div class='businessLinkPic'>
-                                <img src='/images/instagramlogo.png' class='linkLogosPage' alt='' />
-                                <div class='businessLinkText'>
+                            <div className='businessLinkPic'>
+                                <img src='/images/instagramlogo.png' className='linkLogosPage' alt='' />
+                                <div className='businessLinkText'>
                                     <p id='informationTextLinks'><a href={business?.instagramURL} target='_blank'
-                                        rel='noopener noreferrer' class='businessLinks'>@{business?.instagramUsername}</a></p>
+                                        rel='noopener noreferrer' className='businessLinks'>@{business?.instagramUsername}</a></p>
                                 </div>
                             </div>
 
@@ -92,9 +92,9 @@ function BusinessPage(props) {
                                 <>
                                     <br></br>
                                     <div className='businessLinkPic'>
-                                        <img src='/images/instagramlogo.png' class='linkLogosPage' alt='' />
+                                        <img src='/images/instagramlogo.png' className='linkLogosPage' alt='' />
                                         <div className='businessLinkText'>
-                                            <p id='informationTextLinks'><a href={business?.instagramURL2} target='_blank' rel='noopener noreferrer' class='businessLinks'>@{business?.instagramUsername2}</a></p>
+                                            <p id='informationTextLinks'><a href={business?.instagramURL2} target='_blank' rel='noopener noreferrer' className='businessLinks'>@{business?.instagramUsername2}</a></p>
                                         </div>
                                     </div>
                                 </>
@@ -104,9 +104,9 @@ function BusinessPage(props) {
                                 <>
                                     <br></br>
                                     <div className='businessLinkPic'>
-                                        <img src='/images/email-icon.png' class='linkLogosPage' alt='' />
+                                        <img src='/images/email-icon.png' className='linkLogosPage' alt='' />
                                         <div className='businessLinkText'>
-                                            <p id='informationTextLinks'><a href={'mailto:' + business?.publicEmail} class='businessLinks'>Email {business?.name}</a></p>
+                                            <p id='informationTextLinks'><a href={'mailto:' + business?.publicEmail} className='businessLinks'>Email {business?.name}</a></p>
                                         </div>
                                     </div>
                                 </>
@@ -121,11 +121,11 @@ function BusinessPage(props) {
                             }
 
                             {/* <!-- * Business Address --> */}
-                            <div class='businessLinkPic'>
-                                <img src='/images/pin-icon.png' class='linkLogosPage' alt='' />
-                                <div class='businessLinkText'>
+                            <div className='businessLinkPic'>
+                                <img src='/images/pin-icon.png' className='linkLogosPage' alt='' />
+                                <div className='businessLinkText'>
                                     <p id='informationTextLinks'><a href={business?.googleMapsLink}
-                                        target='_blank' rel='noopener noreferrer' class='businessLinks'>{business?.address}</a></p>
+                                        target='_blank' rel='noopener noreferrer' className='businessLinks'>{business?.address}</a></p>
                                 </div>
                             </div>
 
@@ -151,10 +151,10 @@ function BusinessPage(props) {
                             {/* Only allow if there is two addresses */}
                             {(business?.address2 != '') &&
                                 <>
-                                    <div class='businessLinkPic'>
-                                        <img src='/images/pin-icon.png' class='linkLogosPage' alt='' />
-                                        <div class='businessLinkText'>
-                                            <p id='informationTextLinks'><a href={business?.googleMapsLink2} target='_blank' rel='noopener noreferrer' class='businessLinks'>{business?.address2}</a></p>
+                                    <div className='businessLinkPic'>
+                                        <img src='/images/pin-icon.png' className='linkLogosPage' alt='' />
+                                        <div className='businessLinkText'>
+                                            <p id='informationTextLinks'><a href={business?.googleMapsLink2} target='_blank' rel='noopener noreferrer' className='businessLinks'>{business?.address2}</a></p>
                                         </div>
                                     </div>
                                 </>
@@ -199,14 +199,14 @@ function BusinessPage(props) {
                 </Row>
 
                 <br></br>
-                <a href='/discover' class='backToDiscoverLink'>
+                <a href='/discover' className='backToDiscoverLink'>
                     <p>Back to Discover Page</p>
                 </a>
 
                 {/* <!-- * ADDS FILLER/PADDING TO PAGE BELOW --> */}
-                <div class='row justify-content-center' id='filler-area'>
-                    <div class='col'>
-                        <div class='centeredText'>
+                <div className='row justify-content-center' id='filler-area'>
+                    <div className='col'>
+                        <div className='centeredText'>
                             <br></br>
                         </div>
                     </div>

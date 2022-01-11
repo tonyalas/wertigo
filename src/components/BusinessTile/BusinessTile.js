@@ -33,27 +33,27 @@ function BusinessTile(props) {
 
             <h3>{props.category}</h3>
             <h4>{props.subcategory}</h4>
-            <img class='business_image' src={props.picturePath} alt='' />
+            <img className='business_image' src={props.picturePath} alt='' />
             <br></br>
-            <h5><a href={'tel:' + props.phoneNumber} class='phonenumber'>{props.phoneNumber} {props.phoneNumberDescription}</a></h5>
-            <h5><a href={'tel:' + props.phoneNumber2} class='phonenumber'>{props.phoneNumber2} {props.phoneNumberDescription2}</a></h5>
+            <h5><a href={'tel:' + props.phoneNumber} className='phonenumber'>{props.phoneNumber} {props.phoneNumberDescription}</a></h5>
+            <h5><a href={'tel:' + props.phoneNumber2} className='phonenumber'>{props.phoneNumber2} {props.phoneNumberDescription2}</a></h5>
 
             {/* <!-- * Website Link --> */}
-            <div class='businessLinkPic'>
-                <img src={websiteImagePath} class='linkLogos' alt='' />
-                <div class='businessLinkText'>
+            <div className='businessLinkPic'>
+                <img src={websiteImagePath} className='linkLogos' alt='' />
+                <div className='businessLinkText'>
                     <p><a href={websiteLink} target='_blank' rel='noopener noreferrer'
-                        class='businessLinks'>{websiteTypeText}</a></p>
+                        className='businessLinks'>{websiteTypeText}</a></p>
                 </div>
             </div>
 
             <br></br>
             {/* <!-- * Instagram Section --> */}
-            <div class='businessLinkPic'>
-                <img src='/images/instagramlogo.png' class='linkLogos' alt='' />
-                <div class='businessLinkText'>
+            <div className='businessLinkPic'>
+                <img src='/images/instagramlogo.png' className='linkLogos' alt='' />
+                <div className='businessLinkText'>
                     <p><a href={props.instagramURL} target='_blank'
-                        rel='noopener noreferrer' class='businessLinks'>@{props.instagramUsername}</a></p>
+                        rel='noopener noreferrer' className='businessLinks'>@{props.instagramUsername}</a></p>
                 </div>
             </div>
 
@@ -62,9 +62,9 @@ function BusinessTile(props) {
                 <>
                     <br></br>
                     <div className='businessLinkPic'>
-                        <img src='/images/instagramlogo.png' class='linkLogos' alt='' />
+                        <img src='/images/instagramlogo.png' className='linkLogos' alt='' />
                         <div className='businessLinkText'>
-                            <p><a href={props.instagramURL2} target='_blank' rel='noopener noreferrer' class='businessLinks'>{props.instagramUsername2}</a></p>
+                            <p><a href={props.instagramURL2} target='_blank' rel='noopener noreferrer' className='businessLinks'>{props.instagramUsername2}</a></p>
 
                         </div>
                     </div>
@@ -73,11 +73,11 @@ function BusinessTile(props) {
 
             <br></br>
             {/* <!-- * Business Address --> */}
-            <div class='businessLinkPic'>
-                <img src='/images/pin-icon.png' class='linkLogos' alt='' />
-                <div class='businessLinkText'>
+            <div className='businessLinkPic'>
+                <img src='/images/pin-icon.png' className='linkLogos' alt='' />
+                <div className='businessLinkText'>
                     <p><a href={props.googleMapsLink}
-                        target='_blank' rel='noopener noreferrer' class='businessLinks'>{props.address}</a></p>
+                        target='_blank' rel='noopener noreferrer' className='businessLinks'>{props.address}</a></p>
                 </div>
             </div>
 
@@ -85,10 +85,10 @@ function BusinessTile(props) {
             {(props.address2 != '') &&
                 <>
                     <br></br>
-                    <div class='businessLinkPic'>
-                        <img src='/images/pin-icon.png' class='linkLogos' alt='' />
-                        <div class='businessLinkText'>
-                            <p><a href={props.googleMapsLink2} target='_blank' rel='noopener noreferrer' class='businessLinks'>{props.address2}</a></p>
+                    <div className='businessLinkPic'>
+                        <img src='/images/pin-icon.png' className='linkLogos' alt='' />
+                        <div className='businessLinkText'>
+                            <p><a href={props.googleMapsLink2} target='_blank' rel='noopener noreferrer' className='businessLinks'>{props.address2}</a></p>
                         </div>
                     </div>
                 </>

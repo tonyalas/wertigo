@@ -29,7 +29,6 @@ function DiscoverFilterByCategory() {
                         <Accordion.Header><h4 className='subHeader'>Filter Results by Subcategory</h4></Accordion.Header>
                         <Accordion.Body>
                             <p class='filter recentlyadded'>Please select a category from above to see subcategory options.</p>
-
                             <p class='filter restaurant italian mexican chinese fastfood none-button'>Restaurant</p>
                             <p class='filter food sauces cafe deli grocerystore none-button'>Food (Other)</p>
                             <p class='filter bar sportsbar casual highend danceclub none-button'>Bar</p>

@@ -27,7 +27,7 @@ function BusinessTile(props) {
 
         <Col className='col-md-4 border-bottom border-2 item'>
 
-            <Link target='_blank' rel='noopener noreferrer' className='businessHeaderLink' to={`/discover/businessPages/${makeFriendlyURL(props.name)}`}>
+            <Link target='_blank' rel='noopener noreferrer' className='businessHeaderLink' to={`/discover/${makeFriendlyURL(props.name)}`}>
                 <h1>{props.name}</h1>
             </Link>
 

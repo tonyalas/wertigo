@@ -9,13 +9,17 @@ import ptag from '../../pTags'
 function DiscoverPage(props) {
 
     // This will update the Businesses/Business Tiles 
-    const [filterItem, setFilterItem] = useState(props.businesses);
+    const [filterItem, setFilterItem] = useState([]);
     // This will update the Subcategory buttons
     const [filterItemSubButtons, setFilterItemSubButtons] = useState([]);
     // This will update the buttons (not really used in my case)
     const [buttons, setButtons] = useState([]);
     // This SHOULD update the <p> tags inside the Sub Category section
     const [filterPTag, setPTags] = useState([]);
+
+    useEffect(() => {
+        setFilterItem(props.businesses)
+    }, [props.businesses])
 
     useEffect(() => {
         document.title = 'Wertigo - Discover'
@@ -76,20 +80,18 @@ function DiscoverPage(props) {
 
                                 {filterPTag.map(cat => {
                                     return (
-                                        <p>{cat.name}</p>
+                                        <p key={cat.name}>{cat.name}</p>
                                     )
                                 })}
 
                                 <div className='button-section'>
-                                    <button type='button' class='btn btn-secondary category-button filter-button' onClick={() => filter('Recently Added')}>Reset All</button>
+                                    <button type='button' className='btn btn-secondary category-button filter-button' onClick={() => filter('Recently Added')}>Reset All</button>
 
                                     <button className='btn btn-secondary category-button filter-button' onClick={() => filter(filterSubCategory.filteredDataSubCategory)}>None</button>
 
                                     {filterItemSubButtons.map(subButton => {
                                         return (
-                                            <>
-                                                <button className='btn btn-secondary category-button filter-button' onClick={() => filterSubCategory(subButton.subcategory)}>{subButton.subcategory}</button>
-                                            </>
+                                            <button key={subButton.subcategory} className='btn btn-secondary category-button filter-button' onClick={() => filterSubCategory(subButton.subcategory)}>{subButton.subcategory}</button>
                                         )
                                     })}
 

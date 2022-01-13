@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-export default [
+module.exports = [
     {
         id: 1,
         name: 'Nancy Johns Gallery',

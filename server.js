@@ -4,17 +4,32 @@
 // ! If something goes wrong with image uploading, change the <script> tag in contactus.html to link to app.json, comment out the button in the html
 // ! AND inside of package.json, change the start key to "node serverOLD.js". That is all that should be necessary to revert back to how it was before.
 
+const businesses = require('./src/businessesData')
+
 const express = require('express')
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const fs = require('fs')
 const multer = require('multer')
+const cors = require('cors')
 
 require('dotenv').config();
 
 const app = express()
 
-const PORT = process.env.PORT || 3000;
+var allowlist = ['http://localhost:3000']
+var corsOptionsDelegate = function (req, callback) {
+  var corsOptions;
+  if (allowlist.indexOf(req.header('Origin')) !== -1) {
+    corsOptions = { origin: true } // reflect (enable) the requested origin in the CORS response
+  } else {
+    corsOptions = { origin: false } // disable CORS for this request
+  }
+  callback(null, corsOptions) // callback expects two parameters: error and options
+}
+app.use(cors(corsOptionsDelegate))
+
+const PORT = process.env.PORT || 3001;
 
 // COMMENT OUT THIS CODE BLOCK TO WORK LOCALLY. UNCOMMENT IT WHEN PUSHING TO PROD (HEROKU)
 /*
@@ -74,6 +89,10 @@ var upload = multer({
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html ')
+})
+
+app.get('/api/v1/businesses', (req, res) => {
+  res.send(businesses)
 })
 
 app.post('/contactus', (req, res) => {

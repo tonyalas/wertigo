@@ -1,47 +1,43 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default [
     {
-        name: 'Recently Added',
-        description: 'Please select a category from above to see subcategory options.'
-    },
-    {
         name: 'Restaurant',
-        description: 'Restaurant'
+        buttonName: 'None'
     },
     {
         name: 'Food',
-        description: 'Food'
+        buttonName: 'None'
     },
     {
         name: 'Bar',
-        description: 'Bar'
+        buttonName: 'None'
     },
     {
         name: 'Health & Beauty',
-        description: 'Health & Beauty'
+        buttonName: 'None'
     },
     {
         name: 'Shopping',
-        description: 'Shopping'
+        buttonName: 'None'
     },
     {
         name: 'Accessories',
-        description: 'Accessories'
+        buttonName: 'None'
     },
     {
         name: 'Events',
-        description: 'Events'
+        buttonName: 'None'
     },
     {
         name: 'Entertainment',
-        description: 'Entertainment'
+        buttonName: 'None'
     },
     {
         name: 'Automotive',
-        description: 'Automotive'
+        buttonName: 'None'
     },
     {
         name: 'Contractors',
-        description: 'Contractors'
+        buttonName: 'None'
     }
 ]

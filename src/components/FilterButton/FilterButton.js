@@ -1,5 +1,4 @@
 import React from 'react';
-import { Accordion } from 'react-bootstrap';
 import './FilterButton.css'
 
 function FilterButton({ button, filter }) {

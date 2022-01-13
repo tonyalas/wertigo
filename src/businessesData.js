@@ -1,4 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
+// was "export default"
 module.exports = [
     {
         id: 1,

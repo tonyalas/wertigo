@@ -1,7 +1,8 @@
 import React from 'react';
+import { Accordion } from 'react-bootstrap';
 import './FilterButton.css'
 
-function FilterButton({ filter }) {
+function FilterButton({ button, filter }) {
     return (
         <>
             <div className='filter-category-area'>
@@ -31,6 +32,8 @@ function FilterButton({ filter }) {
                 </div>
                 <hr></hr>
             </div>
+
+
         </>
     );
 }

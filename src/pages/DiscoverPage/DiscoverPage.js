@@ -1,32 +1,48 @@
 import { Container, Row } from 'react-bootstrap';
 import BusinessTile from '../../components/BusinessTile/BusinessTile'
-import DiscoverFilterByCategory from '../../components/DiscoverFilterByCategory/DiscoverFilterByCategory';
 import { useEffect, useState } from 'react';
 import FilterButton from '../../components/FilterButton/FilterButton';
+import { Accordion } from 'react-bootstrap';
+import ptag from '../../pTags'
 
 
 function DiscoverPage(props) {
-    //const allCategories = ['All', ...new Set(props.businesses.map(item => item.category))];
-    //const allCategories = ['All', ...props.businesses.map(item => item.category)];
 
-    // console.log(allCategories)
-
+    // This will update the Businesses/Business Tiles 
     const [filterItem, setFilterItem] = useState(props.businesses);
+    // This will update the Subcategory buttons
+    const [filterItemSubButtons, setFilterItemSubButtons] = useState([]);
+    // This will update the buttons (not really used in my case)
     const [buttons, setButtons] = useState([]);
+    // This SHOULD update the <p> tags inside the Sub Category section
+    const [filterPTag, setPTags] = useState([]);
 
     useEffect(() => {
         document.title = 'Wertigo - Discover'
     }, []);
 
+    // This is what will filter out the Business Tiles based on which Button/Category is selected
     const filter = (button) => {
 
         if (button === 'Recently Added') {
             setFilterItem(props.businesses)
+            setFilterItemSubButtons([])
+            setPTags([])
             return;
         }
 
+        // This will grab any Business tiles that meet the criteria (ex: filter chosen) 
         const filteredData = props.businesses.filter(item => item.category === button);
+        const filteredDataTag = ptag.filter(item => item.name === button);
         setFilterItem(filteredData)
+        setFilterItemSubButtons(filteredData)
+        setPTags(filteredDataTag)
+    }
+
+    // This will filter out Business Tiles based on which Subcategory is selected
+    const filterSubCategory = (subButton) => {
+        const filteredDataSubCategory = props.businesses.filter(item => item.subcategory === subButton);
+        setFilterItem(filteredDataSubCategory)
     }
 
     return (
@@ -49,8 +65,40 @@ function DiscoverPage(props) {
 
                 <FilterButton button={buttons} filter={filter} />
 
-                <DiscoverFilterByCategory />
+                <div className='filter-subcategory-area'>
+                    <Accordion flush>
+                        <Accordion.Item eventKey='0'>
+                            <Accordion.Header>
+                                <h4 className='subHeader'>Filter Results by Subcategory</h4>
+                            </Accordion.Header>
+                            <Accordion.Body>
+                                <p>Please select a category from above to see subcategory options.</p>
 
+                                {filterPTag.map(cat => {
+                                    return (
+                                        <p>{cat.name}</p>
+                                    )
+                                })}
+
+                                <div className='button-section'>
+                                    <button type='button' class='btn btn-secondary category-button filter-button' onClick={() => filter('Recently Added')}>Reset All</button>
+
+                                    <button className='btn btn-secondary category-button filter-button' onClick={() => filter(filterSubCategory.filteredDataSubCategory)}>None</button>
+
+                                    {filterItemSubButtons.map(subButton => {
+                                        return (
+                                            <>
+                                                <button className='btn btn-secondary category-button filter-button' onClick={() => filterSubCategory(subButton.subcategory)}>{subButton.subcategory}</button>
+                                            </>
+                                        )
+                                    })}
+
+                                </div>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
+                </div>
+                <hr></hr>
 
                 <div className='discoverDiv'>
                     <Row>

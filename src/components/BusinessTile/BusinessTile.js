@@ -4,7 +4,7 @@ import { makeFriendlyURL } from '../../utils/urlUtils';
 import { Col } from 'react-bootstrap';
 
 
-function BusinessTile(props) {
+function BusinessTile(props, { filterItem }) {
     // This if/else statement will vary depending on whether or not a business has a personal website or just a facebook.
     if (props.websiteURL == '') {
         if (props.etsyURL == '') {

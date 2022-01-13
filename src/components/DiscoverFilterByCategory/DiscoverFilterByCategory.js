@@ -4,7 +4,7 @@ import './DiscoverFilterByCategory.css'
 function DiscoverFilterByCategory() {
     return (
         <>
-            <div className='filter-category-area'>
+            {/* <div className='filter-category-area'>
                 <div className='button-section'>
                     <h3 id='filterResults'>Filter Results by Category</h3>
 
@@ -21,7 +21,7 @@ function DiscoverFilterByCategory() {
                     <button className='btn btn-secondary category-button filter-button' data-filter='contractors'>Contractors</button>
                 </div>
                 <hr></hr>
-            </div>
+            </div> */}
 
             <div className='filter-subcategory-area'>
                 <Accordion flush>

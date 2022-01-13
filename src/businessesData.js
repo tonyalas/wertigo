@@ -289,4 +289,4 @@ export default [
         embeddedMapsLink2: '',
         hasHours: false,
     },
-]
+];

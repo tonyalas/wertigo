@@ -8,7 +8,7 @@ function Footer() {
                 <br></br>
                 <a href='/index' id='footer-links'>Home</a>
                 <a href='/discover' id='footer-links'>Discover</a>
-                <a href='/contactus' id='footer-links'>Contact Us</a>
+                <a href='/contactus' id='footer-links'>Add Your Business</a>
                 <a href='/faq' id='footer-links'>FAQ</a>
                 <br></br>
                 <br></br>

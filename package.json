@@ -21,6 +21,7 @@
     "react": "^17.0.2",
     "react-bootstrap": "^2.1.0",
     "react-dom": "^17.0.2",
+    "react-isotope": "^1.0.7",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "serve": "^13.0.2",
@@ -39,21 +40,32 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-      "extends": ["react-app", "react-app/jest"],
-      "rules": {
-        "eqeqeq": "error"
-      },
-      "overrides": [
-        {
-          "files": ["**/*.js?(x)"],
-          "rules": {
-            "eqeqeq": 0,
-            "quotes": ["warn", "single"],
-            "jsx-quotes": ["warn", "prefer-single"]
-          }
-        }
-      ]
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "eqeqeq": "error"
     },
+    "overrides": [
+      {
+        "files": [
+          "**/*.js?(x)"
+        ],
+        "rules": {
+          "eqeqeq": 0,
+          "quotes": [
+            "warn",
+            "single"
+          ],
+          "jsx-quotes": [
+            "warn",
+            "prefer-single"
+          ]
+        }
+      }
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",

@@ -45,14 +45,23 @@ function DiscoverPage(props) {
         }
 
         setDefaultPTag('')
-        // This will grab any Business tiles that meet the criteria (ex: filter chosen) 
+        // This will grab any Business tiles that match the selected Category (i.e.,: filter chosen) 
         const filteredData = props.businesses.filter(item => item.category === button);
+        // This will get the current <p> tag text content (ex: the little tag that says the same of the category above the subcategory buttons)
         const filteredDataTag = ptag.filter(item => item.name === button);
+        // This will get the appropriate None button based on which category was chosen, and will reset the tiles to the parent category that was initially chosen
         const filteredDataNoneButton = noneButton.filter(item => item.name === button);
+        // This will set the business tiles to show only those under the category that was selected
         setFilterItem(filteredData)
-        setFilterItemSubButtons(filteredData)
+        // This will set the <p> tag
         setPTags(filteredDataTag)
+        // This will set the None button that shows
         setNoneButton(filteredDataNoneButton)
+        // This will create a new set (only unique values) of the Subcategories of the selected Category 
+        const filterSubButtons = [...new Set(filteredData.map(item => item.subcategory))];
+        // This will pass an array of unique Subcategories to the button mapping below so that it will create a new button for each UNIQUE subcategory inside of the parent category.
+        setFilterItemSubButtons(filterSubButtons)
+        //console.log(filterSubButtons)
     }
 
     // This will filter out Business Tiles based on which Subcategory is selected
@@ -112,7 +121,7 @@ function DiscoverPage(props) {
                                     {/* This will show all of the relevant subcategory buttons that are derived from the category that is currently chosen */}
                                     {filterItemSubButtons.map(subButton => {
                                         return (
-                                            <button key={subButton.subcategory} className='btn btn-secondary category-button filter-button' onClick={() => filterSubCategory(subButton.subcategory)}>{subButton.subcategory}</button>
+                                            <button key={subButton} className='btn btn-secondary category-button filter-button' onClick={() => filterSubCategory(subButton)}>{subButton}</button>
                                         )
                                     })}
 

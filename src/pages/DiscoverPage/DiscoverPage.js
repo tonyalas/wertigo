@@ -5,6 +5,7 @@ import FilterButton from '../../components/FilterButton/FilterButton';
 import { Accordion } from 'react-bootstrap';
 import ptag from '../../pTags'
 import noneButton from '../../NoneButtons'
+import './DiscoverPage.css'
 
 
 function DiscoverPage(props) {

@@ -95,7 +95,7 @@ app.get('/api/v1/businesses', (req, res) => {
   res.send(businesses)
 })
 
-app.post('/contactus', (req, res) => {
+app.post('/', (req, res) => {
   console.log(req.body)
 
   upload(req, res, function (err) {
@@ -179,6 +179,7 @@ app.post('/contactus', (req, res) => {
           return res.redirect('/contactformsuccessfullysubmitted.html')
           // this code is technically unreachable since the page will return a different page before it ever gets to this 
           // the code below will delete the image that was just created in the "local system". It is commented out because it causes the user-Recommendation form to break. Heroku automatically clears any locally saved images/files every 24 hours anyway. (or I can manually restart all dynos to wipe the local storage)
+          // eslint-disable-next-line no-unreachable
           if (req.file !== undefined) {
             fs.unlink(path, function (err) {
               if (err) {

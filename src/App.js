@@ -12,7 +12,6 @@ import DiscoverPage from './pages/DiscoverPage/DiscoverPage';
 import FAQPage from './pages/FAQPage/FAQPage';
 import HomePage from './pages/HomePage/HomePage';
 import businessesData from './businessesData';
-import TestContactForm from './pages/ContactUsPage/TestContactForm';
 
 
 function App() {
@@ -32,8 +31,6 @@ function App() {
         <Route path='/discover/businessPages/:businessName' element={<BusinessPage businesses={businesses} />} /> */}
 
         <Route path='/contactus' element={<ContactUsPage />} />
-
-        <Route path='/contact' element={<TestContactForm />} />
 
         <Route path='/faq' element={<FAQPage />} />
 

@@ -1,101 +1,12 @@
-import { Alert, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import './ContactUsPage.css';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-function ContactUsPage() {
+function ContactNodeVer() {
     useEffect(() => {
-        document.title = 'Wertigo - Contact Us'
+        document.title = 'Wertigo - Contact NODE'
     }, []);
 
-    const [status, setStatus] = useState('Submit');
-    const [statusUser, setStatusUser] = useState('Submit');
-    const formRef = useRef()
-    const [formSubmissionStatus, setFormSubmissionStatus] = useState(null);
-    const [formSubmissionUserStatus, setFormSubmissionUserStatus] = useState(null);
-
-    // ! This is the button handler for the Business owner form
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setStatus('Sending...');
-
-        var data = new FormData();
-        var imagedata = document.querySelector('input[type="file"]')
-
-        const { name, email, phoneNumber, privacyCheck, businessName, businessCategory, businessSubcategory, websiteURL, instagramName, otherURL, address, city, postalCode, businessLogoFile, message } = e.target.elements;
-
-
-        data.append('name', name.value);
-        data.append('email', email.value);
-        data.append('phoneNumber', phoneNumber.value);
-        data.append('privacyCheck', privacyCheck.value);
-        data.append('businessName', businessName.value);
-        data.append('businessCategory', businessCategory.value);
-        data.append('businessSubcategory', businessSubcategory.value);
-        data.append('websiteURL', websiteURL.value);
-        data.append('instagramName', instagramName.value);
-        data.append('otherURL', otherURL.value);
-        data.append('address', address.value);
-        data.append('city', city.value);
-        data.append('postalCode', postalCode.value);
-        data.append('businessLogoFile', businessLogoFile.value);
-        data.append('message', message.value);
-        data.append('logoImage', imagedata.files[0]);
-
-        const URL = process.env.REACT_APP_API_URL || ''
-        try {
-            const response = await fetch(URL + '/contact', {
-                method: 'POST',
-                body: data
-            })
-            if (response.status == 200) {
-                setFormSubmissionStatus('success')
-                formRef.current.reset()
-            }
-            else {
-                setFormSubmissionStatus('error')
-            }
-        }
-        catch (e) {
-            setFormSubmissionStatus('error')
-        }
-        setStatus('Submit');
-    };
-
-    // ! This is the button handler for the user recommendation form
-    const handleSubmitUser = async (e) => {
-        e.preventDefault();
-        setStatusUser('Sending...');
-
-        var data = new FormData();
-
-        const { customerName, customerEmail, customerBusinessName, customerMessage } = e.target.elements;
-
-        data.append('customerName', customerName.value);
-        data.append('customerEmail', customerEmail.value);
-        data.append('customerBusinessName', customerBusinessName.value);
-        data.append('customerMessage', customerMessage.value);
-
-        const URL = process.env.REACT_APP_API_URL || ''
-        try {
-            const response = await fetch(URL + '/contact', {
-                method: 'POST',
-                body: data
-            })
-            if (response.status == 200) {
-                setFormSubmissionUserStatus('success')
-                formRef.current.reset()
-            }
-            else {
-                setFormSubmissionUserStatus('error')
-            }
-        }
-        catch (e) {
-            setFormSubmissionUserStatus('error')
-        }
-        setStatusUser('Submit');
-    }
-
-    // ! The actual HTML for the two forms
     return (
         <>
             <div className='Jumbotron'>
@@ -108,19 +19,13 @@ function ContactUsPage() {
                             <h1>Do you own a business?</h1>
                             <p>We want to have you join us! Please fill out the form below and we will act quickly to add your
                                 business to Wertigo.</p>
-                            {formSubmissionStatus == 'success' &&
-                                <Alert variant='success'>Email sent!</Alert>
-                            }
-                            {formSubmissionStatus == 'error' &&
-                                <Alert variant='warning'>Uh oh! Something went wrong. Please try again.</Alert>
-                            }
                         </div>
                     </div>
                 </div>
                 {/* <!-- Section for the first form --> */}
                 <div className='row justify-content-center'>
                     {/* <!-- Contact form for owners of local businesses to contact me --> */}
-                    <form onSubmit={handleSubmit} className='owner-contact-form' encType='multipart/form-data' ref={formRef}>
+                    <form className='owner-contact-form' action='/contact' encType='multipart/form-data'>
                         <div className='form-group'>
                             <div className='row'>
                                 <div className='col-md-4'>
@@ -258,8 +163,8 @@ function ContactUsPage() {
                         </div>
                         <br></br>
                         <div className='centeredText'>
-                            <button type='submit' value='submit' className='btn btn-primary submit' disabled={status == 'Sending...'}>
-                                {status}
+                            <button type='submit' value='submit' className='btn btn-primary submit'>
+                                Submit
                             </button>
                         </div>
                     </form>
@@ -273,19 +178,13 @@ function ContactUsPage() {
                         <div className='centeredText'>
                             <h1>Know someone else with a business?</h1>
                             <p>If you don't own a business yourself, fill out the form below to recommend a local business!</p>
-                            {formSubmissionUserStatus == 'success' &&
-                                <Alert variant='success'>Email sent!</Alert>
-                            }
-                            {formSubmissionUserStatus == 'error' &&
-                                <Alert variant='warning'>Uh oh! Something went wrong. Please try again.</Alert>
-                            }
                         </div>
                     </div>
                 </div>
 
                 {/* <!-- Contact form for other people to nominate local businesses --> */}
                 <div className='row justify-content-center'>
-                    <form className='customer-contact-form' onSubmit={handleSubmitUser} encType='multipart/form-data'>
+                    <form className='customer-contact-form' encType='multipart/form-data'>
                         <div className='form-group'>
                             {/* <!-- Row 1 of Form 2 --> */}
                             <div className='row'>
@@ -303,7 +202,7 @@ function ContactUsPage() {
                         <br></br>
                         {/* <!-- Row 2 of Form 2 --> */}
                         <div className='form-group'>
-                            <input placeholder='Business Name to Recommend*' id='customerBusinessName' name='customerBusinessName' type='text' className='form-control'
+                            <input placeholder='Business Name to Recommend*' id='customerbusinessName' name='customerbusinessName' type='text' className='form-control'
                                 required />
                         </div>
                         <br></br>
@@ -313,8 +212,8 @@ function ContactUsPage() {
                         </div>
                         <br></br>
                         <div className='centeredText'>
-                            <button type='submit' value='submit' className='btn btn-primary' disabled={statusUser == 'Sending...'}>
-                                {statusUser}
+                            <button type='submit' value='submit' className='btn btn-primary'>
+                                Submit
                             </button>
                         </div>
                     </form>
@@ -323,8 +222,23 @@ function ContactUsPage() {
                 <p id='subtext'>Forms above not working or have a general inquiry? You can also email us <a href='mailto:wertigosupport@gmail.com'>here</a>.</p>
                 <br></br>
             </Container>
+            {/* <form onSubmit={handleSubmit}>
+                <div>
+                    <label htmlFor='name'>Name:</label>
+                    <input type='text' id='name' required />
+                </div>
+                <div>
+                    <label htmlFor='email'>Email:</label>
+                    <input type='email' id='email' required />
+                </div>
+                <div>
+                    <label htmlFor='message'>Message:</label>
+                    <textarea id='message' required />
+                </div>
+                <button type='submit'>{status}</button>
+            </form> */}
         </>
     );
 }
 
-export default ContactUsPage;
+export default ContactNodeVer;

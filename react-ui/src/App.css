@@ -1,0 +1,12 @@
+.App {
+  background-color: #eeeeee;
+}
+
+.centeredText {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.phonenumber {
+  text-decoration: none;
+}

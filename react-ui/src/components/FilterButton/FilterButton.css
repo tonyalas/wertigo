@@ -1,0 +1,52 @@
+.filter-category-area {
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.filter-subcategory-area {
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.button-section {
+  padding: 10px;
+  text-align: left;
+}
+
+#filterResults {
+  text-align: left;
+}
+
+.category-button {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.button.accordion-button {
+  color: #2f343f;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #2f343f;
+  background-color: #eeeeee;
+}
+.accordion-button {
+  background-color: #eeeeee;
+  color: #2f343f;
+}
+
+.accordion-body {
+  background-color: #eeeeee;
+}
+
+.accordion-flush .accordion-item .accordion-button {
+  background-color: #eeeeee;
+}
+
+.accordion-item:last-of-type .accordion-button.collapsed {
+  background-color: #eeeeee;
+}
+
+.subHeader {
+  color: #2f343f;
+}

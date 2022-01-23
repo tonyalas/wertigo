@@ -1,0 +1,30 @@
+#informationText {
+  font-size: 24px;
+}
+
+.centeredText {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.block-text {
+  margin: auto;
+  width: 80%;
+}
+
+.phonenumber {
+  text-decoration: none;
+}
+#informationTextLinks {
+  font-size: 18px;
+}
+
+.linkLogosPage {
+  width: 30px;
+  height: 30px;
+}
+
+.backToDiscoverLink {
+  text-decoration: none;
+  color: #2f343f;
+}

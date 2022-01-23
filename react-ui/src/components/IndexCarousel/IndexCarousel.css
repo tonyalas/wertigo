@@ -1,0 +1,9 @@
+.tagline-div h1 {
+  font-size: 48px;
+}
+
+.tagline-div {
+  padding-top: 35px;
+  padding-bottom: 10px;
+  text-align: center;
+}

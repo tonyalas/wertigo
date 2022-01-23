@@ -1,0 +1,21 @@
+.Jumbotron {
+  background-color: #30343e;
+  height: auto;
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.Jumbotron h1 {
+  font-size: 78px;
+}
+
+#wertigo-link {
+  color: white;
+}

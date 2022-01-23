@@ -10,8 +10,37 @@ function ContactUsPage() {
     const [status, setStatus] = useState('Submit');
     const [statusUser, setStatusUser] = useState('Submit');
     const formRef = useRef()
+    const recommendationFormRef = useRef()
     const [formSubmissionStatus, setFormSubmissionStatus] = useState(null);
     const [formSubmissionUserStatus, setFormSubmissionUserStatus] = useState(null);
+
+    useEffect(() => {
+        let timeoutID
+        if (formSubmissionUserStatus == 'success') {
+            timeoutID = setTimeout(() => {
+                setFormSubmissionUserStatus(null);
+            }, 3000)
+        }
+        return () => {
+            if (timeoutID != undefined) {
+                clearTimeout(timeoutID)
+            }
+        }
+    }, [formSubmissionUserStatus])
+
+    useEffect(() => {
+        let timeoutID
+        if (formSubmissionStatus == 'success') {
+            timeoutID = setTimeout(() => {
+                setFormSubmissionStatus(null);
+            }, 3000)
+        }
+        return () => {
+            if (timeoutID != undefined) {
+                clearTimeout(timeoutID)
+            }
+        }
+    }, [formSubmissionStatus])
 
     // ! This is the button handler for the Business owner form
     const handleSubmit = async (e) => {
@@ -83,7 +112,7 @@ function ContactUsPage() {
             })
             if (response.status == 200) {
                 setFormSubmissionUserStatus('success')
-                formRef.current.reset()
+                recommendationFormRef.current.reset()
             }
             else {
                 setFormSubmissionUserStatus('error')
@@ -292,7 +321,7 @@ function ContactUsPage() {
 
                 {/* <!-- Contact form for other people to nominate local businesses --> */}
                 <div className='row justify-content-center'>
-                    <form className='customer-contact-form' onSubmit={handleSubmitUser} encType='multipart/form-data'>
+                    <form className='customer-contact-form' onSubmit={handleSubmitUser} encType='multipart/form-data' ref={recommendationFormRef}>
                         <div className='form-group'>
                             {/* <!-- Row 1 of Form 2 --> */}
                             <div className='row'>

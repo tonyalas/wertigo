@@ -1,0 +1,9 @@
+.block-text {
+  margin: auto;
+  width: 80%;
+  font-size: 18px;
+}
+
+#successButton {
+  margin: 10px;
+}

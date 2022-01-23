@@ -1,0 +1,29 @@
+.indexDiv2 {
+  padding-top: 25px;
+  padding-bottom: 30px;
+}
+
+.getstartednow {
+  padding-bottom: 10px;
+}
+
+.indexDiv3and4 {
+  height: auto;
+  padding: 20px;
+}
+
+.indexDiv5 {
+  height: auto;
+  padding: 20px;
+  padding-bottom: 50px;
+}
+
+.info_text {
+  float: inherit;
+  font-size: 20px;
+}
+
+.vector_image {
+  max-width: 40%;
+  padding-bottom: 10px;
+}

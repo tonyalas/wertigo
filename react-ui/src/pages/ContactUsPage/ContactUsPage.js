@@ -19,7 +19,7 @@ function ContactUsPage() {
         if (formSubmissionUserStatus == 'success') {
             timeoutID = setTimeout(() => {
                 setFormSubmissionUserStatus(null);
-            }, 3000)
+            }, 5000)
         }
         return () => {
             if (timeoutID != undefined) {
@@ -33,7 +33,7 @@ function ContactUsPage() {
         if (formSubmissionStatus == 'success') {
             timeoutID = setTimeout(() => {
                 setFormSubmissionStatus(null);
-            }, 3000)
+            }, 5000)
         }
         return () => {
             if (timeoutID != undefined) {

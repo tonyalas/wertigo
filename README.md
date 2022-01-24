@@ -19,3 +19,7 @@ This is where Wertigo tries to bridge that gap and provide a place to aggregate 
 You can find Wertigo at www.wertigo.ca
 
 ## Launching on January 31, 2022!
+
+Originally written using HTML, CSS and vanilla JavaScript, but was later upgraded to use React.
+
+Followed the tutorial posted here: https://github.com/mars/heroku-cra-node in order to make it work easily with Heroku since React is not natively supported by Heroku. 

@@ -212,7 +212,7 @@ function ContactUsPage() {
                                         <option>Entertainment</option>
                                         <option>Automotive</option>
                                         <option>Contractors</option>
-                                        <option>Other (please specify in textbox below)</option>
+                                        <option>Other (please specify in message box below)</option>
                                     </select>
                                 </div>
                                 <br></br>
@@ -235,8 +235,12 @@ function ContactUsPage() {
                                 <br></br>
                                 <br></br>
                                 <div className='col-md-4'>
-                                    <input placeholder='Instagram Account @ Name' id='instagramName' name='instagramName'
-                                        type='text' className='form-control' />
+                                    <div className='input-group'>
+                                        <div className='input-group-text'>@</div>
+                                        <input placeholder='Instagram Account' id='instagramName' name='instagramName'
+                                            type='text' className='form-control' />
+
+                                    </div>
                                 </div>
                                 <br></br>
                                 <br></br>
@@ -282,7 +286,7 @@ function ContactUsPage() {
                         {/* <!-- * Message section --> */}
                         <br></br>
                         <div className='form-group'>
-                            <textarea placeholder='Have other information (ex: business hours) to let us know? Leave your message here.' id='message'
+                            <textarea placeholder='Have other information (ex: business hours, category not listed) to let us know? Leave your message here.' id='message'
                                 name='message' className='form-control' rows='3'></textarea>
                         </div>
                         <br></br>

@@ -16,6 +16,6 @@ This is where Wertigo tries to bridge that gap and provide a place to aggregate 
 
 ## Website link
 
-You can find Wertigo at https://www.wertigo.ca
+You can find Wertigo at www.wertigo.ca
 
-Currently it is a work in progress, but we aim to deploy to the public within a few months time to get everything just right!
+## Launching on January 31, 2022!

@@ -19,7 +19,7 @@ function IndexMainBody() {
                     </div>
                     <div className='col-md-6'>
                         <h3>Think Local, Live Local</h3>
-                        <p className='info_text'>Support your community by shopping local. Created locally with the community in mind.</p>
+                        <p className='info_text'>Support your community by shopping local. Created locally with the community in mind. Follow us on Instagram <a href='https://www.instagram.com/wertigocanada/' target='_blank' rel='noopener noreferrer'>@wertigocanada</a>!</p>
                     </div>
                 </div>
             </div>

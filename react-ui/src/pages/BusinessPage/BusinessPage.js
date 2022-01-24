@@ -135,7 +135,7 @@ function BusinessPage(props) {
 
                             {/* IF they have a description for their phone number (in other words, a location name), display it */}
                             {(business?.phoneNumberDescription != '') &&
-                                <h3>{business?.phoneNumberDescription}</h3>
+                                <h3>{business?.location1Name} Location</h3>
                             }
 
                             {/* <!-- * Business Address --> */}
@@ -162,7 +162,7 @@ function BusinessPage(props) {
                             {(business?.phoneNumberDescription2 != '') &&
                                 <>
                                     <br></br>
-                                    <h3>{business?.phoneNumberDescription2}</h3>
+                                    <h3>{business?.location2Name} Location</h3>
                                 </>
                             }
 

@@ -191,27 +191,77 @@ function BusinessPage(props) {
                                 </div>
                             }
 
-                            {/* <!-- * Hours and information --> */}
-                            {(business?.hasHours != false) &&
+                            {/* <!-- * IF the business has HOURS (and extra information) --> */}
+                            {(business?.hasHours == true) &&
                                 <>
                                     <h1>Hours</h1>
-
-                                    {/* If there is two locations with the same hours */}
-                                    {(business?.address2 != '') &&
-                                        <h3>Both Locations</h3>
+                                    {/* IF the business has only ONE LOCATION */}
+                                    {(business?.hasMultipleLocations == false) &&
+                                        <p id='informationTextLinks'>
+                                            {business?.hoursDays?.first} <b>{business?.hoursTimes?.first}</b>
+                                            <br></br>
+                                            {business?.hoursDays?.second} <b>{business?.hoursTimes?.second}</b>
+                                            <br></br>
+                                            {business?.hoursDays?.third} <b>{business?.hoursTimes?.third}</b>
+                                            <br></br>
+                                            {business?.hoursDays?.fourth} <b>{business?.hoursTimes?.fourth}</b>
+                                            <br></br>
+                                            {business?.hoursDays?.fifth} <b>{business?.hoursTimes?.fifth}</b>
+                                        </p>
                                     }
-                                    <p id='informationTextLinks'>
-                                        {business?.hoursDays?.first} <b>{business?.hoursTimes?.first}</b>
-                                        <br></br>
-                                        {business?.hoursDays?.second} <b>{business?.hoursTimes?.second}</b>
-                                        <br></br>
-                                        {business?.hoursDays?.third} <b>{business?.hoursTimes?.third}</b>
-                                        <br></br>
-                                        {business?.hoursDays?.fourth} <b>{business?.hoursTimes?.fourth}</b>
-                                        <br></br>
-                                        {business?.hoursDays?.fifth} <b>{business?.hoursTimes?.fifth}</b>
-                                    </p>
 
+                                    {/* IF the business has MULTIPLE LOCATIONS */}
+                                    {(business?.hasMultipleLocations == true) &&
+                                        <>
+                                            {/* IF these 2 (or more) locations have the SAME HOURS */}
+                                            {(business?.locationsHaveDifferentHours != true) &&
+                                                <>
+                                                    <h3>Both Locations</h3>
+                                                    <p id='informationTextLinks'>
+                                                        {business?.hoursDays?.first} <b>{business?.hoursTimes?.first}</b>
+                                                        <br></br>
+                                                        {business?.hoursDays?.second} <b>{business?.hoursTimes?.second}</b>
+                                                        <br></br>
+                                                        {business?.hoursDays?.third} <b>{business?.hoursTimes?.third}</b>
+                                                        <br></br>
+                                                        {business?.hoursDays?.fourth} <b>{business?.hoursTimes?.fourth}</b>
+                                                        <br></br>
+                                                        {business?.hoursDays?.fifth} <b>{business?.hoursTimes?.fifth}</b>
+                                                    </p>
+
+                                                </>
+                                            }
+
+                                            {/* IF BUSINESS HAS 2 LOCATIONS WITH DIFFERENT HOURS */}
+                                            {(business?.locationsHaveDifferentHours == true) &&
+                                                <>
+                                                    {/* DISPLAY FIRST LOCATION'S HOURS HERE */}
+                                                    <h3>{business?.phoneNumberDescription} Location</h3>
+                                                    {business?.hoursDays?.first} <b>{business?.hoursTimes?.first}</b>
+                                                    <br></br>
+                                                    {business?.hoursDays?.second} <b>{business?.hoursTimes?.second}</b>
+                                                    <br></br>
+                                                    {business?.hoursDays?.third} <b>{business?.hoursTimes?.third}</b>
+                                                    <br></br>
+                                                    {business?.hoursDays?.fourth} <b>{business?.hoursTimes?.fourth}</b>
+                                                    <br></br>
+                                                    {business?.hoursDays?.fifth} <b>{business?.hoursTimes?.fifth}</b>
+
+                                                    {/* DISPLAY SECOND LOCATION'S HOURS HERE */}
+                                                    <h3>{business?.phoneNumberDescription2} Location</h3>
+                                                    {business?.hoursDaysLocation2?.first} <b>{business?.hoursTimesLocation2?.first}</b>
+                                                    <br></br>
+                                                    {business?.hoursDaysLocation2?.second} <b>{business?.hoursTimesLocation2?.second}</b>
+                                                    <br></br>
+                                                    {business?.hoursDaysLocation2?.third} <b>{business?.hoursTimesLocation2?.third}</b>
+                                                    <br></br>
+                                                    {business?.hoursDaysLocation2?.fourth} <b>{business?.hoursTimesLocation2?.fourth}</b>
+                                                    <br></br>
+                                                    {business?.hoursDaysLocation2?.fifth} <b>{business?.hoursTimesLocation2?.fifth}</b>
+                                                </>
+                                            }
+                                        </>
+                                    }
                                 </>
                             }
                         </div>
@@ -232,9 +282,6 @@ function BusinessPage(props) {
                     </div>
                 </div>
             </Container>
-
-            {/* {count}
-            <button onClick={() => { setCount(count + 1) }}>Click here</button> */}
         </>
     )
 }

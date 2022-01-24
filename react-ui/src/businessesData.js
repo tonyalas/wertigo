@@ -27,6 +27,8 @@ module.exports = [
         embeddedMapsLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.7601646094004!2d-82.9817573845015!3d42.326313945224655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2b458060690f%3A0x7c27c27b9d2055e5!2sNancy%20Johns%20Gallery%20%26%20Framing!5e0!3m2!1sen!2sca!4v1640644420421!5m2!1sen!2sca',
         embeddedMapsLink2: '',
         hasHours: true,
+        hasMultipleLocations: false,
+        locationsHaveDifferentHours: false,
         hoursDays: {
             first: 'Sunday - Monday:',
             second: 'Tuesday - Friday:',
@@ -64,6 +66,8 @@ module.exports = [
         embeddedMapsLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2952.5018781982026!2d-83.02871048450302!3d42.267808948915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2c2f9c35f17b%3A0xca5d55e263c8fd19!2sDeMarco%27s%20Fine%20Foods!5e0!3m2!1sen!2sca!4v1640657531167!5m2!1sen!2sca',
         embeddedMapsLink2: '',
         hasHours: true,
+        hasMultipleLocations: false,
+        locationsHaveDifferentHours: false,
         hoursDays: {
             first: 'Monday:',
             second: 'Tuesday - Friday:',
@@ -103,6 +107,8 @@ module.exports = [
         embeddedMapsLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.3647072074837!2d-82.84742788450187!3d42.3134193460382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883ad5401226512d%3A0xa36876a3cc69d6f!2sThe%20Cutting%20Board%20Deli%20Tecumseh!5e0!3m2!1sen!2sca!4v1641484812596!5m2!1sen!2sca',
         embeddedMapsLink2: '',
         hasHours: true,
+        hasMultipleLocations: false,
+        locationsHaveDifferentHours: false,
         hoursDays: {
             first: 'Sunday:',
             second: 'Monday:',
@@ -140,6 +146,8 @@ module.exports = [
         embeddedMapsLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.600091739068!2d-82.96589148450194!3d42.308397846355135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2b110046c187%3A0xe07d28ba73f468d2!2s5124%20Tecumseh%20Rd%20E%2C%20Windsor%2C%20ON%20N8T%201C1!5e0!3m2!1sen!2sca!4v1641922926722!5m2!1sen!2sca',
         embeddedMapsLink2: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1080.827644627133!2d-82.89106497451371!3d42.33188205951131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88252ab499f12b47%3A0x291fac191da4736a!2s12325%20Riverside%20Dr%20E%2C%20Windsor%2C%20ON%20N8N%201A3!5e0!3m2!1sen!2sca!4v1641923147011!5m2!1sen!2sca',
         hasHours: true,
+        hasMultipleLocations: true,
+        locationsHaveDifferentHours: false,
         hoursDays: {
             first: 'Sunday:',
             second: 'Monday - Saturday:'
@@ -175,6 +183,8 @@ module.exports = [
         embeddedMapsLink: '',
         embeddedMapsLink2: '',
         hasHours: false,
+        hasMultipleLocations: false,
+        locationsHaveDifferentHours: false,
     },
     {
         id: 6,
@@ -202,6 +212,8 @@ module.exports = [
         embeddedMapsLink: '',
         embeddedMapsLink2: '',
         hasHours: false,
+        hasMultipleLocations: false,
+        locationsHaveDifferentHours: false,
     },
     {
         id: 7,
@@ -229,6 +241,8 @@ module.exports = [
         embeddedMapsLink: '',
         embeddedMapsLink2: '',
         hasHours: false,
+        hasMultipleLocations: false,
+        locationsHaveDifferentHours: false,
     },
     {
         id: 8,
@@ -256,6 +270,8 @@ module.exports = [
         embeddedMapsLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.988050317444!2d-83.00803438070346!3d42.30012040226445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2dea5459de3d%3A0x6e455a62b73c6b8!2sManual%20Therapy%20Clinic!5e0!3m2!1sen!2sca!4v1640657761775!5m2!1sen!2sca',
         embeddedMapsLink2: '',
         hasHours: true,
+        hasMultipleLocations: false,
+        locationsHaveDifferentHours: false,
         hoursDays: {
             first: ''
         },
@@ -289,6 +305,8 @@ module.exports = [
         embeddedMapsLink: '',
         embeddedMapsLink2: '',
         hasHours: false,
+        hasMultipleLocations: false,
+        locationsHaveDifferentHours: false,
     },
     {
         id: 10,
@@ -316,6 +334,8 @@ module.exports = [
         embeddedMapsLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.7505262784157!2d-82.98329128450203!3d42.30518834655751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2b7de132c14f%3A0x2f7136b133287375!2sValantina%20Salon!5e0!3m2!1sen!2sca!4v1642699961748!5m2!1sen!2sca',
         embeddedMapsLink2: '',
         hasHours: true,
+        hasMultipleLocations: false,
+        locationsHaveDifferentHours: false,
         hoursDays: {
             first: 'Sunday - Monday:',
             second: 'Tuesday:',
@@ -329,6 +349,51 @@ module.exports = [
             third: '9:30am to 5:30pm',
             fourth: '9:30am to 7pm',
             fifth: '9:30am to 5pm'
+        },
+    },
+    {
+        id: 11,
+        name: 'The Penalty Box',
+        category: 'Restaurant',
+        subcategory: 'Casual',
+        picturePath: '/images/thepenaltybox.png',
+        description: '',
+        phoneNumber: '519-253-3310',
+        phoneNumberDescription: '(Walker)',
+        phoneNumber2: '226-674-0188',
+        phoneNumberDescription2: '(Cabana) *NEW',
+        publicEmail: 'info@penaltyboxrestaurant.com',
+        websiteURL: 'https://www.penaltyboxwindsor.com',
+        facebookURL: '',
+        etsyURL: '',
+        instagramURL: '',
+        instagramUsername: '',
+        instagramURL2: '',
+        instagramUsername2: '',
+        address: '2151 Walker Rd, Windsor ON, N8W 3P5',
+        googleMapsLink: 'https://goo.gl/maps/UkweVsz3TPfEUp2V7',
+        address2: '525 Cabana Rd E, Windsor ON, N9G 1A5',
+        googleMapsLink2: 'https://goo.gl/maps/WRPDhWdchcAxrrpW6',
+        embeddedMapsLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.909322047103!2d-82.99665078450214!3d42.30180024677136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2c81eb2c074f%3A0xea60afcbcf302f46!2s2151%20Walker%20Rd%2C%20Windsor%2C%20ON%20N8W%201M4!5e0!3m2!1sen!2sca!4v1643043312164!5m2!1sen!2sca',
+        embeddedMapsLink2: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2473.091307932382!2d-82.99714320984192!3d42.25859412767268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2eaa99a73947%3A0x53b241494387e0db!2s525%20Cabana%20Rd%20E%2C%20Windsor%2C%20ON%20N9G%201A5!5e0!3m2!1sen!2sca!4v1643043439583!5m2!1sen!2sca',
+        hasHours: true,
+        hasMultipleLocations: true,
+        locationsHaveDifferentHours: true,
+        hoursDays: {
+            first: 'Sunday:',
+            second: 'Monday - Saturday:'
+        },
+        hoursTimes: {
+            first: 'Closed',
+            second: '10:30am to 8:00pm'
+        },
+        hoursDaysLocation2: {
+            first: 'Sunday - Monday:',
+            second: 'Tuesday - Saturday:'
+        },
+        hoursTimesLocation2: {
+            first: 'Closed',
+            second: '10:30am to 8:00pm'
         },
     },
 ];

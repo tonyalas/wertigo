@@ -144,7 +144,10 @@ function DiscoverPage(props) {
                     </Row>
 
                 </div>
-
+                <div className='centeredText'>
+                    <h3>More businesses to come!</h3>
+                    <br></br>
+                </div>
             </Container>
 
 

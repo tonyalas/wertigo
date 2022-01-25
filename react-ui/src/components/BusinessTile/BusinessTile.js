@@ -5,24 +5,6 @@ import { Col } from 'react-bootstrap';
 
 
 function BusinessTile(props, { filterItem }) {
-    // This if/else statement will vary depending on whether or not a business has a personal website or just a facebook.
-    if (props.websiteURL == '') {
-        if (props.etsyURL == '') {
-            var websiteLink = props.facebookURL
-            var websiteImagePath = '/images/facebook-logo.png'
-            var websiteTypeText = 'Facebook'
-        }
-        else {
-            websiteLink = props.etsyURL
-            websiteImagePath = '/images/etsy-logo.png'
-            websiteTypeText = 'Etsy'
-        }
-    }
-    else {
-        websiteLink = props.websiteURL
-        websiteImagePath = '/images/website_logo.png'
-        websiteTypeText = 'Website'
-    }
     return (
 
         <Col className='col-md-4 border-bottom border-2 item'>
@@ -38,15 +20,46 @@ function BusinessTile(props, { filterItem }) {
             <h5><a href={'tel:' + props.phoneNumber} className='phonenumber'>{props.phoneNumber} {props.phoneNumberDescription}</a></h5>
             <h5><a href={'tel:' + props.phoneNumber2} className='phonenumber'>{props.phoneNumber2} {props.phoneNumberDescription2}</a></h5>
 
-            {/* <!-- * Website Link --> */}
-            <div className='businessLinkPic'>
-                <img src={websiteImagePath} className='linkLogos' alt='' />
-                <div className='businessLinkText'>
-                    <p><a href={websiteLink} target='_blank' rel='noopener noreferrer'
-                        className='businessLinks'>{websiteTypeText}</a></p>
-                </div>
-            </div>
+            {/* <!-- * IF they have a Website Link --> */}
+            {(props.websiteURL != '') &&
+                <>
+                    <div className='businessLinkPic'>
+                        <img src='/images/website_logo.png' className='linkLogos' alt='' />
+                        <div className='businessLinkText'>
+                            <p><a href={props.websiteURL} target='_blank'
+                                rel='noopener noreferrer' className='businessLinks'>Website</a></p>
+                        </div>
+                    </div>
+                </>
+            }
 
+            {/* <!-- * IF they have a Facebook Link --> */}
+            {/* {(props.facebookURL != '') &&
+                <>
+                    <br></br>
+                    <div className='businessLinkPic'>
+                        <img src='/images/facebook-logo.png' className='linkLogos' alt='' />
+                        <div className='businessLinkText'>
+                            <p><a href={props.facebookURL} target='_blank'
+                                rel='noopener noreferrer' className='businessLinks'>Facebook</a></p>
+                        </div>
+                    </div>
+                </>
+            } */}
+
+            {/* <!-- * IF they have an Etsy Link --> */}
+            {(props.etsyURL != '') &&
+                <>
+                    <br></br>
+                    <div className='businessLinkPic'>
+                        <img src='/images/etsy-logo.png' className='linkLogos' alt='' />
+                        <div className='businessLinkText'>
+                            <p><a href={props.etsyURL} target='_blank'
+                                rel='noopener noreferrer' className='businessLinks'>Etsy</a></p>
+                        </div>
+                    </div>
+                </>
+            }
 
             {/* <!-- * Instagram Section --> ONLY SHOW IF THEY HAVE AN INSTAGRAM */}
             {(props.instagramURL != '') &&

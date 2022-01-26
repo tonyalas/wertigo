@@ -2,6 +2,47 @@
 // was "export default"
 module.exports = [
     {
+        id: 21,
+        name: 'Plant Joy',
+        category: 'Food',
+        subcategory: 'Donut Shop',
+        picturePath: '/images/plantjoy.jpg',
+        description: 'Vegan doughnuts made with organic and fair-trade ingredients.',
+        phoneNumber: '226-246-7196',
+        phoneNumberDescription: '',
+        location1Name: '',
+        phoneNumber2: '',
+        phoneNumberDescription2: '',
+        location2Name: '',
+        publicEmail: 'hello@plantjoy.ca',
+        websiteURL: 'https://plantjoy.ca',
+        facebookURL: 'https://www.facebook.com/plantjoyyqg/',
+        etsyURL: '',
+        instagramURL: 'https://www.instagram.com/plantjoyyqg/?hl=en',
+        instagramUsername: 'plantjoyyqg',
+        instagramURL2: '',
+        instagramUsername2: '',
+        address: '5622 Wyandotte St E, Windsor, ON N8S 1M1',
+        googleMapsLink: 'https://goo.gl/maps/BHz5MCnyCRjYRWMH9',
+        address2: '',
+        googleMapsLink2: '',
+        embeddedMapsLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.6524390210666!2d-82.97137958450143!3d42.32861134507962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d0fff65950b%3A0xa93d301a01d032c6!2sPlant%20Joy!5e0!3m2!1sen!2sca!4v1643235038352!5m2!1sen!2sca',
+        embeddedMapsLink2: '',
+        hasHours: true,
+        hasMultipleLocations: false,
+        locationsHaveDifferentHours: false,
+        hoursDays: {
+            first: 'Sunday - Monday:',
+            second: 'Tuesday - Friday:',
+            third: 'Saturday:'
+        },
+        hoursTimes: {
+            first: 'CLOSED',
+            second: '11:00pm to 6:00pm',
+            third: '11:00pm to 5:00pm'
+        },
+    },
+    {
         id: 20,
         name: 'Riverside Pie Cafe',
         category: 'Food',

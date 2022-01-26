@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { makeFriendlyURL } from '../../utils/urlUtils';
 import { Col, Container, Row } from 'react-bootstrap';
 import './BusinessPage.css'
@@ -22,6 +22,7 @@ function BusinessPage(props) {
 
     useEffect(() => {
         document.title = business?.name;
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (

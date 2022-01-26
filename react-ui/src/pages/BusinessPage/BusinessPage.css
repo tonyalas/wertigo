@@ -28,3 +28,16 @@
   text-decoration: none;
   color: #2f343f;
 }
+
+.tableCenter {
+  font-size: 18px;
+}
+
+#days {
+  text-align: left;
+  padding-right: 10px;
+}
+
+#hours {
+  text-align: right;
+}

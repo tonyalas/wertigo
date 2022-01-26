@@ -35,12 +35,11 @@ function BusinessPage(props) {
                 <Row className='justify-content-center'>
                     <Col>
                         <div className='centeredText'>
+                            <h1>{business?.category}</h1>
+                            <h2>{business?.subcategory}</h2>
                             <div className='block-text'>
                                 <p id='informationText'>{business?.description}</p>
                             </div>
-                            <h1>{business?.category}</h1>
-                            <h2>{business?.subcategory}</h2>
-                            <br></br>
                             <h4><a href={'tel:' + business?.phoneNumber} className='phonenumber'>{business?.phoneNumber} {business?.phoneNumberDescription}</a></h4>
                             <h4><a href={'tel:' + business?.phoneNumber2} className='phonenumber'>{business?.phoneNumber2} {business?.phoneNumberDescription2}</a></h4>
 
@@ -228,7 +227,30 @@ function BusinessPage(props) {
                                                         <br></br>
                                                         {business?.hoursDays?.fifth} <b>{business?.hoursTimes?.fifth}</b>
                                                     </p>
-
+                                                    {/* <div className='tableCenter'>
+                                                        <table align='center'>
+                                                            <tr>
+                                                                <td id='days'>{business?.hoursDays?.first}</td>
+                                                                <td id='hours'><b>{business?.hoursTimes?.first}</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td id='days'>{business?.hoursDays?.second}</td>
+                                                                <td id='hours'><b>{business?.hoursTimes?.second}</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td id='days'>{business?.hoursDays?.third}</td>
+                                                                <td id='hours'><b>{business?.hoursTimes?.third}</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td id='days'>{business?.hoursDays?.fourth}</td>
+                                                                <td id='hours'><b>{business?.hoursTimes?.fourth}</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td id='days'>{business?.hoursDays?.fifth}</td>
+                                                                <td id='hours'><b>{business?.hoursTimes?.fifth}</b></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div> */}
                                                 </>
                                             }
 
@@ -237,27 +259,31 @@ function BusinessPage(props) {
                                                 <>
                                                     {/* DISPLAY FIRST LOCATION'S HOURS HERE */}
                                                     <h3>{business?.phoneNumberDescription} Location</h3>
-                                                    {business?.hoursDays?.first} <b>{business?.hoursTimes?.first}</b>
-                                                    <br></br>
-                                                    {business?.hoursDays?.second} <b>{business?.hoursTimes?.second}</b>
-                                                    <br></br>
-                                                    {business?.hoursDays?.third} <b>{business?.hoursTimes?.third}</b>
-                                                    <br></br>
-                                                    {business?.hoursDays?.fourth} <b>{business?.hoursTimes?.fourth}</b>
-                                                    <br></br>
-                                                    {business?.hoursDays?.fifth} <b>{business?.hoursTimes?.fifth}</b>
+                                                    <p id='informationTextLinks'>
+                                                        {business?.hoursDays?.first} <b>{business?.hoursTimes?.first}</b>
+                                                        <br></br>
+                                                        {business?.hoursDays?.second} <b>{business?.hoursTimes?.second}</b>
+                                                        <br></br>
+                                                        {business?.hoursDays?.third} <b>{business?.hoursTimes?.third}</b>
+                                                        <br></br>
+                                                        {business?.hoursDays?.fourth} <b>{business?.hoursTimes?.fourth}</b>
+                                                        <br></br>
+                                                        {business?.hoursDays?.fifth} <b>{business?.hoursTimes?.fifth}</b>
+                                                    </p>
 
                                                     {/* DISPLAY SECOND LOCATION'S HOURS HERE */}
                                                     <h3>{business?.phoneNumberDescription2} Location</h3>
-                                                    {business?.hoursDaysLocation2?.first} <b>{business?.hoursTimesLocation2?.first}</b>
-                                                    <br></br>
-                                                    {business?.hoursDaysLocation2?.second} <b>{business?.hoursTimesLocation2?.second}</b>
-                                                    <br></br>
-                                                    {business?.hoursDaysLocation2?.third} <b>{business?.hoursTimesLocation2?.third}</b>
-                                                    <br></br>
-                                                    {business?.hoursDaysLocation2?.fourth} <b>{business?.hoursTimesLocation2?.fourth}</b>
-                                                    <br></br>
-                                                    {business?.hoursDaysLocation2?.fifth} <b>{business?.hoursTimesLocation2?.fifth}</b>
+                                                    <p id='informationTextLinks'>
+                                                        {business?.hoursDaysLocation2?.first} <b>{business?.hoursTimesLocation2?.first}</b>
+                                                        <br></br>
+                                                        {business?.hoursDaysLocation2?.second} <b>{business?.hoursTimesLocation2?.second}</b>
+                                                        <br></br>
+                                                        {business?.hoursDaysLocation2?.third} <b>{business?.hoursTimesLocation2?.third}</b>
+                                                        <br></br>
+                                                        {business?.hoursDaysLocation2?.fourth} <b>{business?.hoursTimesLocation2?.fourth}</b>
+                                                        <br></br>
+                                                        {business?.hoursDaysLocation2?.fifth} <b>{business?.hoursTimesLocation2?.fifth}</b>
+                                                    </p>
                                                 </>
                                             }
                                         </>

@@ -128,9 +128,18 @@ function ContactUsPage() {
     return (
         <>
             <div className='Jumbotron'>
-                <h1>Contact Us</h1>
+                <h1>Add Your Business</h1>
             </div>
             <Container>
+                <div className='row justify-content-center'>
+                    <div className='col'>
+                        <div className='centeredText'>
+                            <br></br>
+                            <p><b>Get started on discovering local businesses <a href='/discover' target='_blank' rel='noopener noreferrer'>here</a> today!</b></p>
+                        </div>
+                    </div>
+                </div>
+                <hr></hr>
                 <div className='row justify-content-center'>
                     <div className='col'>
                         <div className='centeredText'>

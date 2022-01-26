@@ -10,6 +10,11 @@ import './DiscoverPage.css'
 
 function DiscoverPage(props) {
 
+    // var today = new Date()
+    // var time = today.getHours() + ':' + today.getMinutes()
+    // //var time = today.toLocaleString([], { hour12: true });
+    // console.log(time)
+
     // This will update the Businesses/Business Tiles section
     const [filterItem, setFilterItem] = useState([]);
     // This will update the Subcategory buttons

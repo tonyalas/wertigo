@@ -2,6 +2,43 @@
 // was "export default"
 module.exports = [
     {
+        id: 24,
+        name: 'Anchor Coffee House',
+        category: 'Food',
+        subcategory: 'Coffee Shop',
+        picturePath: '/images/anchor.png',
+        description: 'Anchor is a locally owned and operated cafe and bakery. We\'re proud to carry a variety of Canadian coffee roasters and bake everything in house. We have a limited breakfast and lunch menu and also offer catering and home delivery.',
+        phoneNumber: '519-915-0626',
+        phoneNumberDescription: '',
+        location1Name: '',
+        phoneNumber2: '',
+        phoneNumberDescription2: '',
+        location2Name: '',
+        publicEmail: 'info@anchorcoffeehouse.com',
+        websiteURL: 'https://www.anchorcoffeehouse.com',
+        facebookURL: 'https://www.facebook.com/Anchor-Coffee-House-176585555847820',
+        etsyURL: '',
+        instagramURL: 'https://www.instagram.com/anchorcoffeehouse/?hl=en',
+        instagramUsername: 'anchorcoffeehouse',
+        instagramURL2: '',
+        instagramUsername2: '',
+        address: '543 Lincoln Rd, Windsor, ON N8Y 2G6',
+        googleMapsLink: 'https://goo.gl/maps/SNsFCCJ7CSLJ7J4D6',
+        address2: '',
+        googleMapsLink2: '',
+        embeddedMapsLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.9579914671044!2d-83.01854358450156!3d42.322094745490865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2cc0ee648997%3A0x653df15f48bfce2e!2sAnchor%20Coffee%20House!5e0!3m2!1sen!2sca!4v1643320725111!5m2!1sen!2sca',
+        embeddedMapsLink2: '',
+        hasHours: true,
+        hasMultipleLocations: false,
+        locationsHaveDifferentHours: false,
+        hoursDays: {
+            first: 'Every day of the week:'
+        },
+        hoursTimes: {
+            first: '9:00am to 3:00pm'
+        },
+    },
+    {
         id: 23,
         name: 'Michael Difazio Reclaim Artistry',
         category: 'Shopping',

@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { makeFriendlyURL } from '../../utils/urlUtils';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row, Table } from 'react-bootstrap';
 import './BusinessPage.css'
 
 function BusinessPage(props) {
@@ -197,17 +197,51 @@ function BusinessPage(props) {
                                     <h1>Hours</h1>
                                     {/* IF the business has only ONE LOCATION */}
                                     {(business?.hasMultipleLocations == false) &&
-                                        <p id='informationTextLinks'>
-                                            {business?.hoursDays?.first} <b>{business?.hoursTimes?.first}</b>
-                                            <br></br>
-                                            {business?.hoursDays?.second} <b>{business?.hoursTimes?.second}</b>
-                                            <br></br>
-                                            {business?.hoursDays?.third} <b>{business?.hoursTimes?.third}</b>
-                                            <br></br>
-                                            {business?.hoursDays?.fourth} <b>{business?.hoursTimes?.fourth}</b>
-                                            <br></br>
-                                            {business?.hoursDays?.fifth} <b>{business?.hoursTimes?.fifth}</b>
-                                        </p>
+                                        <>
+                                            {/* <p id='informationTextLinks'>
+                                                {business?.hoursDays?.first} <b>{business?.hoursTimes?.first}</b>
+                                                <br></br>
+                                                {business?.hoursDays?.second} <b>{business?.hoursTimes?.second}</b>
+                                                <br></br>
+                                                {business?.hoursDays?.third} <b>{business?.hoursTimes?.third}</b>
+                                                <br></br>
+                                                {business?.hoursDays?.fourth} <b>{business?.hoursTimes?.fourth}</b>
+                                                <br></br>
+                                                {business?.hoursDays?.fifth} <b>{business?.hoursTimes?.fifth}</b>
+                                            </p> */}
+                                            <Table striped bordered>
+                                                <tbody>
+                                                    <tr>
+                                                        <td id='days'>{business?.hoursDays?.first}</td>
+                                                        <td id='hours'><b>{business?.hoursTimes?.first}</b></td>
+                                                    </tr>
+                                                    {(business?.hoursDays?.second != null) &&
+                                                        <tr>
+                                                            <td id='days'>{business?.hoursDays?.second}</td>
+                                                            <td id='hours'><b>{business?.hoursTimes?.second}</b></td>
+                                                        </tr>
+                                                    }
+                                                    {(business?.hoursDays?.third != null) &&
+                                                        <tr>
+                                                            <td id='days'>{business?.hoursDays?.third}</td>
+                                                            <td id='hours'><b>{business?.hoursTimes?.third}</b></td>
+                                                        </tr>
+                                                    }
+                                                    {(business?.hoursDays?.fourth != null) &&
+                                                        <tr>
+                                                            <td id='days'>{business?.hoursDays?.fourth}</td>
+                                                            <td id='hours'><b>{business?.hoursTimes?.fourth}</b></td>
+                                                        </tr>
+                                                    }
+                                                    {(business?.hoursDays?.fifth != null) &&
+                                                        <tr>
+                                                            <td id='days'>{business?.hoursDays?.fifth}</td>
+                                                            <td id='hours'><b>{business?.hoursTimes?.fifth}</b></td>
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </Table>
+                                        </>
                                     }
 
                                     {/* IF the business has MULTIPLE LOCATIONS */}
@@ -217,7 +251,7 @@ function BusinessPage(props) {
                                             {(business?.locationsHaveDifferentHours != true) &&
                                                 <>
                                                     <h3>Both Locations</h3>
-                                                    <p id='informationTextLinks'>
+                                                    {/* <p id='informationTextLinks'>
                                                         {business?.hoursDays?.first} <b>{business?.hoursTimes?.first}</b>
                                                         <br></br>
                                                         {business?.hoursDays?.second} <b>{business?.hoursTimes?.second}</b>
@@ -227,31 +261,39 @@ function BusinessPage(props) {
                                                         {business?.hoursDays?.fourth} <b>{business?.hoursTimes?.fourth}</b>
                                                         <br></br>
                                                         {business?.hoursDays?.fifth} <b>{business?.hoursTimes?.fifth}</b>
-                                                    </p>
-                                                    {/* <div className='tableCenter'>
-                                                        <table align='center'>
+                                                    </p> */}
+                                                    <Table striped bordered>
+                                                        <tbody>
                                                             <tr>
                                                                 <td id='days'>{business?.hoursDays?.first}</td>
                                                                 <td id='hours'><b>{business?.hoursTimes?.first}</b></td>
                                                             </tr>
-                                                            <tr>
-                                                                <td id='days'>{business?.hoursDays?.second}</td>
-                                                                <td id='hours'><b>{business?.hoursTimes?.second}</b></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td id='days'>{business?.hoursDays?.third}</td>
-                                                                <td id='hours'><b>{business?.hoursTimes?.third}</b></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td id='days'>{business?.hoursDays?.fourth}</td>
-                                                                <td id='hours'><b>{business?.hoursTimes?.fourth}</b></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td id='days'>{business?.hoursDays?.fifth}</td>
-                                                                <td id='hours'><b>{business?.hoursTimes?.fifth}</b></td>
-                                                            </tr>
-                                                        </table>
-                                                    </div> */}
+                                                            {(business?.hoursDays?.second != null) &&
+                                                                <tr>
+                                                                    <td id='days'>{business?.hoursDays?.second}</td>
+                                                                    <td id='hours'><b>{business?.hoursTimes?.second}</b></td>
+                                                                </tr>
+                                                            }
+                                                            {(business?.hoursDays?.third != null) &&
+                                                                <tr>
+                                                                    <td id='days'>{business?.hoursDays?.third}</td>
+                                                                    <td id='hours'><b>{business?.hoursTimes?.third}</b></td>
+                                                                </tr>
+                                                            }
+                                                            {(business?.hoursDays?.fourth != null) &&
+                                                                <tr>
+                                                                    <td id='days'>{business?.hoursDays?.fourth}</td>
+                                                                    <td id='hours'><b>{business?.hoursTimes?.fourth}</b></td>
+                                                                </tr>
+                                                            }
+                                                            {(business?.hoursDays?.fifth != null) &&
+                                                                <tr>
+                                                                    <td id='days'>{business?.hoursDays?.fifth}</td>
+                                                                    <td id='hours'><b>{business?.hoursTimes?.fifth}</b></td>
+                                                                </tr>
+                                                            }
+                                                        </tbody>
+                                                    </Table>
                                                 </>
                                             }
 
@@ -260,7 +302,7 @@ function BusinessPage(props) {
                                                 <>
                                                     {/* DISPLAY FIRST LOCATION'S HOURS HERE */}
                                                     <h3>{business?.phoneNumberDescription} Location</h3>
-                                                    <p id='informationTextLinks'>
+                                                    {/* <p id='informationTextLinks'>
                                                         {business?.hoursDays?.first} <b>{business?.hoursTimes?.first}</b>
                                                         <br></br>
                                                         {business?.hoursDays?.second} <b>{business?.hoursTimes?.second}</b>
@@ -270,11 +312,43 @@ function BusinessPage(props) {
                                                         {business?.hoursDays?.fourth} <b>{business?.hoursTimes?.fourth}</b>
                                                         <br></br>
                                                         {business?.hoursDays?.fifth} <b>{business?.hoursTimes?.fifth}</b>
-                                                    </p>
+                                                    </p> */}
+                                                    <Table striped bordered>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td id='days'>{business?.hoursDays?.first}</td>
+                                                                <td id='hours'><b>{business?.hoursTimes?.first}</b></td>
+                                                            </tr>
+                                                            {(business?.hoursDays?.second != null) &&
+                                                                <tr>
+                                                                    <td id='days'>{business?.hoursDays?.second}</td>
+                                                                    <td id='hours'><b>{business?.hoursTimes?.second}</b></td>
+                                                                </tr>
+                                                            }
+                                                            {(business?.hoursDays?.third != null) &&
+                                                                <tr>
+                                                                    <td id='days'>{business?.hoursDays?.third}</td>
+                                                                    <td id='hours'><b>{business?.hoursTimes?.third}</b></td>
+                                                                </tr>
+                                                            }
+                                                            {(business?.hoursDays?.fourth != null) &&
+                                                                <tr>
+                                                                    <td id='days'>{business?.hoursDays?.fourth}</td>
+                                                                    <td id='hours'><b>{business?.hoursTimes?.fourth}</b></td>
+                                                                </tr>
+                                                            }
+                                                            {(business?.hoursDays?.fifth != null) &&
+                                                                <tr>
+                                                                    <td id='days'>{business?.hoursDays?.fifth}</td>
+                                                                    <td id='hours'><b>{business?.hoursTimes?.fifth}</b></td>
+                                                                </tr>
+                                                            }
+                                                        </tbody>
+                                                    </Table>
 
                                                     {/* DISPLAY SECOND LOCATION'S HOURS HERE */}
                                                     <h3>{business?.phoneNumberDescription2} Location</h3>
-                                                    <p id='informationTextLinks'>
+                                                    {/* <p id='informationTextLinks'>
                                                         {business?.hoursDaysLocation2?.first} <b>{business?.hoursTimesLocation2?.first}</b>
                                                         <br></br>
                                                         {business?.hoursDaysLocation2?.second} <b>{business?.hoursTimesLocation2?.second}</b>
@@ -284,7 +358,39 @@ function BusinessPage(props) {
                                                         {business?.hoursDaysLocation2?.fourth} <b>{business?.hoursTimesLocation2?.fourth}</b>
                                                         <br></br>
                                                         {business?.hoursDaysLocation2?.fifth} <b>{business?.hoursTimesLocation2?.fifth}</b>
-                                                    </p>
+                                                    </p> */}
+                                                    <Table striped bordered>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td id='days'>{business?.hoursDaysLocation2?.first}</td>
+                                                                <td id='hours'><b>{business?.hoursTimesLocation2?.first}</b></td>
+                                                            </tr>
+                                                            {(business?.hoursDaysLocation2?.second != null) &&
+                                                                <tr>
+                                                                    <td id='days'>{business?.hoursDaysLocation2?.second}</td>
+                                                                    <td id='hours'><b>{business?.hoursTimesLocation2?.second}</b></td>
+                                                                </tr>
+                                                            }
+                                                            {(business?.hoursDaysLocation2?.third != null) &&
+                                                                <tr>
+                                                                    <td id='days'>{business?.hoursDaysLocation2?.third}</td>
+                                                                    <td id='hours'><b>{business?.hoursTimesLocation2?.third}</b></td>
+                                                                </tr>
+                                                            }
+                                                            {(business?.hoursDaysLocation2?.fourth != null) &&
+                                                                <tr>
+                                                                    <td id='days'>{business?.hoursDaysLocation2?.fourth}</td>
+                                                                    <td id='hours'><b>{business?.hoursTimesLocation2?.fourth}</b></td>
+                                                                </tr>
+                                                            }
+                                                            {(business?.hoursDaysLocation2?.fifth != null) &&
+                                                                <tr>
+                                                                    <td id='days'>{business?.hoursDaysLocation2?.fifth}</td>
+                                                                    <td id='hours'><b>{business?.hoursTimesLocation2?.fifth}</b></td>
+                                                                </tr>
+                                                            }
+                                                        </tbody>
+                                                    </Table>
                                                 </>
                                             }
                                         </>

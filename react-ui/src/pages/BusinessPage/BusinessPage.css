@@ -33,11 +33,22 @@
   font-size: 18px;
 }
 
+.hoursTable {
+  padding: 5px;
+}
+
 #days {
-  text-align: left;
-  padding-right: 10px;
+  font-size: 18px;
 }
 
 #hours {
-  text-align: right;
+  font-size: 18px;
+}
+
+.table td {
+  padding: 10px;
+}
+
+.table th {
+  padding: 10px;
 }

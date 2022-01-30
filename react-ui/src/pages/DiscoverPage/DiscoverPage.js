@@ -10,15 +10,12 @@ import './DiscoverPage.css'
 
 function DiscoverPage(props) {
 
-    // var today = new Date()
-    // var time = today.getHours() + ':' + today.getMinutes()
-    // //var time = today.toLocaleString([], { hour12: true });
-    // console.log(time)
-
     // This will update the Businesses/Business Tiles section
     const [filterItem, setFilterItem] = useState([]);
     // This will update the Subcategory buttons
     const [filterItemSubButtons, setFilterItemSubButtons] = useState([]);
+    // This will keep track of which category is chosen/clicked on (used in the filterOpenNow function)
+    const [categoryChosen, setCategoryChosen] = useState([]);
     // This will update the buttons (not really used in my case)
     // eslint-disable-next-line no-unused-vars
     const [buttons, setButtons] = useState([]);
@@ -46,6 +43,7 @@ function DiscoverPage(props) {
             setFilterItemSubButtons([])
             setPTags([])
             setNoneButton([])
+            setCategoryChosen('Recently Added')
             setDefaultPTag('Please select a category from above to see subcategory options.')
             return;
         }
@@ -53,6 +51,10 @@ function DiscoverPage(props) {
         setDefaultPTag('')
         // This will grab any Business tiles that match the selected Category (i.e.,: filter chosen) 
         const filteredData = props.businesses.filter(item => item.category === button);
+
+        // This will update which category is chosen and keep track of it
+        setCategoryChosen(button)
+
         // This will get the current <p> tag text content (ex: the little tag that says the same of the category above the subcategory buttons)
         const filteredDataTag = ptag.filter(item => item.name === button);
         // This will get the appropriate None button based on which category was chosen, and will reset the tiles to the parent category that was initially chosen
@@ -74,6 +76,65 @@ function DiscoverPage(props) {
     const filterSubCategory = (subButton) => {
         const filteredDataSubCategory = props.businesses.filter(item => item.subcategory === subButton);
         setFilterItem(filteredDataSubCategory)
+    }
+
+
+    function filterOpenNow() {
+        var today = new Date()
+        var time = today.getHours() + ':' + today.getMinutes()
+        var dayOfTheWeek = today.getDay()
+        console.log(time)
+        console.log(dayOfTheWeek)
+        console.log(categoryChosen)
+
+        // ! The current problem is that when "Recently Added" is clicked again and you try to click the open now button, it will default to showing nothing instead of all of the open now stores
+
+        // if it is SUNDAY
+        if (dayOfTheWeek == 0) {
+            console.log('Today is Sunday')
+            //var tempTime = new Date()
+            //tempTime.setHours(1, 59, 0)
+            //var fakeTime = tempTime.getHours() + ':' + tempTime.getMinutes()
+            //console.log('test ' + fakeTime)
+            const filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.sunday && item.category === categoryChosen && item.closingHours.sunday != 'Closed')
+            setFilterItem(filteredDataOpenNow)
+        }
+        // if it is MONDAY
+        if (dayOfTheWeek == 1) {
+            console.log('Today is Monday')
+            const filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.monday && item.category === categoryChosen && item.closingHours.monday != 'Closed')
+            setFilterItem(filteredDataOpenNow)
+        }
+        // if it is TUESDAY
+        if (dayOfTheWeek == 2) {
+            console.log('Today is Tuesday')
+            const filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.tuesday && item.category === categoryChosen && item.closingHours.tuesday != 'Closed')
+            setFilterItem(filteredDataOpenNow)
+        }
+        // if it is WEDNESDAY
+        if (dayOfTheWeek == 3) {
+            console.log('Today is Wednesday')
+            const filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.wednesday && item.category === categoryChosen && item.closingHours.wednesday != 'Closed')
+            setFilterItem(filteredDataOpenNow)
+        }
+        // if it is THURSDAY
+        if (dayOfTheWeek == 4) {
+            console.log('Today is Thursday')
+            const filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.thursday && item.category === categoryChosen && item.closingHours.thursday != 'Closed')
+            setFilterItem(filteredDataOpenNow)
+        }
+        // if it is FRIDAY
+        if (dayOfTheWeek == 5) {
+            console.log('Today is Friday')
+            const filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.friday && item.category === categoryChosen && item.closingHours.friday != 'Closed')
+            setFilterItem(filteredDataOpenNow)
+        }
+        // if it is SATURDAY
+        if (dayOfTheWeek == 6) {
+            console.log('Today is Saturday')
+            const filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.saturday && item.category === categoryChosen && item.closingHours.saturday != 'Closed')
+            setFilterItem(filteredDataOpenNow)
+        }
     }
 
     return (
@@ -115,12 +176,15 @@ function DiscoverPage(props) {
                                     })}
 
                                     {/* This is a static "Reset All" button that does not change regardless of the category or subcategory chosen */}
-                                    <button type='button' className='btn btn-secondary category-button filter-button' onClick={() => filter('Recently Added')}>Reset All</button>
+                                    <button type='button' className='btn btn-warning category-button filter-button' onClick={() => filter('Recently Added')}>Reset All</button>
+
+                                    {/* This is a static "Open Now" button that does not change regardless of the category or subcategory chosen
+                                    <button type='button' className='btn btn-success category-button filter-button' onClick={() => filterOpenNow()}>Open Now</button> */}
 
                                     {/* This will show a "None" button that will reset any subcategory filters to show all of the tiles of the same category */}
                                     {filterNoneButtons.map(cat => {
                                         return (
-                                            <button key={cat.name} className='btn btn-secondary category-button filter-button' onClick={() => filter(cat.name)}>None</button>
+                                            <button key={cat.name} className='btn btn-danger category-button filter-button' onClick={() => filter(cat.name)}>None</button>
                                         )
                                     })}
 

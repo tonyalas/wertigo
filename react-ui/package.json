@@ -1,6 +1,6 @@
 {
   "name": "wertigo",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A website for finding local places, new and old!",
   "private": true,
   "dependencies": {

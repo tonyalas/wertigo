@@ -128,7 +128,7 @@ function ContactUsPage() {
     return (
         <>
             <div className='Jumbotron'>
-                <h1>Add Your Business</h1>
+                <h1>Contact Us</h1>
             </div>
             <Container>
                 <div className='row justify-content-center'>

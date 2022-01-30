@@ -11,6 +11,7 @@ import ContactUsPage from './pages/ContactUsPage/ContactUsPage';
 import DiscoverPage from './pages/DiscoverPage/DiscoverPage';
 import FAQPage from './pages/FAQPage/FAQPage';
 import HomePage from './pages/HomePage/HomePage';
+import WhatsNewPage from './pages/WhatsNewPage/WhatsNewPage';
 import businessesData from './businessesData';
 
 
@@ -33,6 +34,8 @@ function App() {
         <Route path='/contactus' element={<ContactUsPage />} />
 
         <Route path='/faq' element={<FAQPage />} />
+
+        <Route path='/whatsnew' element={<WhatsNewPage />} />
 
         <Route path='/contactformsuccess' element={<ContactFormSuccess />} />
 

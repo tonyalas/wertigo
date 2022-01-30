@@ -37,6 +37,24 @@ module.exports = [
         hoursTimes: {
             first: '9:00am to 3:00pm'
         },
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '12:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
     },
     {
         id: 23,
@@ -79,6 +97,24 @@ module.exports = [
             second: 'CLOSED',
             third: '8:00am to 5:00pm',
             fourth: '10:00am to 2:00pm'
+        },
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
         },
     },
     {
@@ -125,6 +161,24 @@ module.exports = [
             fourth: '10:00am to 7:00pm',
             fifth: '10:00am to 6:00pm'
         },
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '17:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '3:00'
+        },
     },
     {
         id: 21,
@@ -165,6 +219,24 @@ module.exports = [
             first: 'CLOSED',
             second: '11:00pm to 6:00pm',
             third: '11:00pm to 5:00pm'
+        },
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
         },
     },
     {
@@ -207,6 +279,24 @@ module.exports = [
             second: '10:00am to 6:00pm',
             third: '10:00am to 4:00pm'
         },
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
     },
     {
         id: 19,
@@ -247,6 +337,24 @@ module.exports = [
             first: 'CLOSED',
             second: '11:00am to 7:00pm',
             third: '11:00am to 4:00pm'
+        },
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
         },
     },
     {
@@ -289,6 +397,24 @@ module.exports = [
             second: '10:00am to 5:00pm',
             third: '12:00pm to 4:00pm'
         },
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
     },
     {
         id: 17,
@@ -330,6 +456,24 @@ module.exports = [
             second: '8:30am to 1:00pm',
             third: '8:30am to 4:00pm'
         },
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
     },
     {
         id: 16,
@@ -366,6 +510,24 @@ module.exports = [
         },
         hoursTimes: {
             first: '4:00pm to 10:00pm'
+        },
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
         },
     },
     {
@@ -405,6 +567,24 @@ module.exports = [
         hoursTimes: {
             first: 'CLOSED',
             second: '11:00am to 9:00pm'
+        },
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
         },
     },
     {
@@ -453,6 +633,24 @@ module.exports = [
             first: '3:30pm to 9:00pm',
             second: '3:30pm to 11:00pm'
         },
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
     },
     {
         id: 13,
@@ -491,6 +689,24 @@ module.exports = [
         hoursTimes: {
             first: '4:00pm to 11:00pm',
             second: '11:30am to 11:00pm'
+        },
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
         },
     },
     {
@@ -539,6 +755,24 @@ module.exports = [
             first: 'Closed',
             second: '10:30am to 8:00pm'
         },
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
     },
     {
         id: 11,
@@ -581,6 +815,24 @@ module.exports = [
             second: '11:00am to 9:00pm',
             third: '11:00am to 10:00pm',
             fourth: '11:00am to 11:00pm'
+        },
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
         },
     },
     {
@@ -627,6 +879,24 @@ module.exports = [
             fourth: '9:30am to 7:00pm',
             fifth: '9:30am to 5:00pm'
         },
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
     },
     {
         id: 1,
@@ -667,6 +937,24 @@ module.exports = [
             first: 'Closed',
             second: '10:00am to 6:00pm',
             third: '10:00am to 4:00pm'
+        },
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
         },
     },
     {
@@ -710,7 +998,25 @@ module.exports = [
             second: '10:00am to 6:00pm',
             third: '10:00am to 5:00pm',
             fourth: '10:00am to 3:00pm',
-        }
+        },
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
     },
     {
         id: 3,
@@ -752,6 +1058,24 @@ module.exports = [
             second: 'Closed',
             third: '10:00am to 4:00pm'
         },
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
     },
     {
         id: 4,
@@ -791,6 +1115,24 @@ module.exports = [
             first: 'Closed',
             second: '9:00am to 6:00pm'
         },
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
     },
     {
         id: 5,
@@ -822,6 +1164,24 @@ module.exports = [
         hasHours: false,
         hasMultipleLocations: false,
         locationsHaveDifferentHours: false,
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
     },
     {
         id: 6,
@@ -853,6 +1213,24 @@ module.exports = [
         hasHours: false,
         hasMultipleLocations: false,
         locationsHaveDifferentHours: false,
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
     },
     {
         id: 7,
@@ -884,6 +1262,24 @@ module.exports = [
         hasHours: false,
         hasMultipleLocations: false,
         locationsHaveDifferentHours: false,
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
     },
     {
         id: 8,
@@ -920,7 +1316,25 @@ module.exports = [
         },
         hoursTimes: {
             first: 'Please check the website link above for times.'
-        }
+        },
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
     },
     {
         id: 9,
@@ -952,5 +1366,23 @@ module.exports = [
         hasHours: false,
         hasMultipleLocations: false,
         locationsHaveDifferentHours: false,
+        openingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
+        closingHours: {
+            sunday: '10:00',
+            monday: '17:00',
+            tuesday: '',
+            wednesday: '',
+            thursday: '',
+            friday: '17:00',
+            saturday: '13:00'
+        },
     },
 ];

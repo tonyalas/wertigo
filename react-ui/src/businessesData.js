@@ -2,6 +2,46 @@
 // was "export default"
 module.exports = [
     {
+        id: 28,
+        name: 'Pipe\'s Palace',
+        category: 'Accessories',
+        subcategory: 'Smoke Shop',
+        picturePath: '/images/pipespalace.jpeg',
+        description: '',
+        phoneNumber: '519-988-0420',
+        phoneNumberDescription: '',
+        location1Name: '',
+        phoneNumber2: '',
+        phoneNumberDescription2: '',
+        location2Name: '',
+        publicEmail: 'pipespalace@gmail.com',
+        websiteURL: '',
+        facebookURL: '',
+        etsyURL: '',
+        instagramURL: 'https://www.instagram.com/pipespalacewindsor/',
+        instagramUsername: 'pipespalacewindsor',
+        instagramURL2: '',
+        instagramUsername2: '',
+        address: '6058 Tecumseh Rd E, Windsor, ON N8T 1E3',
+        googleMapsLink: 'https://goo.gl/maps/B4dMDnAGtTFUW8oq9',
+        address2: '',
+        googleMapsLink2: '',
+        embeddedMapsLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.494676583717!2d-82.95482298450194!3d42.31064674621321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2b1e7b59abfd%3A0xc527d09cb77f4e0f!2s6058%20Tecumseh%20Rd%20E%2C%20Windsor%2C%20ON%20N8T%201E3!5e0!3m2!1sen!2sca!4v1643658883907!5m2!1sen!2sca',
+        embeddedMapsLink2: '',
+        hasHours: true,
+        hasMultipleLocations: false,
+        locationsHaveDifferentHours: false,
+        hoursMessage: '',
+        hoursDays: {
+            first: 'Sunday:',
+            second: 'Monday - Saturday:'
+        },
+        hoursTimes: {
+            first: '12:00pm to 3:00pm',
+            second: '12:00pm to 8:00pm'
+        },
+    },
+    {
         id: 27,
         name: 'Armando\'s Carpet & Tile Cleaning',
         category: 'Contractors',

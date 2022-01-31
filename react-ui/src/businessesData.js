@@ -48,7 +48,7 @@ module.exports = [
         phoneNumber2: '226-783-6259',
         phoneNumberDescription2: '(Huron Church)',
         location2Name: 'Windsor (Huron Church)',
-        publicEmail: 'info@thewestore',
+        publicEmail: 'info@thewestore.com',
         websiteURL: 'https://thewestore.com',
         facebookURL: '',
         etsyURL: '',

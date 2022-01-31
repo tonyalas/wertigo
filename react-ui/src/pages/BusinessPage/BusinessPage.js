@@ -253,7 +253,7 @@ function BusinessPage(props) {
                                             {/* IF these 2 (or more) locations have the SAME HOURS */}
                                             {(business?.locationsHaveDifferentHours != true) &&
                                                 <>
-                                                    <h3>Both Locations</h3>
+                                                    <h3>All Locations</h3>
                                                     {/* <p id='informationTextLinks'>
                                                         {business?.hoursDays?.first} <b>{business?.hoursTimes?.first}</b>
                                                         <br></br>

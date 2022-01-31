@@ -11,7 +11,7 @@ function Footer() {
                 <Link to='/discover' id='footer-links'>Discover</Link>
                 <Link to='/contactus' id='footer-links'>Contact Us</Link>
                 <Link to='/faq' id='footer-links'>FAQ</Link>
-                <Link to='/whatsnew' id='footer-links'>What's New</Link>
+                {/* <Link to='/whatsnew' id='footer-links'>What's New</Link> */}
                 {/* <a href='/index' id='footer-links'>Home</a>
                 <a href='/discover' id='footer-links'>Discover</a>
                 <a href='/contactus' id='footer-links'>Add Your Business</a>

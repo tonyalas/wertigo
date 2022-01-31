@@ -2,6 +2,48 @@
 // was "export default"
 module.exports = [
     {
+        id: 26,
+        name: 'The Green Clean Team',
+        category: 'Contractors',
+        subcategory: 'Commercial Cleaning Services',
+        picturePath: '/images/greencleanteam.png',
+        description: 'Green Clean Team is changing the way you clean. Being the first of its kind in Windsor-Essex County, we provide eco friendly cleaning for whatever the situation may be using Stabilized Aqueous Ozone (SAO) technology, to suit any and all cleaning needs!',
+        phoneNumber: '519-982-9331',
+        phoneNumberDescription: '',
+        location1Name: '',
+        phoneNumber2: '',
+        phoneNumberDescription2: '',
+        location2Name: '',
+        publicEmail: 'adrian@thegclean.com',
+        websiteURL: '',
+        facebookURL: 'https://www.facebook.com/GCTCleaning/',
+        etsyURL: '',
+        instagramURL: '',
+        instagramUsername: '',
+        instagramURL2: '',
+        instagramUsername2: '',
+        address: '1501 Howard Ave, Windsor, ON N8X 3T5',
+        googleMapsLink: 'https://goo.gl/maps/EAh819awbxPXEDoq9',
+        address2: '',
+        googleMapsLink2: '',
+        embeddedMapsLink: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11803.473241778609!2d-83.0207799!3d42.3026753!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x180a3a439db30572!2sThe%20Green%20Clean%20Team!5e0!3m2!1sen!2sca!4v1643648172305!5m2!1sen!2sca',
+        embeddedMapsLink2: '',
+        hasHours: true,
+        hasMultipleLocations: false,
+        locationsHaveDifferentHours: false,
+        hoursMessage: 'Please email or call to book an appointment.',
+        hoursDays: {
+            first: 'Sunday:',
+            second: 'Monday - Friday:',
+            third: 'Saturday:'
+        },
+        hoursTimes: {
+            first: 'CLOSED',
+            second: '12:00pm to 8:00pm',
+            third: '10:00am to 4:00pm'
+        },
+    },
+    {
         id: 24,
         name: 'Anchor Coffee House',
         category: 'Food',

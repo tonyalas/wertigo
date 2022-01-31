@@ -201,6 +201,8 @@ function DiscoverPage(props) {
                     </Accordion>
                 </div>
                 <hr></hr>
+                <h6>Click on a business' name to open a separate page and get more information about them.</h6>
+                <hr></hr>
 
                 <div className='discoverDiv'>
                     <Row>

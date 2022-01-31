@@ -459,7 +459,7 @@ module.exports = [
         subcategory: 'Mechanic',
         picturePath: '/images/defaultpicture.jpg',
         description: 'Oil change services & lube. Tire services and repair.',
-        phoneNumber: '416-991-9030',
+        phoneNumber: '416-991-9090',
         phoneNumberDescription: '',
         location1Name: '',
         phoneNumber2: '',

@@ -195,6 +195,7 @@ function BusinessPage(props) {
                             {(business?.hasHours == true) &&
                                 <>
                                     <h1>Hours</h1>
+                                    <h5>{business?.hoursMessage}</h5>
                                     {/* IF the business has only ONE LOCATION */}
                                     {(business?.hasMultipleLocations == false) &&
                                         <>
@@ -211,10 +212,12 @@ function BusinessPage(props) {
                                             </p> */}
                                             <Table striped bordered>
                                                 <tbody>
-                                                    <tr>
-                                                        <td id='days'>{business?.hoursDays?.first}</td>
-                                                        <td id='hours'><b>{business?.hoursTimes?.first}</b></td>
-                                                    </tr>
+                                                    {(business?.hoursDays?.first != null) &&
+                                                        <tr>
+                                                            <td id='days'>{business?.hoursDays?.first}</td>
+                                                            <td id='hours'><b>{business?.hoursTimes?.first}</b></td>
+                                                        </tr>
+                                                    }
                                                     {(business?.hoursDays?.second != null) &&
                                                         <tr>
                                                             <td id='days'>{business?.hoursDays?.second}</td>
@@ -264,10 +267,12 @@ function BusinessPage(props) {
                                                     </p> */}
                                                     <Table striped bordered>
                                                         <tbody>
-                                                            <tr>
-                                                                <td id='days'>{business?.hoursDays?.first}</td>
-                                                                <td id='hours'><b>{business?.hoursTimes?.first}</b></td>
-                                                            </tr>
+                                                            {(business?.hoursDays?.first != null) &&
+                                                                <tr>
+                                                                    <td id='days'>{business?.hoursDays?.first}</td>
+                                                                    <td id='hours'><b>{business?.hoursTimes?.first}</b></td>
+                                                                </tr>
+                                                            }
                                                             {(business?.hoursDays?.second != null) &&
                                                                 <tr>
                                                                     <td id='days'>{business?.hoursDays?.second}</td>
@@ -315,10 +320,12 @@ function BusinessPage(props) {
                                                     </p> */}
                                                     <Table striped bordered>
                                                         <tbody>
-                                                            <tr>
-                                                                <td id='days'>{business?.hoursDays?.first}</td>
-                                                                <td id='hours'><b>{business?.hoursTimes?.first}</b></td>
-                                                            </tr>
+                                                            {(business?.hoursDays?.first != null) &&
+                                                                <tr>
+                                                                    <td id='days'>{business?.hoursDays?.first}</td>
+                                                                    <td id='hours'><b>{business?.hoursTimes?.first}</b></td>
+                                                                </tr>
+                                                            }
                                                             {(business?.hoursDays?.second != null) &&
                                                                 <tr>
                                                                     <td id='days'>{business?.hoursDays?.second}</td>
@@ -361,10 +368,12 @@ function BusinessPage(props) {
                                                     </p> */}
                                                     <Table striped bordered>
                                                         <tbody>
-                                                            <tr>
-                                                                <td id='days'>{business?.hoursDaysLocation2?.first}</td>
-                                                                <td id='hours'><b>{business?.hoursTimesLocation2?.first}</b></td>
-                                                            </tr>
+                                                            {(business?.hoursDaysLocation2?.first != null) &&
+                                                                <tr>
+                                                                    <td id='days'>{business?.hoursDaysLocation2?.first}</td>
+                                                                    <td id='hours'><b>{business?.hoursTimesLocation2?.first}</b></td>
+                                                                </tr>
+                                                            }
                                                             {(business?.hoursDaysLocation2?.second != null) &&
                                                                 <tr>
                                                                     <td id='days'>{business?.hoursDaysLocation2?.second}</td>
@@ -403,7 +412,7 @@ function BusinessPage(props) {
 
                 <br></br>
                 <a href='/discover' className='backToDiscoverLink'>
-                    <p>Back to Discover Page</p>
+                    <p>{'\u2190'} Back to Discover Page</p>
                 </a>
 
                 {/* <!-- * ADDS FILLER/PADDING TO PAGE BELOW --> */}

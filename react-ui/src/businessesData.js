@@ -31,6 +31,7 @@ module.exports = [
         hasHours: true,
         hasMultipleLocations: false,
         locationsHaveDifferentHours: false,
+        hoursMessage: '',
         hoursDays: {
             first: 'Every day of the week:'
         },
@@ -86,17 +87,16 @@ module.exports = [
         hasHours: true,
         hasMultipleLocations: false,
         locationsHaveDifferentHours: false,
+        hoursMessage: 'Bookings are preferred through website link above.',
         hoursDays: {
-            first: 'Bookings are preferred through website link above.',
-            second: 'Sunday:',
-            third: 'Monday - Friday:',
-            fourth: 'Saturday'
+            first: 'Sunday:',
+            second: 'Monday - Friday:',
+            third: 'Saturday'
         },
         hoursTimes: {
-            first: '',
-            second: 'CLOSED',
-            third: '8:00am to 5:00pm',
-            fourth: '10:00am to 2:00pm'
+            first: 'CLOSED',
+            second: '8:00am to 5:00pm',
+            third: '10:00am to 2:00pm'
         },
         openingHours: {
             sunday: '10:00',
@@ -297,6 +297,40 @@ module.exports = [
             friday: '17:00',
             saturday: '13:00'
         },
+    },
+    {
+        id: 25,
+        name: 'G.S.S. Towing',
+        category: 'Automotive',
+        subcategory: 'Mechanic',
+        picturePath: '/images/defaultpicture.jpg',
+        description: 'Oil change services & lube. Tire services and repair.',
+        phoneNumber: '416-991-9030',
+        phoneNumberDescription: '',
+        location1Name: '',
+        phoneNumber2: '',
+        phoneNumberDescription2: '',
+        location2Name: '',
+        publicEmail: '',
+        websiteURL: '',
+        facebookURL: '',
+        etsyURL: '',
+        instagramURL: '',
+        instagramUsername: '',
+        instagramURL2: '',
+        instagramUsername2: '',
+        address: '2130 South Pacific St #3 Windsor, ON N8X 2A3',
+        googleMapsLink: 'https://goo.gl/maps/UcNLQqhKAMDuh2M2A',
+        address2: '',
+        googleMapsLink2: '',
+        embeddedMapsLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.3051815248923!2d-83.03400468450232!3d42.29335314730425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2c53c8a210cd%3A0x2a26718331333b9a!2s2130%20S%20Pacific%20St%20%233%2C%20Windsor%2C%20ON%20N8X%202A3!5e0!3m2!1sen!2sca!4v1643610121212!5m2!1sen!2sca',
+        embeddedMapsLink2: '',
+        hasHours: true,
+        hasMultipleLocations: false,
+        locationsHaveDifferentHours: false,
+        hoursMessage: 'Please call or text to book an appointment.',
+        hoursDays: {},
+        hoursTimes: {},
     },
     {
         id: 19,
@@ -1311,12 +1345,9 @@ module.exports = [
         hasHours: true,
         hasMultipleLocations: false,
         locationsHaveDifferentHours: false,
-        hoursDays: {
-            first: ''
-        },
-        hoursTimes: {
-            first: 'Please check the website link above for times.'
-        },
+        hoursMessage: 'Please check the website link above for booking times.',
+        hoursDays: {},
+        hoursTimes: {},
         openingHours: {
             sunday: '10:00',
             monday: '17:00',

@@ -28,6 +28,7 @@
     hasHours: true,
     hasMultipleLocations: false,
     locationsHaveDifferentHours: false,
+    hoursMessage: '',
     hoursDays: {
         first: 'Sunday - Monday:',
         second: 'Tuesday:',

@@ -101,7 +101,7 @@ function BusinessTile(props, { filterItem }) {
             }
 
             {/* <!-- * Business Address - IF THERE IS A SPECIFIC ADDRESS, KEEP THE <a> TAG --> */}
-            {(props.address != 'Windsor, ON' && props.business != 'Lasalle, ON') &&
+            {(props.address != 'Windsor, ON' && props.address != 'Lasalle, ON' && props.address != '') &&
                 <div className='businessLinkPic'>
                     <img src='/images/pin-icon.png' className='linkLogos' alt='' />
                     <div className='businessLinkText'>

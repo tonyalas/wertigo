@@ -90,14 +90,26 @@ function BusinessTile(props, { filterItem }) {
             }
 
             <br></br>
-            {/* <!-- * Business Address --> */}
-            <div className='businessLinkPic'>
-                <img src='/images/pin-icon.png' className='linkLogos' alt='' />
-                <div className='businessLinkText'>
-                    <p><a href={props.googleMapsLink}
-                        target='_blank' rel='noopener noreferrer' className='businessLinks'>{props.address}</a></p>
+            {/* <!-- * Business Address - IF THERE IS NO SPECIFIC ADDRESS, DO NOT ADD A <a> TAG --> */}
+            {(props.address == 'Windsor, ON' || props.address == 'Lasalle, ON') &&
+                <div className='businessLinkPic'>
+                    <img src='/images/pin-icon.png' className='linkLogos' alt='' />
+                    <div className='businessLinkText'>
+                        <p>{props.address}</p>
+                    </div>
                 </div>
-            </div>
+            }
+
+            {/* <!-- * Business Address - IF THERE IS A SPECIFIC ADDRESS, KEEP THE <a> TAG --> */}
+            {(props.address != 'Windsor, ON' && props.business != 'Lasalle, ON') &&
+                <div className='businessLinkPic'>
+                    <img src='/images/pin-icon.png' className='linkLogos' alt='' />
+                    <div className='businessLinkText'>
+                        <p><a href={props.googleMapsLink}
+                            target='_blank' rel='noopener noreferrer' className='businessLinks'>{props.address}</a></p>
+                    </div>
+                </div>
+            }
 
             {/* Only allow if there is two addresses */}
             {(props.address2 != '') &&

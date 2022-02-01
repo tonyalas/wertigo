@@ -2,6 +2,46 @@
 // was "export default"
 module.exports = [
     {
+        id: 35,
+        name: 'Flowers by Toni',
+        category: 'Shopping',
+        subcategory: 'Floral Design',
+        picturePath: '/images/flowersbytoni.jpg',
+        description: 'Fresh flowers for all occasions!',
+        phoneNumber: '519-551-6405',
+        phoneNumberDescription: '',
+        location1Name: '',
+        phoneNumber2: '',
+        phoneNumberDescription2: '',
+        location2Name: '',
+        publicEmail: ' amontaleone@hotmail.ca',
+        websiteURL: '',
+        facebookURL: 'https://www.facebook.com/Flowers-By-Toni-248130792583105',
+        etsyURL: '',
+        instagramURL: '',
+        instagramUsername: '',
+        instagramURL2: '',
+        instagramUsername2: '',
+        address: 'Windsor, ON',
+        googleMapsLink: '',
+        embeddedMapsLink: '',
+        address2: '',
+        googleMapsLink2: '',
+        embeddedMapsLink2: '',
+        hasHours: true,
+        hasMultipleLocations: false,
+        locationsHaveDifferentHours: false,
+        hoursMessage: 'Please call or email to order.',
+        hoursDays: {
+            first: 'Sunday:',
+            second: 'Monday - Saturday:'
+        },
+        hoursTimes: {
+            first: 'CLOSED',
+            second: '9:00pm to 5:00pm'
+        },
+    },
+    {
         id: 34,
         name: 'Green Envy',
         category: 'Shopping',

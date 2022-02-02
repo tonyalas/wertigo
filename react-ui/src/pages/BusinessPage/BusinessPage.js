@@ -41,8 +41,12 @@ function BusinessPage(props) {
                             <div className='block-text'>
                                 <p id='informationText'>{business?.description}</p>
                             </div>
-                            <h4><a href={'tel:' + business?.phoneNumber} className='phonenumber'>{business?.phoneNumber} {business?.phoneNumberDescription}</a></h4>
-                            <h4><a href={'tel:' + business?.phoneNumber2} className='phonenumber'>{business?.phoneNumber2} {business?.phoneNumberDescription2}</a></h4>
+                            {(business?.phoneNumber != '') &&
+                                <h4><a href={'tel:' + business?.phoneNumber} className='phonenumber'>{business?.phoneNumber} {business?.phoneNumberDescription}</a></h4>
+                            }
+                            {(business?.phoneNumber2 != '') &&
+                                <h4><a href={'tel:' + business?.phoneNumber2} className='phonenumber'>{business?.phoneNumber2} {business?.phoneNumberDescription2}</a></h4>
+                            }
 
                             {/* If they have a public phone number, display it here */}
                             {(business?.phoneNumber != '') &&
@@ -59,13 +63,13 @@ function BusinessPage(props) {
                                                 className='businessLinks'>{business?.name} Website</a></p>
                                         </div>
                                     </div>
+                                    <br></br>
                                 </>
                             }
 
                             {/* <!-- * IF they have a Facebook Link --> */}
                             {(business?.facebookURL != '') &&
                                 <>
-                                    <br></br>
                                     <div className='businessLinkPic'>
                                         <img src='/images/facebook-logo.png' className='linkLogosPage' alt='' />
                                         <div className='businessLinkText'>
@@ -73,13 +77,13 @@ function BusinessPage(props) {
                                                 className='businessLinks'>{business?.name} Facebook</a></p>
                                         </div>
                                     </div>
+                                    <br></br>
                                 </>
                             }
 
                             {/* <!-- * IF they have an Etsy Link --> */}
                             {(business?.etsyURL != '') &&
                                 <>
-                                    <br></br>
                                     <div className='businessLinkPic'>
                                         <img src='/images/etsy-logo.png' className='linkLogosPage' alt='' />
                                         <div className='businessLinkText'>
@@ -87,13 +91,13 @@ function BusinessPage(props) {
                                                 className='businessLinks'>{business?.name} Etsy</a></p>
                                         </div>
                                     </div>
+                                    <br></br>
                                 </>
                             }
 
                             {/* <!-- * Instagram Section --> ONLY SHOW IF THEY HAVE AN INSTAGRAM */}
                             {(business?.instagramURL != '') &&
                                 <>
-                                    <br></br>
                                     <div className='businessLinkPic'>
                                         <img src='/images/instagramlogo.png' className='linkLogosPage' alt='' />
                                         <div className='businessLinkText'>
@@ -101,36 +105,35 @@ function BusinessPage(props) {
                                                 rel='noopener noreferrer' className='businessLinks'>@{business?.instagramUsername}</a></p>
                                         </div>
                                     </div>
+                                    <br></br>
                                 </>
                             }
 
                             {/* ONLY SHOW SECOND INSTAGRAM IF THERE IS TWO */}
                             {(business?.instagramURL2 != '') &&
                                 <>
-                                    <br></br>
                                     <div className='businessLinkPic'>
                                         <img src='/images/instagramlogo.png' className='linkLogosPage' alt='' />
                                         <div className='businessLinkText'>
                                             <p id='informationTextLinks'><a href={business?.instagramURL2} target='_blank' rel='noopener noreferrer' className='businessLinks'>@{business?.instagramUsername2}</a></p>
                                         </div>
                                     </div>
+                                    <br></br>
                                 </>
                             }
 
                             {/* IF they have a public email */}
                             {(business?.publicEmail != '') &&
                                 <>
-                                    <br></br>
                                     <div className='businessLinkPic'>
                                         <img src='/images/email-icon.png' className='linkLogosPage' alt='' />
                                         <div className='businessLinkText'>
                                             <p id='informationTextLinks'><a href={'mailto:' + business?.publicEmail} className='businessLinks'>Email {business?.name}</a></p>
                                         </div>
                                     </div>
+                                    <br></br>
                                 </>
                             }
-
-                            <br></br>
                             <br></br>
 
                             {/* IF they have a description for their phone number (in other words, a location name), display it */}
@@ -138,14 +141,31 @@ function BusinessPage(props) {
                                 <h3>{business?.location1Name} Location</h3>
                             }
 
-                            {/* <!-- * Business Address --> */}
-                            <div className='businessLinkPic'>
-                                <img src='/images/pin-icon.png' className='linkLogosPage' alt='' />
-                                <div className='businessLinkText'>
-                                    <p id='informationTextLinks'><a href={business?.googleMapsLink}
-                                        target='_blank' rel='noopener noreferrer' className='businessLinks'>{business?.address}</a></p>
-                                </div>
-                            </div>
+                            {/* <!-- * Business Address - IF THERE IS NO SPECIFIC ADDRESS, DO NOT ADD A <a> TAG --> */}
+                            {(business?.address == 'Windsor, ON' || business?.address == 'Lasalle, ON') &&
+                                <>
+                                    <div className='businessLinkPic'>
+                                        <img src='/images/pin-icon.png' className='linkLogosPage' alt='' />
+                                        <div className='businessLinkText'>
+                                            <p id='informationTextLinks'>{business?.address}</p>
+                                        </div>
+                                    </div>
+                                </>
+                            }
+
+                            {/* <!-- * Business Address - IF THERE IS A SPECIFIC ADDRESS, KEEP THE <a> TAG --> */}
+                            {(business?.address != 'Windsor, ON' && business?.address != 'Lasalle, ON' && business?.address != '') &&
+                                <>
+                                    <div className='businessLinkPic'>
+                                        <img src='/images/pin-icon.png' className='linkLogosPage' alt='' />
+                                        <div className='businessLinkText'>
+                                            <p id='informationTextLinks'><a href={business?.googleMapsLink}
+                                                target='_blank' rel='noopener noreferrer' className='businessLinks'>{business?.address}</a></p>
+                                        </div>
+                                    </div>
+
+                                </>
+                            }
 
                             <br></br>
 

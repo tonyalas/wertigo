@@ -15,7 +15,7 @@ function DiscoverPage(props) {
     // This will update the Subcategory buttons
     const [filterItemSubButtons, setFilterItemSubButtons] = useState([]);
     // This will keep track of which category is chosen/clicked on (used in the filterOpenNow function)
-    const [categoryChosen, setCategoryChosen] = useState([]);
+    const [categoryChosen, setCategoryChosen] = useState('Recently Added');
     // This will update the buttons (not really used in my case)
     // eslint-disable-next-line no-unused-vars
     const [buttons, setButtons] = useState([]);
@@ -84,55 +84,112 @@ function DiscoverPage(props) {
         var time = today.getHours() + ':' + today.getMinutes()
         var dayOfTheWeek = today.getDay()
         console.log(time)
-        console.log(dayOfTheWeek)
+        //console.log(dayOfTheWeek)
         console.log(categoryChosen)
-
-        // ! The current problem is that when "Recently Added" is clicked again and you try to click the open now button, it will default to showing nothing instead of all of the open now stores
+        var filteredDataOpenNow
 
         // if it is SUNDAY
         if (dayOfTheWeek == 0) {
             console.log('Today is Sunday')
-            //var tempTime = new Date()
-            //tempTime.setHours(1, 59, 0)
-            //var fakeTime = tempTime.getHours() + ':' + tempTime.getMinutes()
-            //console.log('test ' + fakeTime)
-            const filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.sunday && item.category === categoryChosen && item.closingHours.sunday != 'Closed')
+            // If there is no category chosen, display any place that is currently open
+            if (categoryChosen == 'Recently Added') {
+                console.log('Recently Added is currently chosen')
+                filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.sunday && time >= item.openingHours.sunday && item.closingHours.sunday != 'Closed')
+            }
+            // If there is a category chosen, only show places that are open and of the chosen category
+            else {
+                filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.sunday && time >= item.openingHours.sunday && item.category === categoryChosen && item.closingHours.sunday != 'Closed')
+            }
             setFilterItem(filteredDataOpenNow)
         }
         // if it is MONDAY
         if (dayOfTheWeek == 1) {
             console.log('Today is Monday')
-            const filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.monday && item.category === categoryChosen && item.closingHours.monday != 'Closed')
+            // If there is no category chosen, display any place that is currently open
+            if (categoryChosen == 'Recently Added') {
+                console.log('Recently Added is currently chosen')
+                filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.monday && time >= item.openingHours.monday && item.closingHours.monday != 'Closed')
+            }
+            // If there is a category chosen, only show places that are open and of the chosen category
+            else {
+                filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.monday && time >= item.openingHours.monday && item.category === categoryChosen && item.closingHours.monday != 'Closed')
+            }
             setFilterItem(filteredDataOpenNow)
         }
         // if it is TUESDAY
         if (dayOfTheWeek == 2) {
             console.log('Today is Tuesday')
-            const filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.tuesday && item.category === categoryChosen && item.closingHours.tuesday != 'Closed')
+            // If there is no category chosen, display any place that is currently open
+            if (categoryChosen == 'Recently Added') {
+                console.log('Recently Added is currently chosen')
+                filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.tuesday && time >= item.openingHours.tuesday && item.closingHours.tuesday != 'Closed')
+            }
+            // If there is a category chosen, only show places that are open and of the chosen category
+            else {
+                filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.tuesday && time >= item.openingHours.tuesday && item.category === categoryChosen && item.closingHours.tuesday != 'Closed')
+            }
             setFilterItem(filteredDataOpenNow)
         }
         // if it is WEDNESDAY
         if (dayOfTheWeek == 3) {
             console.log('Today is Wednesday')
-            const filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.wednesday && item.category === categoryChosen && item.closingHours.wednesday != 'Closed')
+            // If there is no category chosen, display any place that is currently open
+            if (categoryChosen == 'Recently Added') {
+                console.log('Recently Added is currently chosen')
+                filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.wednesday && time >= item.openingHours.wednesday && item.closingHours.wednesday != 'Closed')
+            }
+            // If there is a category chosen, only show places that are open and of the chosen category
+            else {
+                filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.wednesday && time >= item.openingHours.wednesday && item.category === categoryChosen && item.closingHours.wednesday != 'Closed')
+            }
             setFilterItem(filteredDataOpenNow)
         }
         // if it is THURSDAY
         if (dayOfTheWeek == 4) {
+            // var tempTime = new Date()
+            // tempTime.setHours(10, 50)
+            // var fakeTime = tempTime.getHours() + ':' + tempTime.getMinutes()
+            // console.log('test ' + fakeTime)
+
+            // If there is no category chosen, display any place that is currently open
+            if (categoryChosen == 'Recently Added') {
+                //console.log('Recently Added is currently chosen')
+                filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.thursday && time >= item.openingHours.thursday && item.closingHours.thursday != 'Closed')
+            }
+            // If there is a category chosen, only show places that are open and of the chosen category
+            else {
+                filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.thursday && time >= item.openingHours.thursday && item.category === categoryChosen && item.closingHours.thursday != 'Closed')
+            }
             console.log('Today is Thursday')
-            const filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.thursday && item.category === categoryChosen && item.closingHours.thursday != 'Closed')
+            console.log(filteredDataOpenNow)
             setFilterItem(filteredDataOpenNow)
         }
         // if it is FRIDAY
         if (dayOfTheWeek == 5) {
             console.log('Today is Friday')
-            const filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.friday && item.category === categoryChosen && item.closingHours.friday != 'Closed')
+            // If there is no category chosen, display any place that is currently open
+            if (categoryChosen == 'Recently Added') {
+                console.log('Recently Added is currently chosen')
+                filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.friday && time >= item.openingHours.friday && item.closingHours.friday != 'Closed')
+            }
+            // If there is a category chosen, only show places that are open and of the chosen category
+            else {
+                filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.friday && time >= item.openingHours.friday && item.category === categoryChosen && item.closingHours.friday != 'Closed')
+            }
             setFilterItem(filteredDataOpenNow)
         }
         // if it is SATURDAY
         if (dayOfTheWeek == 6) {
             console.log('Today is Saturday')
-            const filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.saturday && item.category === categoryChosen && item.closingHours.saturday != 'Closed')
+            // If there is no category chosen, display any place that is currently open
+            if (categoryChosen == 'Recently Added') {
+                console.log('Recently Added is currently chosen')
+                filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.saturday && time >= item.openingHours.saturday && item.closingHours.saturday != 'Closed')
+            }
+            // If there is a category chosen, only show places that are open and of the chosen category
+            else {
+                filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.saturday && time >= item.openingHours.saturday && item.category === categoryChosen && item.closingHours.saturday != 'Closed')
+            }
             setFilterItem(filteredDataOpenNow)
         }
     }
@@ -178,7 +235,7 @@ function DiscoverPage(props) {
                                     {/* This is a static "Reset All" button that does not change regardless of the category or subcategory chosen */}
                                     <button type='button' className='btn btn-warning category-button filter-button' onClick={() => filter('Recently Added')}>Reset All</button>
 
-                                    {/* This is a static "Open Now" button that does not change regardless of the category or subcategory chosen
+                                    {/* This is a static "Open Now" button that does not change regardless of the category or subcategory chosen 
                                     <button type='button' className='btn btn-success category-button filter-button' onClick={() => filterOpenNow()}>Open Now</button> */}
 
                                     {/* This will show a "None" button that will reset any subcategory filters to show all of the tiles of the same category */}

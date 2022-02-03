@@ -28,6 +28,15 @@
     "locationsHaveDifferentHours",
     "hoursDays",
     "hoursTimes",
-    "hoursMessage"
+    "hoursMessage",
+    "openingHours",
+    "sunday",
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday",
+    "saturday",
+    "closingHours"
   ]
 }

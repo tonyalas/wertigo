@@ -4,7 +4,7 @@ import { makeFriendlyURL } from '../../utils/urlUtils';
 import { Col } from 'react-bootstrap';
 
 
-function BusinessTile(props, { filterItem }) {
+function BusinessTile(props) {
     return (
 
         <Col className='col-md-4 border-bottom border-2 item'>
@@ -15,7 +15,7 @@ function BusinessTile(props, { filterItem }) {
 
             <h3>{props.category}</h3>
             <h4>{props.subcategory}</h4>
-            <img className='business_image' src={props.picturePath} alt='' />
+            <Link target='_blank' rel='noopener noreferrer' className='businessHeaderLink' to={`/discover/${makeFriendlyURL(props.name)}`}><img className='business_image' src={props.picturePath} alt='' /></Link>
             <br></br>
             {(props.phoneNumber != '') &&
                 <h5><a href={'tel:' + props.phoneNumber} className='phonenumber'>{props.phoneNumber} {props.phoneNumberDescription}</a></h5>

@@ -4,14 +4,6 @@ import { Link } from 'react-router-dom';
 function IndexMainBody() {
     return (
         <div>
-            <div className='indexDiv2'>
-                <h1 className='getstartednow'>Get Started Now</h1>
-                <Link to='/discover'>
-                    <button type='button' className='btn btn-primary'>Discover</button>
-                </Link>
-                {/* <a href='discover.html'><button type='button' className='btn btn-primary'>Discover</button></a> */}
-            </div>
-            <hr></hr>
             <div className='indexDiv3and4'>
                 <div className='row'>
                     <div className='col-md-4'>

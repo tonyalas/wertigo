@@ -44,21 +44,21 @@
         fifth: ''
     },
     openingHours: {
-            sunday: '09:00',
-            monday: '09:00',
-            tuesday: '09:00',
-            wednesday: '09:00',
-            thursday: '09:00',
-            friday: '09:00',
-            saturday: '09:00'
-        },
-        closingHours: {
-            sunday: '17:00',
-            monday: '17:00',
-            tuesday: '17:00',
-            wednesday: '17:00',
-            thursday: '17:00',
-            friday: '17:00',
-            saturday: '17:00'
-        },
+        sunday: '09:00',
+        monday: '09:00',
+        tuesday: '09:00',
+        wednesday: '09:00',
+        thursday: '09:00',
+        friday: '09:00',
+        saturday: '09:00'
+    },
+    closingHours: {
+        sunday: '17:00',
+        monday: '17:00',
+        tuesday: '17:00',
+        wednesday: '17:00',
+        thursday: '17:00',
+        friday: '17:00',
+        saturday: '17:00'
+    },
 },

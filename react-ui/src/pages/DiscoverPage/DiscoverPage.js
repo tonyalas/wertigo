@@ -3,9 +3,10 @@ import BusinessTile from '../../components/BusinessTile/BusinessTile'
 import { useEffect, useState } from 'react';
 import FilterButton from '../../components/FilterButton/FilterButton';
 import { Accordion } from 'react-bootstrap';
-import ptag from '../../pTags'
-import noneButton from '../../NoneButtons'
-import './DiscoverPage.css'
+import ptag from '../../pTags';
+import noneButton from '../../NoneButtons';
+import './DiscoverPage.css';
+import BusinessOfTheWeek from '../../components/BusinessOfTheWeek/BusinessOfTheWeek';
 
 
 function DiscoverPage(props) {
@@ -80,8 +81,40 @@ function DiscoverPage(props) {
 
 
     function filterOpenNow() {
+        // ! The solution here should be to add a leading 0 before HOURS if the current hour is single digit (1am to 9am, includes midnight since it is 00:00)
+        // ! Then, also add a leading 0 before MINUTES if the current minute is single digit (0-9). 
+        // ! This will fix the problem of the Open Now button working incorrectly when the current time is single digits.
+        // ! Try to solve this by adding an if statement that concatenates a '0' when necessary and prints the regular time else
         var today = new Date()
-        var time = today.getHours() + ':' + today.getMinutes()
+        // IF the current hour is SINGLE DIGIT
+        if (today.getHours() == '1' || today.getHours() == '2' || today.getHours() == '3' || today.getHours() == '4' || today.getHours() == '5' || today.getHours() == '6' || today.getHours() == '7' || today.getHours() == '8' || today.getHours() == '9') {
+            // IF the current minute is SINGLE DIGIT (AND the hour is single digit)
+            if (today.getMinutes() == '0' || today.getMinutes() == '1' || today.getMinutes() == '2' || today.getMinutes() == '3' || today.getMinutes() == '4' || today.getMinutes() == '5' || today.getMinutes() == '6' || today.getMinutes() == '7' || today.getMinutes() == '8' || today.getMinutes() == '9') {
+                console.log('single digit hours and minutes')
+                // eslint-disable-next-line no-useless-concat
+                var time = '0' + today.getHours() + ':' + '0' + today.getMinutes()
+            }
+            // IF only the hour is single digit but NOT the minutes as well
+            else {
+                console.log('single digit hours and double digit minutes')
+                time = '0' + today.getHours() + ':' + today.getMinutes()
+            }
+        }
+        // IF the current hour is DOUBLE DIGIT 
+        else {
+            // IF the current hour is DOUBLE DIGIT but the current minutes are SINGLE DIGIT
+            if (today.getMinutes() == '0' || today.getMinutes() == '1' || today.getMinutes() == '2' || today.getMinutes() == '3' || today.getMinutes() == '4' || today.getMinutes() == '5' || today.getMinutes() == '6' || today.getMinutes() == '7' || today.getMinutes() == '8' || today.getMinutes() == '9') {
+                console.log('double digit hours and single digit minutes')
+                // eslint-disable-next-line no-useless-concat
+                time = today.getHours() + ':' + '0' + today.getMinutes()
+            }
+            // IF the current hour and minutes are BOTH DOUBLE DIGITS (aka normal)
+            else {
+                console.log('double digit hours and minutes')
+                time = today.getHours() + ':' + today.getMinutes()
+            }
+        }
+        //var time = today.getHours() + ':' + today.getMinutes()
         var dayOfTheWeek = today.getDay()
         console.log(time)
         //console.log(dayOfTheWeek)
@@ -146,11 +179,6 @@ function DiscoverPage(props) {
         }
         // if it is THURSDAY
         if (dayOfTheWeek == 4) {
-            // var tempTime = new Date()
-            // tempTime.setHours(10, 50)
-            // var fakeTime = tempTime.getHours() + ':' + tempTime.getMinutes()
-            // console.log('test ' + fakeTime)
-
             // If there is no category chosen, display any place that is currently open
             if (categoryChosen == 'Recently Added') {
                 //console.log('Recently Added is currently chosen')
@@ -166,16 +194,21 @@ function DiscoverPage(props) {
         }
         // if it is FRIDAY
         if (dayOfTheWeek == 5) {
+            // var tempTime = new Date()
+            // tempTime.setHours(8, 35)
+            // var fakeTime = '0' + tempTime.getHours() + ':' + tempTime.getMinutes()
+            // console.log('test ' + fakeTime)
             console.log('Today is Friday')
             // If there is no category chosen, display any place that is currently open
             if (categoryChosen == 'Recently Added') {
-                console.log('Recently Added is currently chosen')
+                //console.log('Recently Added is currently chosen')
                 filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.friday && time >= item.openingHours.friday && item.closingHours.friday != 'Closed')
             }
             // If there is a category chosen, only show places that are open and of the chosen category
             else {
                 filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.friday && time >= item.openingHours.friday && item.category === categoryChosen && item.closingHours.friday != 'Closed')
             }
+            console.log(filteredDataOpenNow)
             setFilterItem(filteredDataOpenNow)
         }
         // if it is SATURDAY
@@ -190,6 +223,7 @@ function DiscoverPage(props) {
             else {
                 filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.saturday && time >= item.openingHours.saturday && item.category === categoryChosen && item.closingHours.saturday != 'Closed')
             }
+            console.log(filteredDataOpenNow)
             setFilterItem(filteredDataOpenNow)
         }
     }
@@ -211,6 +245,8 @@ function DiscoverPage(props) {
                     </div>
                 </div>
                 <hr></hr>
+
+                {/* <BusinessOfTheWeek /> */}
 
                 {/* This component displays all of the main Category buttons */}
                 <FilterButton button={buttons} filter={filter} />
@@ -258,7 +294,7 @@ function DiscoverPage(props) {
                     </Accordion>
                 </div>
                 <hr></hr>
-                <h6>Click on a business' name to open a separate page and get more information about them.</h6>
+                <h6>Click on a business' name or logo to open a separate page and get more information about them!</h6>
                 <hr></hr>
 
                 <div className='discoverDiv'>

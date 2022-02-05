@@ -3,6 +3,8 @@ import IndexCarousel from '../../components/IndexCarousel/IndexCarousel';
 import IndexMainBody from '../../components/IndexMainBody/IndexMainBody';
 import JumbotronHeader from '../../components/JumbotronHeader/JumbotronHeader';
 import { useEffect } from 'react';
+import BusinessOfTheWeek from '../../components/BusinessOfTheWeek/BusinessOfTheWeek';
+import GetStartedNow from '../../components/GetStartedNow/GetStartedNow';
 
 function HomePage() {
     useEffect(() => {
@@ -19,6 +21,8 @@ function HomePage() {
             <Container>
                 <div className='centeredText'>
                     <IndexCarousel />
+                    <GetStartedNow />
+                    {/* <BusinessOfTheWeek /> */}
 
                     <IndexMainBody />
 

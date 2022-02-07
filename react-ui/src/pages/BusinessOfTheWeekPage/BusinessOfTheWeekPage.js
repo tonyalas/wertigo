@@ -41,7 +41,7 @@ function BusinessOfTheWeekPage() {
                             <h1>{thisWeekBusiness.category}</h1>
                             <h2>{thisWeekBusiness.subcategory}</h2>
                             <div className='block-text'>
-                                <p id='informationText'>{thisWeekBusiness.description} Order your beautiful flower arrangement just in time for Valentine's Day! <br></br>Email, call, or message on Facebook to place your order today!</p>
+                                <p id='informationText'>{thisWeekBusiness.description} Order your beautiful flower arrangement just in time for Valentine's Day! <br></br>Email, call, or message on Facebook to place your order today!<br></br><b>$65 for a dozen roses.</b><br></br>Please contact for other prices.</p>
                             </div>
                             {(thisWeekBusiness.phoneNumber != '') &&
                                 <h4><a href={'tel:' + thisWeekBusiness.phoneNumber} className='phonenumber'>{thisWeekBusiness.phoneNumber} {thisWeekBusiness.phoneNumberDescription}</a></h4>

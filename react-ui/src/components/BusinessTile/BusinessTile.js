@@ -20,7 +20,7 @@ function BusinessTile(props) {
             {(props.phoneNumber != '') &&
                 <h5><a href={'tel:' + props.phoneNumber} className='phonenumber'>{props.phoneNumber} {props.phoneNumberDescription}</a></h5>
             }
-            {(props.phoneNumber != '') &&
+            {(props.phoneNumber2 != '') &&
                 <h5><a href={'tel:' + props.phoneNumber2} className='phonenumber'>{props.phoneNumber2} {props.phoneNumberDescription2}</a></h5>
             }
 

@@ -6,7 +6,6 @@ import { Accordion } from 'react-bootstrap';
 import ptag from '../../pTags';
 import noneButton from '../../NoneButtons';
 import './DiscoverPage.css';
-import BusinessOfTheWeek from '../../components/BusinessOfTheWeek/BusinessOfTheWeek';
 
 
 function DiscoverPage(props) {
@@ -117,7 +116,7 @@ function DiscoverPage(props) {
         //var time = today.getHours() + ':' + today.getMinutes()
         var dayOfTheWeek = today.getDay()
         console.log(time)
-        //console.log(dayOfTheWeek)
+        console.log(dayOfTheWeek)
         console.log(categoryChosen)
         var filteredDataOpenNow
 
@@ -133,6 +132,7 @@ function DiscoverPage(props) {
             else {
                 filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.sunday && time >= item.openingHours.sunday && item.category === categoryChosen && item.closingHours.sunday != 'Closed')
             }
+            console.log(filteredDataOpenNow)
             setFilterItem(filteredDataOpenNow)
         }
         // if it is MONDAY
@@ -245,8 +245,6 @@ function DiscoverPage(props) {
                     </div>
                 </div>
                 <hr></hr>
-
-                {/* <BusinessOfTheWeek /> */}
 
                 {/* This component displays all of the main Category buttons */}
                 <FilterButton button={buttons} filter={filter} />

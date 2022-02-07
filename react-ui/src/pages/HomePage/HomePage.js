@@ -22,7 +22,7 @@ function HomePage() {
                 <div className='centeredText'>
                     <IndexCarousel />
                     <GetStartedNow />
-                    {/* <BusinessOfTheWeek /> */}
+                    <BusinessOfTheWeek />
 
                     <IndexMainBody />
 

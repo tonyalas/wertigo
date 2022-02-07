@@ -18,6 +18,10 @@ function Footer() {
                 <a href='/faq' id='footer-links'>FAQ</a> */}
                 <br></br>
                 <br></br>
+                <Link to='/businessoftheweek' id='footer-links'>Business of the Week</Link>
+                <Link to='/whatsnew' id='footer-links'>What's New</Link>
+                <br></br>
+                <br></br>
                 <a href='https://github.com/tonyalas/wertigo' id='footer-links' target='_blank' rel='noopener noreferrer'>Github</a>
             </div>
         </footer>

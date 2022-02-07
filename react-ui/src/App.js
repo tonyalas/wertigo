@@ -13,6 +13,7 @@ import FAQPage from './pages/FAQPage/FAQPage';
 import HomePage from './pages/HomePage/HomePage';
 import WhatsNewPage from './pages/WhatsNewPage/WhatsNewPage';
 import businessesData from './businessesData';
+import BusinessOfTheWeekPage from './pages/BusinessOfTheWeekPage/BusinessOfTheWeekPage';
 
 
 function App() {
@@ -36,6 +37,8 @@ function App() {
         <Route path='/faq' element={<FAQPage />} />
 
         <Route path='/whatsnew' element={<WhatsNewPage />} />
+
+        <Route path='/businessoftheweek' element={<BusinessOfTheWeekPage />} />
 
         <Route path='/contactformsuccess' element={<ContactFormSuccess />} />
 

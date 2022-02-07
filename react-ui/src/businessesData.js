@@ -2156,7 +2156,7 @@ module.exports = [
         phoneNumberDescription2: '',
         location2Name: '',
         publicEmail: 'felipesblazinbbq@gmail.com',
-        websiteURL: '',
+        websiteURL: 'https://www.felipesblazinbbq.com',
         facebookURL: 'https://www.facebook.com/felipesblazinbbq',
         etsyURL: '',
         instagramURL: 'https://www.instagram.com/felipesblazinbbq/',

@@ -1,9 +1,22 @@
-import { useEffect } from 'react';
-import { Container, Row, Col, Table, Carousel } from 'react-bootstrap';
+import { useEffect, useState } from 'react';
+import { Container, Row, Col, Table, Carousel, Modal } from 'react-bootstrap';
 import businessesData from '../../businessesData';
 import './BusinessOfTheWeekPage.css'
 
 function BusinessOfTheWeekPage() {
+
+
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    const [show2, setShow2] = useState(false);
+    const handleClose2 = () => setShow2(false);
+    const handleShow2 = () => setShow2(true);
+
+    const [show3, setShow3] = useState(false);
+    const handleClose3 = () => setShow3(false);
+    const handleShow3 = () => setShow3(true);
 
     // ! EDIT THIS NUMBER AND MATCH IT WITH THE NUMBER IN BusinessOfTheWeek.js
     const thisWeekBusiness = businessesData.find(x => x.id === 35)
@@ -43,16 +56,62 @@ function BusinessOfTheWeekPage() {
                             <div className='block-text'>
                                 <p id='informationText'>{thisWeekBusiness.description} Order your beautiful flower arrangement just in time for Valentine's Day! <br></br>Email, call, or message on Facebook to place your order today!<br></br><b>$65 for a dozen roses.</b><br></br>Please contact for other prices.</p>
                             </div>
-                            {(thisWeekBusiness.phoneNumber != '') &&
-                                <h4><a href={'tel:' + thisWeekBusiness.phoneNumber} className='phonenumber'>{thisWeekBusiness.phoneNumber} {thisWeekBusiness.phoneNumberDescription}</a></h4>
-                            }
-                            {(thisWeekBusiness.phoneNumber2 != '') &&
-                                <h4><a href={'tel:' + thisWeekBusiness.phoneNumber2} className='phonenumber'>{thisWeekBusiness.phoneNumber2} {thisWeekBusiness.phoneNumberDescription2}</a></h4>
+
+                            {(thisWeekBusiness.businessPicture1 != undefined) &&
+                                <>
+                                    <img src={thisWeekBusiness.businessPicture1} className='promotionImage' alt='' onClick={handleShow} />
+                                    <Modal show={show} onHide={handleClose}>
+                                        <Modal.Header closeButton>
+                                            <Modal.Title>{thisWeekBusiness.name}</Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>
+                                            <img src={thisWeekBusiness.businessPicture1} className='img-fluid' alt='' />
+                                        </Modal.Body>
+                                    </Modal>
+
+                                    {(thisWeekBusiness.businessPicture2 != undefined) &&
+                                        <>
+                                            <img src={thisWeekBusiness.businessPicture2} className='promotionImage' alt='' onClick={handleShow2} />
+                                            <Modal show={show2} onHide={handleClose2}>
+                                                <Modal.Header closeButton>
+                                                    <Modal.Title>{thisWeekBusiness.name}</Modal.Title>
+                                                </Modal.Header>
+                                                <Modal.Body>
+                                                    <img src={thisWeekBusiness.businessPicture2} className='img-fluid' alt='' />
+                                                </Modal.Body>
+                                            </Modal>
+                                        </>
+                                    }
+
+                                    {(thisWeekBusiness.businessPicture3 != undefined) &&
+                                        <>
+                                            <img src={thisWeekBusiness.businessPicture3} className='promotionImage' alt='' onClick={handleShow3} />
+                                            <Modal show={show3} onHide={handleClose3}>
+                                                <Modal.Header closeButton>
+                                                    <Modal.Title>{thisWeekBusiness.name}</Modal.Title>
+                                                </Modal.Header>
+                                                <Modal.Body>
+                                                    <img src={thisWeekBusiness.businessPicture3} className='img-fluid' alt='' />
+                                                </Modal.Body>
+                                            </Modal>
+                                        </>
+                                    }
+                                    <br></br>
+                                    <br></br>
+                                </>
                             }
 
-                            {/* If they have a public phone number, display it here */}
                             {(thisWeekBusiness.phoneNumber != '') &&
-                                <br></br>
+                                <>
+                                    <h4><a href={'tel:' + thisWeekBusiness.phoneNumber} className='phonenumber'>{thisWeekBusiness.phoneNumber} {thisWeekBusiness.phoneNumberDescription}</a></h4>
+                                    <br></br>
+                                </>
+                            }
+                            {(thisWeekBusiness.phoneNumber2 != '') &&
+                                <>
+                                    <h4><a href={'tel:' + thisWeekBusiness.phoneNumber2} className='phonenumber'>{thisWeekBusiness.phoneNumber2} {thisWeekBusiness.phoneNumberDescription2}</a></h4>
+                                    <br></br>
+                                </>
                             }
 
                             {/* <!-- * IF they have a Website Link --> */}

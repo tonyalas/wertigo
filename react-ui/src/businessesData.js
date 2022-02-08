@@ -72,6 +72,7 @@ module.exports = [
         category: 'Restaurant',
         subcategory: 'Cafe',
         picturePath: '/images/cafeamor.jpg',
+        businessPicture1: '',
         description: 'We promote Latin American art and culture through great specialty coffee, fresh food, books, paintings, artisanal pottery, and handcrafted jewelry.',
         phoneNumber: '519-999-8185',
         phoneNumberDescription: '',

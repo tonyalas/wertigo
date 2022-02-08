@@ -52,3 +52,18 @@
 .table th {
   padding: 10px;
 }
+
+.modal_Image {
+  width: 250px;
+  height: 250px;
+}
+
+.promotionImage {
+  width: 200px;
+  height: 200px;
+}
+
+.business_logo {
+  width: 250px;
+  height: 250px;
+}

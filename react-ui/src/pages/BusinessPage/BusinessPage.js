@@ -1,11 +1,16 @@
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { makeFriendlyURL } from '../../utils/urlUtils';
-import { Col, Container, Row, Table } from 'react-bootstrap';
+import { Col, Container, Row, Table, Modal } from 'react-bootstrap';
 import './BusinessPage.css'
 
 function BusinessPage(props) {
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     const params = useParams();
     const business = props.businesses.find(
@@ -30,7 +35,7 @@ function BusinessPage(props) {
             <div className='Jumbotron'>
                 <h1>{business?.name}</h1>
                 <br></br>
-                <img className='business_image' src={business?.picturePath} alt='' />
+                <img className='business_logo' src={business?.picturePath} alt='' />
             </div>
             <Container>
                 <Row className='justify-content-center'>
@@ -41,21 +46,34 @@ function BusinessPage(props) {
                             <div className='block-text'>
                                 <p id='informationText'>{business?.description}</p>
                             </div>
-                            {(business?.phoneNumber != '') &&
-                                <h4><a href={'tel:' + business?.phoneNumber} className='phonenumber'>{business?.phoneNumber} {business?.phoneNumberDescription}</a></h4>
-                            }
-                            {(business?.phoneNumber2 != '') &&
-                                <h4><a href={'tel:' + business?.phoneNumber2} className='phonenumber'>{business?.phoneNumber2} {business?.phoneNumberDescription2}</a></h4>
-                            }
 
-                            {/* If they have a public phone number, display it here */}
-                            {(business?.phoneNumber != '') &&
-                                <br></br>
-                            }
 
                             {/* {(business?.businessPicture1 != '') &&
-                                <img src={business?.businessPicture1} className='business_image' alt='' />
+                                <>
+                                    <img src={business?.businessPicture1} className='promotionImage' alt='' onClick={handleShow} />
+                                    <Modal show={show} onHide={handleClose}>
+                                        <Modal.Header closeButton>
+                                            <Modal.Title>Mi Casita</Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>
+                                            <img src={business?.businessPicture1} className=' img-fluid' alt='' />
+                                        </Modal.Body>
+                                    </Modal>
+                                </>
                             } */}
+
+                            {(business?.phoneNumber != '') &&
+                                <>
+                                    <h4><a href={'tel:' + business?.phoneNumber} className='phonenumber'>{business?.phoneNumber} {business?.phoneNumberDescription}</a></h4>
+                                    <br></br>
+                                </>
+                            }
+                            {(business?.phoneNumber2 != '') &&
+                                <>
+                                    <h4><a href={'tel:' + business?.phoneNumber2} className='phonenumber'>{business?.phoneNumber2} {business?.phoneNumberDescription2}</a></h4>
+                                    <br></br>
+                                </>
+                            }
 
                             {/* <!-- * IF they have a Website Link --> */}
                             {(business?.websiteURL != '') &&

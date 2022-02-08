@@ -53,6 +53,10 @@ function BusinessPage(props) {
                                 <br></br>
                             }
 
+                            {/* {(business?.businessPicture1 != '') &&
+                                <img src={business?.businessPicture1} className='business_image' alt='' />
+                            } */}
+
                             {/* <!-- * IF they have a Website Link --> */}
                             {(business?.websiteURL != '') &&
                                 <>

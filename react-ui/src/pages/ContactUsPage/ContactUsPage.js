@@ -376,7 +376,7 @@ function ContactUsPage() {
                     </form>
                 </div>
                 <br></br>
-                <p id='subtext'>Forms above not working or have a general inquiry? You can also email us <a href='mailto:wertigosupport@gmail.com'>here</a>.</p>
+                <p id='subtext'>Forms above not working or have a general inquiry? You can also email us <a href='mailto:wertigocanada@gmail.com'>here</a>.</p>
                 <br></br>
             </Container>
         </>

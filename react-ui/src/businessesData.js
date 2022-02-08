@@ -7,6 +7,7 @@ module.exports = [
         category: 'Restaurant',
         subcategory: 'Mexican',
         picturePath: '/images/micasita.jpg',
+        businessPicture1: 'https://res.cloudinary.com/wertigo/image/upload/v1644280831/businessPictures/micasita1_ennvb2.jpg',
         description: 'A local family owned restaurant serving fresh made to order Salvadoran and Mexican cuisine. Open for dine in or take out (order online).',
         phoneNumber: '519-253-2274',
         phoneNumberDescription: '',

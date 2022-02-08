@@ -8,9 +8,16 @@ import './BusinessPage.css'
 function BusinessPage(props) {
 
     const [show, setShow] = useState(false);
-
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const [show2, setShow2] = useState(false);
+    const handleClose2 = () => setShow2(false);
+    const handleShow2 = () => setShow2(true);
+
+    const [show3, setShow3] = useState(false);
+    const handleClose3 = () => setShow3(false);
+    const handleShow3 = () => setShow3(true);
 
     const params = useParams();
     const business = props.businesses.find(
@@ -48,19 +55,49 @@ function BusinessPage(props) {
                             </div>
 
 
-                            {/* {(business?.businessPicture1 != '') &&
+                            {(business?.businessPicture1 != undefined) &&
                                 <>
                                     <img src={business?.businessPicture1} className='promotionImage' alt='' onClick={handleShow} />
                                     <Modal show={show} onHide={handleClose}>
                                         <Modal.Header closeButton>
-                                            <Modal.Title>Mi Casita</Modal.Title>
+                                            <Modal.Title>{business?.name}</Modal.Title>
                                         </Modal.Header>
                                         <Modal.Body>
-                                            <img src={business?.businessPicture1} className=' img-fluid' alt='' />
+                                            <img src={business?.businessPicture1} className='img-fluid' alt='' />
                                         </Modal.Body>
                                     </Modal>
+
+                                    {(business?.businessPicture2 != undefined) &&
+                                        <>
+                                            <img src={business?.businessPicture2} className='promotionImage' alt='' onClick={handleShow2} />
+                                            <Modal show={show2} onHide={handleClose2}>
+                                                <Modal.Header closeButton>
+                                                    <Modal.Title>{business?.name}</Modal.Title>
+                                                </Modal.Header>
+                                                <Modal.Body>
+                                                    <img src={business?.businessPicture2} className='img-fluid' alt='' />
+                                                </Modal.Body>
+                                            </Modal>
+                                        </>
+                                    }
+
+                                    {(business?.businessPicture3 != undefined) &&
+                                        <>
+                                            <img src={business?.businessPicture3} className='promotionImage' alt='' onClick={handleShow3} />
+                                            <Modal show={show3} onHide={handleClose3}>
+                                                <Modal.Header closeButton>
+                                                    <Modal.Title>{business?.name}</Modal.Title>
+                                                </Modal.Header>
+                                                <Modal.Body>
+                                                    <img src={business?.businessPicture3} className='img-fluid' alt='' />
+                                                </Modal.Body>
+                                            </Modal>
+                                        </>
+                                    }
+                                    <br></br>
+                                    <br></br>
                                 </>
-                            } */}
+                            }
 
                             {(business?.phoneNumber != '') &&
                                 <>

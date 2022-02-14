@@ -18,8 +18,8 @@ function BusinessOfTheWeekPage() {
     const handleClose3 = () => setShow3(false);
     const handleShow3 = () => setShow3(true);
 
-    // ! EDIT THIS NUMBER AND MATCH IT WITH THE NUMBER IN BusinessOfTheWeek.js
-    const thisWeekBusiness = businessesData.find(x => x.id === 35)
+    // ! EDIT THIS NUMBER AND MATCH IT WITH THE NUMBER IN BusinessOfTheWeek.js component
+    const thisWeekBusiness = businessesData.find(x => x.id === 4)
 
     useEffect(() => {
         document.title = 'Wertigo - Business of the Week'
@@ -30,7 +30,7 @@ function BusinessOfTheWeekPage() {
             <div className='Jumbotron'>
                 <h1>Business of the Week</h1>
                 {/* EDIT THIS TO UPDATE THE WEEK BELOW */}
-                <h4>The featured business of the week for February 7 - February 14, 2022 is:</h4>
+                <h4>The featured business of the week for February 14 - February 21, 2022 is:</h4>
                 <h2 id='businessNameLarge'>{thisWeekBusiness.name}</h2>
                 <br></br>
                 {/* UPDATE THESE PICTURES */}
@@ -39,10 +39,10 @@ function BusinessOfTheWeekPage() {
                         <img className='sliding-image' src={thisWeekBusiness.picturePath} alt='' />
                     </Carousel.Item>
                     <Carousel.Item interval={2500}>
-                        <img className='sliding-image' src='/images/businessoftheweek/flowersbytoni2.jpg' alt='' />
+                        <img className='sliding-image' src='/images/businessoftheweek/felipebbq2.jpg' alt='' />
                     </Carousel.Item>
                     <Carousel.Item interval={2500}>
-                        <img className='sliding-image' src='/images/businessoftheweek/flowersbytoni3.jpg' alt='' />
+                        <img className='sliding-image' src='/images/businessoftheweek/felipebbq3.jpg' alt='' />
                     </Carousel.Item>
                 </Carousel>
             </div>
@@ -54,7 +54,7 @@ function BusinessOfTheWeekPage() {
                             <h1>{thisWeekBusiness.category}</h1>
                             <h2>{thisWeekBusiness.subcategory}</h2>
                             <div className='block-text'>
-                                <p id='informationText'>{thisWeekBusiness.description} Order your beautiful flower arrangement just in time for Valentine's Day! <br></br>Email, call, or message on Facebook to place your order today!<br></br><b>$65 for a dozen roses.</b><br></br>Please contact for other prices.</p>
+                                <p id='informationText'>{thisWeekBusiness.description} We are a brother-sister duo that make homemade, gourmet bbq sauce using fresh, locally sourced ingredients.<br></br><b>Please contact us on one of our socials or visit our website to place an order!</b></p>
                             </div>
 
                             {(thisWeekBusiness.businessPicture1 != undefined) &&

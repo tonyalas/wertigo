@@ -67,6 +67,15 @@ module.exports = [
             friday: '23:00',
             saturday: '23:00'
         },
+        openPastMidnight: {
+            sunday: false,
+            monday: false,
+            tuesday: false,
+            wednesday: false,
+            thursday: false,
+            friday: false,
+            saturday: false
+        }
     },
     {
         id: 40,
@@ -364,7 +373,7 @@ module.exports = [
         businessPicture1: 'https://res.cloudinary.com/wertigo/image/upload/v1644339994/businessPictures/FlowersByToni/FlowersByToni1_clnd2l.jpg',
         businessPicture2: 'https://res.cloudinary.com/wertigo/image/upload/v1644339994/businessPictures/FlowersByToni/FlowersByToni2_wvhnpg.jpg',
         businessPicture3: 'https://res.cloudinary.com/wertigo/image/upload/v1644339994/businessPictures/FlowersByToni/FlowersByToni3_treabg.jpg',
-        description: 'Fresh flowers for all occasions!',
+        description: 'Fresh flowers for all occasions! Email, call, or message on Facebook to place your order today! $65 for a dozen roses. Please contact for other prices.',
         phoneNumber: '519-551-6405',
         phoneNumberDescription: '',
         location1Name: '',

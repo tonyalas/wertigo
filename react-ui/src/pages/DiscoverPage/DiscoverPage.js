@@ -86,7 +86,7 @@ function DiscoverPage(props) {
         // ! Try to solve this by adding an if statement that concatenates a '0' when necessary and prints the regular time else
         var today = new Date()
         // IF the current hour is SINGLE DIGIT
-        if (today.getHours() == '1' || today.getHours() == '2' || today.getHours() == '3' || today.getHours() == '4' || today.getHours() == '5' || today.getHours() == '6' || today.getHours() == '7' || today.getHours() == '8' || today.getHours() == '9') {
+        if (today.getHours() == '0' || today.getHours() == '1' || today.getHours() == '2' || today.getHours() == '3' || today.getHours() == '4' || today.getHours() == '5' || today.getHours() == '6' || today.getHours() == '7' || today.getHours() == '8' || today.getHours() == '9') {
             // IF the current minute is SINGLE DIGIT (AND the hour is single digit)
             if (today.getMinutes() == '0' || today.getMinutes() == '1' || today.getMinutes() == '2' || today.getMinutes() == '3' || today.getMinutes() == '4' || today.getMinutes() == '5' || today.getMinutes() == '6' || today.getMinutes() == '7' || today.getMinutes() == '8' || today.getMinutes() == '9') {
                 console.log('single digit hours and minutes')
@@ -179,6 +179,11 @@ function DiscoverPage(props) {
         }
         // if it is THURSDAY
         if (dayOfTheWeek == 4) {
+            // var tempTime = new Date()
+            // tempTime.setHours(8, 35)
+            // var fakeTime = '0' + tempTime.getHours() + ':' + tempTime.getMinutes()
+            // console.log('test ' + fakeTime)
+
             // If there is no category chosen, display any place that is currently open
             if (categoryChosen == 'Recently Added') {
                 //console.log('Recently Added is currently chosen')
@@ -194,15 +199,13 @@ function DiscoverPage(props) {
         }
         // if it is FRIDAY
         if (dayOfTheWeek == 5) {
-            // var tempTime = new Date()
-            // tempTime.setHours(8, 35)
-            // var fakeTime = '0' + tempTime.getHours() + ':' + tempTime.getMinutes()
-            // console.log('test ' + fakeTime)
             console.log('Today is Friday')
             // If there is no category chosen, display any place that is currently open
             if (categoryChosen == 'Recently Added') {
                 //console.log('Recently Added is currently chosen')
-                filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.friday && time >= item.openingHours.friday && item.closingHours.friday != 'Closed')
+                // ! This has the addition of the OR case where a business object has the key "openPastMidnight" which refers to the store being open late on a particular day. In this case, it checks for openPastMidnight.thursday because it would roll over from a late closing time from technically the "previous day".
+                // * For example, a bar that is open on a Thursday from 2pm to 2am would technically close Friday at 2am, but re-open again at 1pm on Friday. So to avoid having weird glitches like that, the values in openPastMidnight refer to the day before. So in this example, I set openPastMidnight.thursday to 2am so that it technically rolls over from Thursday into Friday.
+                filteredDataOpenNow = props.businesses.filter(item => (time < item.closingHours.friday && time >= item.openingHours.friday && item.closingHours.friday != 'Closed') || (item.openPastMidnight != undefined && time < item.openPastMidnight.thursday && item.openPastMidnight.thursday != false))
             }
             // If there is a category chosen, only show places that are open and of the chosen category
             else {
@@ -217,11 +220,11 @@ function DiscoverPage(props) {
             // If there is no category chosen, display any place that is currently open
             if (categoryChosen == 'Recently Added') {
                 console.log('Recently Added is currently chosen')
-                filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.saturday && time >= item.openingHours.saturday && item.closingHours.saturday != 'Closed')
+                filteredDataOpenNow = props.businesses.filter(item => (time < item.closingHours.saturday && time >= item.openingHours.saturday && item.closingHours.saturday != 'Closed') || (item.openPastMidnight != undefined && time < item.openPastMidnight.friday))
             }
             // If there is a category chosen, only show places that are open and of the chosen category
             else {
-                filteredDataOpenNow = props.businesses.filter(item => time < item.closingHours.saturday && time >= item.openingHours.saturday && item.category === categoryChosen && item.closingHours.saturday != 'Closed')
+                filteredDataOpenNow = props.businesses.filter(item => (time < item.closingHours.saturday && time >= item.openingHours.saturday && item.category === categoryChosen && item.closingHours.saturday != 'Closed') || (item.openPastMidnight != undefined && time < item.openPastMidnight.friday && item.category === categoryChosen))
             }
             console.log(filteredDataOpenNow)
             setFilterItem(filteredDataOpenNow)

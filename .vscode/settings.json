@@ -37,6 +37,9 @@
     "thursday",
     "friday",
     "saturday",
-    "closingHours"
+    "closingHours",
+    "businessPicture1",
+    "businessPicture2",
+    "businessPicture3"
   ]
 }

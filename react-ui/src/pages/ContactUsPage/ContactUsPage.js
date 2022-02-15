@@ -216,7 +216,6 @@ function ContactUsPage() {
                                         <option>Bar</option>
                                         <option>Health & Wellness</option>
                                         <option>Shopping</option>
-                                        <option>Accessories</option>
                                         <option>Events</option>
                                         <option>Entertainment</option>
                                         <option>Automotive</option>

@@ -21,10 +21,6 @@ export default [
         buttonName: 'None'
     },
     {
-        name: 'Accessories',
-        buttonName: 'None'
-    },
-    {
         name: 'Events',
         buttonName: 'None'
     },

@@ -25,10 +25,6 @@ export default [
         description: 'Shopping'
     },
     {
-        name: 'Accessories',
-        description: 'Accessories'
-    },
-    {
         name: 'Events',
         description: 'Events'
     },

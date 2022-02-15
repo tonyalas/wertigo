@@ -827,7 +827,7 @@ module.exports = [
     {
         id: 28,
         name: 'Pipe\'s Palace',
-        category: 'Accessories',
+        category: 'Shopping',
         subcategory: 'Smoke Shop',
         picturePath: '/images/pipespalace.jpeg',
         description: '',
@@ -2235,7 +2235,7 @@ module.exports = [
     {
         id: 5,
         name: 'Bella Armande Jewelry',
-        category: 'Accessories',
+        category: 'Shopping',
         subcategory: 'Jewelry',
         picturePath: '/images/bellaarmande.jpg',
         businessPicture1: 'https://res.cloudinary.com/wertigo/image/upload/v1644343983/businessPictures/BellaArmande/BA1_yaeuvg.jpg',
@@ -2339,7 +2339,7 @@ module.exports = [
     {
         id: 3,
         name: 'Threedee Lab',
-        category: 'Accessories',
+        category: 'Shopping',
         subcategory: 'Gifts',
         picturePath: '/images/threedlab.png',
         businessPicture1: 'https://res.cloudinary.com/wertigo/image/upload/v1644344352/businessPictures/ThreedeeLab/3d-1_gcpzqu.jpg',

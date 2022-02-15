@@ -19,7 +19,7 @@ function FilterButton({ button, filter }) {
 
                     <button type='button' className='btn btn-secondary category-button filter-button' onClick={() => filter('Shopping')}>Shopping</button>
 
-                    <button type='button' className='btn btn-secondary category-button filter-button' onClick={() => filter('Accessories')}>Accessories</button>
+                    {/* <button type='button' className='btn btn-secondary category-button filter-button' onClick={() => filter('Accessories')}>Accessories</button> */}
 
                     <button type='button' className='btn btn-secondary category-button filter-button' onClick={() => filter('Events')}>Events</button>
 

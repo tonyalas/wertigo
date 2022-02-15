@@ -2,6 +2,67 @@
 // was "export default"
 module.exports = [
     {
+        id: 42,
+        name: 'Golden Flamez Candles',
+        category: 'Shopping',
+        subcategory: 'Candles',
+        picturePath: '/images/goldenflamezcandles.jpg',
+        businessPicture1: 'https://res.cloudinary.com/wertigo/image/upload/v1644941723/businessPictures/GoldenFlamezCandles/gfc1_smbbwt.jpg',
+        businessPicture2: 'https://res.cloudinary.com/wertigo/image/upload/v1644941723/businessPictures/GoldenFlamezCandles/gfc2_xsg2zu.jpg',
+        businessPicture3: 'https://res.cloudinary.com/wertigo/image/upload/v1644941723/businessPictures/GoldenFlamezCandles/gfc3_saxe5b.jpg',
+        description: 'Soy Vegan Candles, Made with Organic Oils. Hand poured in small batches. Cruelty Free.',
+        phoneNumber: '519-890-7701',
+        phoneNumberDescription: '',
+        location1Name: '',
+        phoneNumber2: '',
+        phoneNumberDescription2: '',
+        location2Name: '',
+        publicEmail: 'goldenflamezcandles@gmail.com',
+        websiteURL: 'https://www.goldenflamezcandles.com',
+        facebookURL: 'https://www.facebook.com/goldenflamezcandles',
+        etsyURL: '',
+        instagramURL: 'https://www.instagram.com/goldenflamezcandles/',
+        instagramUsername: 'goldenflamezcandles',
+        instagramURL2: '',
+        instagramUsername2: '',
+        address: 'Harrow, ON',
+        googleMapsLink: '',
+        embeddedMapsLink: '',
+        address2: '',
+        googleMapsLink2: '',
+        embeddedMapsLink2: '',
+        hasHours: true,
+        hasMultipleLocations: false,
+        locationsHaveDifferentHours: false,
+        hoursMessage: 'These hours are for pick-up times only. Please order through our website first.',
+        hoursDays: {
+            first: 'Monday - Friday:',
+            second: 'Saturday & Sunday:'
+        },
+        hoursTimes: {
+            first: '10:00am to 6:00pm',
+            second: '10:00am to 8:00pm'
+        },
+        openingHours: {
+            sunday: '10:00',
+            monday: '10:00',
+            tuesday: '10:00',
+            wednesday: '10:00',
+            thursday: '10:00',
+            friday: '10:00',
+            saturday: '10:00'
+        },
+        closingHours: {
+            sunday: '20:00',
+            monday: '18:00',
+            tuesday: '18:00',
+            wednesday: '18:00',
+            thursday: '18:00',
+            friday: '18:00',
+            saturday: '20:00'
+        },
+    },
+    {
         id: 41,
         name: 'Mi Casita',
         category: 'Restaurant',

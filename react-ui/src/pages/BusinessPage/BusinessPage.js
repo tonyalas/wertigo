@@ -201,7 +201,7 @@ function BusinessPage(props) {
                             }
 
                             {/* <!-- * Business Address - IF THERE IS NO SPECIFIC ADDRESS, DO NOT ADD A <a> TAG --> */}
-                            {(business?.address == 'Windsor, ON' || business?.address == 'Lasalle, ON') &&
+                            {(business?.address == 'Windsor, ON' || business?.address == 'Lasalle, ON' || business?.address == 'Harrow, ON') &&
                                 <>
                                     <div className='businessLinkPic'>
                                         <img src='/images/pin-icon.png' className='linkLogosPage' alt='' />
@@ -213,7 +213,7 @@ function BusinessPage(props) {
                             }
 
                             {/* <!-- * Business Address - IF THERE IS A SPECIFIC ADDRESS, KEEP THE <a> TAG --> */}
-                            {(business?.address != 'Windsor, ON' && business?.address != 'Lasalle, ON' && business?.address != '') &&
+                            {(business?.address != 'Windsor, ON' && business?.address != 'Lasalle, ON' && business?.address != 'Harrow, ON' && business?.address != '') &&
                                 <>
                                     <div className='businessLinkPic'>
                                         <img src='/images/pin-icon.png' className='linkLogosPage' alt='' />

@@ -2,6 +2,68 @@
 // was "export default"
 module.exports = [
     {
+        id: 43,
+        name: 'Hip Hop Nails',
+        category: 'Health & Beauty',
+        subcategory: 'Nail Salon',
+        picturePath: '/images/hiphopnails.jpg',
+        description: 'We provide professional nail care service, and facial & waxing for Ladies and Gentlemen.',
+        phoneNumber: '519-969-1143',
+        phoneNumberDescription: '',
+        location1Name: '',
+        phoneNumber2: '',
+        phoneNumberDescription2: '',
+        location2Name: '',
+        publicEmail: '',
+        websiteURL: '',
+        facebookURL: '',
+        etsyURL: '',
+        instagramURL: '',
+        instagramUsername: '',
+        instagramURL2: '',
+        instagramUsername2: '',
+        address: '3202 Dougall Ave, Windsor, ON N9E 1S6',
+        googleMapsLink: 'https://goo.gl/maps/uXsatrya5ZNg94sC8',
+        embeddedMapsLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2952.4425636162587!2d-83.01189748450301!3d42.26907534883504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2c19c450a155%3A0xd0c12d9d73b37c91!2sHip%20Hop%20Nails!5e0!3m2!1sen!2sca!4v1645072672771!5m2!1sen!2sca',
+        address2: '',
+        googleMapsLink2: '',
+        embeddedMapsLink2: '',
+        hasHours: true,
+        hasMultipleLocations: false,
+        locationsHaveDifferentHours: false,
+        hoursMessage: '',
+        hoursDays: {
+            first: 'Sunday:',
+            second: 'Monday - Tuesday:',
+            third: 'Wednesday - Friday:',
+            fourth: 'Saturday'
+        },
+        hoursTimes: {
+            first: '10:00am to 5:00pm',
+            second: '10:00am to 7:00pm',
+            third: '9:30am to 7:00pm',
+            fourth: '9:30am to 6:00pm'
+        },
+        openingHours: {
+            sunday: '10:00',
+            monday: '10:00',
+            tuesday: '10:00',
+            wednesday: '09:30',
+            thursday: '09:30',
+            friday: '09:30',
+            saturday: '09:30'
+        },
+        closingHours: {
+            sunday: '17:00',
+            monday: '19:00',
+            tuesday: '19:00',
+            wednesday: '19:00',
+            thursday: '19:00',
+            friday: '19:00',
+            saturday: '16:00'
+        },
+    },
+    {
         id: 42,
         name: 'Golden Flamez Candles',
         category: 'Shopping',

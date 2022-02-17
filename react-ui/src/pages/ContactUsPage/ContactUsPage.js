@@ -214,7 +214,7 @@ function ContactUsPage() {
                                         <option>Restaurant</option>
                                         <option>Food (Other)</option>
                                         <option>Bar</option>
-                                        <option>Health & Wellness</option>
+                                        <option>Health & Beauty</option>
                                         <option>Shopping</option>
                                         <option>Events</option>
                                         <option>Entertainment</option>

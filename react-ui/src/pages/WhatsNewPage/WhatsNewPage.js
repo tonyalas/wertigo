@@ -17,13 +17,13 @@ function WhatsNewPage() {
                 <div className='row justify-content-center'>
                     <div className='col'>
                         <div className='centeredText'>
-                            {/* <h2>February 15, 2022</h2>
+                            <h2>February 18, 2022</h2>
                             <h4>Open Now button</h4>
                             <p className='whatsnewtext'>The newest addition to the Wertigo Discover page is the "Open Now" button! Under the "Filter Results by Subcategory" section on the Discover page, you will find a new, green button labeled "Open Now".<br></br>You can either press this button with no category selected to show any business currently open, OR you can select a category first and press the button to see any businesses of that category that are currently open.<br></br>This new button looks like this:</p>
                             <img src='/images/OpenNowButton.jpg' alt='' className='openNowButton' />
                             <p className='whatsnewtext'>So now if you're craving a late night snack, looking where to go out with some friends on a Friday night or want to do a quick run to a business in the evening, you can find out what's currently open!</p>
                             <br></br>
-                            <hr></hr> */}
+                            <hr></hr>
                             <h2>February 14, 2022</h2>
                             <h4>Business of the Week: February 14 - 21, 2022</h4>
                             <p className='whatsnewtext'>Craving something delicious to add to your food? Look no further than Felipe's Blazin BBQ sauces! They are a brother- sister duo that make homemade, gourmet bbq sauce using fresh, locally sourced ingredients.</p>

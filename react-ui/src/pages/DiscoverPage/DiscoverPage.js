@@ -272,8 +272,8 @@ function DiscoverPage(props) {
                                     {/* This is a static "Reset All" button that does not change regardless of the category or subcategory chosen */}
                                     <button type='button' className='btn btn-warning category-button filter-button' onClick={() => filter('Recently Added')}>Reset All</button>
 
-                                    {/* This is a static "Open Now" button that does not change regardless of the category or subcategory chosen 
-                                    <button type='button' className='btn btn-success category-button filter-button' onClick={() => filterOpenNow()}>Open Now</button> */}
+                                    {/* This is a static "Open Now" button that does not change regardless of the category or subcategory chosen */}
+                                    <button type='button' className='btn btn-success category-button filter-button' onClick={() => filterOpenNow()}>Open Now</button>
 
                                     {/* This will show a "None" button that will reset any subcategory filters to show all of the tiles of the same category */}
                                     {filterNoneButtons.map(cat => {

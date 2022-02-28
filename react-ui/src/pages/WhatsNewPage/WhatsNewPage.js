@@ -17,6 +17,13 @@ function WhatsNewPage() {
                 <div className='row justify-content-center'>
                     <div className='col'>
                         <div className='centeredText'>
+                            <h2>February 28, 2022</h2>
+                            <h4>Business of the Week: February 28 - March 7, 2022</h4>
+                            <p className='whatsnewtext'>By shopping our wide selection of Eco-Friendly and Cruelty-Free products, you will significantly help reduce waste and contribute to the well-being of the planet! Help us better the Earth!</p>
+                            <img src='/images/greenenvy.jpg' alt='' className='business_image' />
+                            <Link target='_blank' rel='noopener noreferrer' className='businessHeaderLink' to={'/businessoftheweek'}><p className='whatsnewtext'>See the new Business of the Week here!</p></Link>
+                            <br></br>
+                            <hr></hr>
                             <h2>February 18, 2022</h2>
                             <h4>Open Now button</h4>
                             <p className='whatsnewtext'>The newest addition to the Wertigo Discover page is the "Open Now" button! Under the "Filter Results by Subcategory" section on the Discover page, you will find a new, green button labeled "Open Now".<br></br>You can either press this button with no category selected to show any business currently open, OR you can select a category first and press the button to see any businesses of that category that are currently open.<br></br>This new button looks like this:</p>
@@ -28,7 +35,7 @@ function WhatsNewPage() {
                             <h4>Business of the Week: February 14 - 21, 2022</h4>
                             <p className='whatsnewtext'>Craving something delicious to add to your food? Look no further than Felipe's Blazin BBQ sauces! They are a brother- sister duo that make homemade, gourmet bbq sauce using fresh, locally sourced ingredients.</p>
                             <img src='/images/felipebbq.png' alt='' className='business_image' />
-                            <Link target='_blank' rel='noopener noreferrer' className='businessHeaderLink' to={'/businessoftheweek'}><p className='whatsnewtext'>See the new Business of the Week here!</p></Link>
+                            <Link target='_blank' rel='noopener noreferrer' className='businessHeaderLink' to={'/discover/FelipesBlazinBBQ'}><p className='whatsnewtext'>Check out Felipe's Blazin BBQ here!</p></Link>
                             <br></br>
                             <hr></hr>
                             <h2>February 7, 2022</h2>

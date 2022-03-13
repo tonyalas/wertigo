@@ -40,6 +40,7 @@
     "closingHours",
     "businessPicture1",
     "businessPicture2",
-    "businessPicture3"
+    "businessPicture3",
+    "openPastMidnight"
   ]
 }

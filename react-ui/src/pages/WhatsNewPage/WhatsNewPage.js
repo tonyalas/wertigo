@@ -17,11 +17,18 @@ function WhatsNewPage() {
                 <div className='row justify-content-center'>
                     <div className='col'>
                         <div className='centeredText'>
+                            <h2>March 14, 2022</h2>
+                            <h4>Business of the Week: March 14 - 21, 2022</h4>
+                            <p className='whatsnewtext'>Whether you are interested in renting or purchasing art, framing your own collection, or creating a custom gift, they have everything you need to acquire that perfect piece of art.</p>
+                            <img src='/images/nancyjohnsgallery.jpg' alt='' className='business_image' />
+                            <Link target='_blank' rel='noopener noreferrer' className='businessHeaderLink' to={'/businessoftheweek'}><p className='whatsnewtext'>See the new Business of the Week here!</p></Link>
+                            <br></br>
+                            <hr></hr>
                             <h2>February 28, 2022</h2>
                             <h4>Business of the Week: February 28 - March 7, 2022</h4>
                             <p className='whatsnewtext'>By shopping our wide selection of Eco-Friendly and Cruelty-Free products, you will significantly help reduce waste and contribute to the well-being of the planet! Help us better the Earth!</p>
                             <img src='/images/greenenvy.jpg' alt='' className='business_image' />
-                            <Link target='_blank' rel='noopener noreferrer' className='businessHeaderLink' to={'/businessoftheweek'}><p className='whatsnewtext'>See the new Business of the Week here!</p></Link>
+                            <Link target='_blank' rel='noopener noreferrer' className='businessHeaderLink' to={'/discover/GreenEnvy'}><p className='whatsnewtext'>Check out Green Envy here!</p></Link>
                             <br></br>
                             <hr></hr>
                             <h2>February 18, 2022</h2>

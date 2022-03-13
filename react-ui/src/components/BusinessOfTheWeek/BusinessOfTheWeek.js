@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 
 function BusinessOfTheWeek() {
     // ! EDIT THIS NUMBER AND MATCH IT WITH THE NUMBER IN BusinessOfTheWeekPage.js
-    const thisWeekBusiness = businessesData.find(x => x.id === 34)
+    const thisWeekBusiness = businessesData.find(x => x.id === 9)
     return (
         <>
             <h1 id='header'>Business Of The Week!</h1>
             {/* EDIT THIS DESCRIPTION */}
             <p className='center'>
-                {thisWeekBusiness.name} specializes in Eco-Friendly, Cruelty-Free, Vegan and Zero-Waste products.<br></br>Click the button below for more information.
+                {thisWeekBusiness.name} specializes in custom framing and Windsor's local artists. <br></br>Click the button below for more information.
             </p>
             <Col className='col item'>
                 <Link target='_blank' rel='noopener noreferrer' className='businessHeaderLink' to={'/businessoftheweek'}>

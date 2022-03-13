@@ -64,4 +64,13 @@
         friday: '17:00',
         saturday: '17:00'
     },
+    openPastMidnight: {
+        sunday: false,
+        monday: false,
+        tuesday: false,
+        wednesday: false,
+        thursday: false,
+        friday: false,
+        saturday: false
+    },
 },

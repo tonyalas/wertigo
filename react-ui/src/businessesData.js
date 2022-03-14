@@ -2258,7 +2258,7 @@ module.exports = [
         name: 'Nancy Johns Gallery',
         category: 'Shopping',
         subcategory: 'Framing and Art',
-        picturePath: '/images/nancyjohnsgallery.jpg',
+        picturePath: '/images/nancyjohnsgallery.png',
         businessPicture1: 'https://res.cloudinary.com/wertigo/image/upload/v1644343407/businessPictures/NancyJohns/NJ1_fuz7pv.jpg',
         businessPicture2: 'https://res.cloudinary.com/wertigo/image/upload/v1644343408/businessPictures/NancyJohns/NJ2_zxqr1o.jpg',
         businessPicture3: 'https://res.cloudinary.com/wertigo/image/upload/v1644343408/businessPictures/NancyJohns/NJ3_zqh8ct.jpg',

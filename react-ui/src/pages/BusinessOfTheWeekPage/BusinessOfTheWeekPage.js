@@ -19,7 +19,7 @@ function BusinessOfTheWeekPage() {
     const handleShow3 = () => setShow3(true);
 
     // ! EDIT THIS NUMBER AND MATCH IT WITH THE NUMBER IN BusinessOfTheWeek.js component
-    const thisWeekBusiness = businessesData.find(x => x.id === 9)
+    const thisWeekBusiness = businessesData.find(x => x.id === 8)
 
     useEffect(() => {
         document.title = 'Wertigo - Business of the Week'
@@ -30,7 +30,7 @@ function BusinessOfTheWeekPage() {
             <div className='Jumbotron'>
                 <h1>Business of the Week</h1>
                 {/* EDIT THIS TO UPDATE THE WEEK BELOW */}
-                <h4>The featured business of the week for March 14 - March 21, 2022 is:</h4>
+                <h4>The featured business of the week for April 11 - April 18, 2022 is:</h4>
                 <h2 id='businessNameLarge'>{thisWeekBusiness.name}</h2>
                 <br></br>
                 {/* UPDATE THESE PICTURES */}
@@ -39,10 +39,10 @@ function BusinessOfTheWeekPage() {
                         <img className='sliding-image' src={thisWeekBusiness.picturePath} alt='' />
                     </Carousel.Item>
                     <Carousel.Item interval={2500}>
-                        <img className='sliding-image' src='/images/businessoftheweek/nancyjohns2.jpg' alt='' />
+                        <img className='sliding-image' src='/images/businessoftheweek/demarcos2.jpg' alt='' />
                     </Carousel.Item>
                     <Carousel.Item interval={2500}>
-                        <img className='sliding-image' src='/images/businessoftheweek/nancyjohns3.jpg' alt='' />
+                        <img className='sliding-image' src='/images/businessoftheweek/demarcos3.jpg' alt='' />
                     </Carousel.Item>
                 </Carousel>
             </div>
@@ -54,7 +54,7 @@ function BusinessOfTheWeekPage() {
                             <h1>{thisWeekBusiness.category}</h1>
                             <h2>{thisWeekBusiness.subcategory}</h2>
                             <div className='block-text'>
-                                <p id='informationText'>{thisWeekBusiness.description} Whether you are interested in renting or purchasing art, framing your own collection, or creating a custom gift, we have everything you need to acquire that perfect piece of art.</p>
+                                <p id='informationText'>{thisWeekBusiness.description} We provide the community members of Windsor with delicious, quality food since our opening in 2017. While working hard to guarantee the highest level of satisfaction. Our main goal at Demarco's is to provide our customers with the most delicious food. We offer products such as Grocery, Dairy, Fresh Bread, Coffee, Vegan, Keto & Gluten-Free Friendly items and are Gift Basket Extraordinaire!</p>
                             </div>
 
                             {(thisWeekBusiness.businessPicture1 != undefined) &&

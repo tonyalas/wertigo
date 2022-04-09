@@ -17,11 +17,18 @@ function WhatsNewPage() {
                 <div className='row justify-content-center'>
                     <div className='col'>
                         <div className='centeredText'>
+                            <h2>April 11, 2022</h2>
+                            <h4>Business of the Week: April 11 - 18, 2022</h4>
+                            <p className='whatsnewtext'>Demarco's specializes in bringing the best available fresh produce and goods to their local neighbourhood. They have just recently celebrated <b>4</b> years of being open!</p>
+                            <img src='/images/demarcosfinefoods.jpeg' alt='' className='business_image' />
+                            <Link target='_blank' rel='noopener noreferrer' className='businessHeaderLink' to={'/businessoftheweek'}><p className='whatsnewtext'>See the new Business of the Week here!</p></Link>
+                            <br></br>
+                            <hr></hr>
                             <h2>March 14, 2022</h2>
                             <h4>Business of the Week: March 14 - 21, 2022</h4>
                             <p className='whatsnewtext'>Whether you are interested in renting or purchasing art, framing your own collection, or creating a custom gift, they have everything you need to acquire that perfect piece of art.</p>
                             <img src='/images/nancyjohnsgallery.png' alt='' className='business_image' />
-                            <Link target='_blank' rel='noopener noreferrer' className='businessHeaderLink' to={'/businessoftheweek'}><p className='whatsnewtext'>See the new Business of the Week here!</p></Link>
+                            <Link target='_blank' rel='noopener noreferrer' className='businessHeaderLink' to={'/discover/NancyJohnsGallery'}><p className='whatsnewtext'>Check out Nancy Johns Gallery here!</p></Link>
                             <br></br>
                             <hr></hr>
                             <h2>February 28, 2022</h2>

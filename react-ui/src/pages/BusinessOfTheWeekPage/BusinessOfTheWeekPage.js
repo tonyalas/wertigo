@@ -19,7 +19,7 @@ function BusinessOfTheWeekPage() {
     const handleShow3 = () => setShow3(true);
 
     // ! EDIT THIS NUMBER AND MATCH IT WITH THE NUMBER IN BusinessOfTheWeek.js component
-    const thisWeekBusiness = businessesData.find(x => x.id === 8)
+    const thisWeekBusiness = businessesData.find(x => x.id === 48)
 
     useEffect(() => {
         document.title = 'Wertigo - Business of the Week'
@@ -28,9 +28,9 @@ function BusinessOfTheWeekPage() {
     return (
         <>
             <div className='Jumbotron'>
-                <h1>Business of the Week</h1>
+                <h1>Business of the Month</h1>
                 {/* EDIT THIS TO UPDATE THE WEEK BELOW */}
-                <h4>The featured business of the week for April 11 - April 18, 2022 is:</h4>
+                <h4>The featured business of the month starting May 17, 2022 is:</h4>
                 <h2 id='businessNameLarge'>{thisWeekBusiness.name}</h2>
                 <br></br>
                 {/* UPDATE THESE PICTURES */}
@@ -39,10 +39,10 @@ function BusinessOfTheWeekPage() {
                         <img className='sliding-image' src={thisWeekBusiness.picturePath} alt='' />
                     </Carousel.Item>
                     <Carousel.Item interval={2500}>
-                        <img className='sliding-image' src='/images/businessoftheweek/demarcos2.jpg' alt='' />
+                        <img className='sliding-image' src='/images/businessoftheweek/sidelines2.jpg' alt='' />
                     </Carousel.Item>
                     <Carousel.Item interval={2500}>
-                        <img className='sliding-image' src='/images/businessoftheweek/demarcos3.jpg' alt='' />
+                        <img className='sliding-image' src='/images/businessoftheweek/sidelines3.jpg' alt='' />
                     </Carousel.Item>
                 </Carousel>
             </div>
@@ -54,7 +54,7 @@ function BusinessOfTheWeekPage() {
                             <h1>{thisWeekBusiness.category}</h1>
                             <h2>{thisWeekBusiness.subcategory}</h2>
                             <div className='block-text'>
-                                <p id='informationText'>{thisWeekBusiness.description} We provide the community members of Windsor with delicious, quality food since our opening in 2017. While working hard to guarantee the highest level of satisfaction. Our main goal at Demarco's is to provide our customers with the most delicious food. We offer products such as Grocery, Dairy, Fresh Bread, Coffee, Vegan, Keto & Gluten-Free Friendly items and are Gift Basket Extraordinaire!</p>
+                                <p id='informationText'>{thisWeekBusiness.description} Sidelines Sports Bar & Grill is a brand new Bar that aims to build community by providing amazing food and beverages that bring people together. We are providing an atmosphere that is  unique to the East-Side Windsor area. Our approach to delivering only the finest service to our customers starts and ends with our constant desire to exceed expectations.</p>
                             </div>
 
                             {(thisWeekBusiness.businessPicture1 != undefined) &&

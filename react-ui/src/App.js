@@ -38,7 +38,7 @@ function App() {
 
         <Route path='/whatsnew' element={<WhatsNewPage />} />
 
-        <Route path='/businessoftheweek' element={<BusinessOfTheWeekPage />} />
+        <Route path='/businessofthemonth' element={<BusinessOfTheWeekPage />} />
 
         <Route path='/contactformsuccess' element={<ContactFormSuccess />} />
 

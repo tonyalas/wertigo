@@ -21,7 +21,7 @@ function Navbar() {
                             <Link to='/discover' id='links' onClick={() => setExpanded(false)}><Nav.Link href='/discover' id='links'>Discover</Nav.Link></Link>
                             <Link to='/contactus' id='links' onClick={() => setExpanded(false)}><Nav.Link href='/contactus' id='links'>Add Your Business</Nav.Link></Link>
                             <Link to='/faq' id='links' onClick={() => setExpanded(false)}><Nav.Link href='/faq' id='links'>FAQ</Nav.Link></Link>
-                            <Link to='/businessoftheweek' id='links' onClick={() => setExpanded(false)}><Nav.Link href='/businessoftheweek' id='links'>Business of the Week</Nav.Link></Link>
+                            <Link to='/businessofthemonth' id='links' onClick={() => setExpanded(false)}><Nav.Link href='/businessofthemonth' id='links'>Business of the Month</Nav.Link></Link>
                             <Link to='/whatsnew' id='links' onClick={() => setExpanded(false)}><Nav.Link href='/whatsnew' id='links'>What's New</Nav.Link></Link>
                         </Nav>
                     </NavbarRB.Collapse>

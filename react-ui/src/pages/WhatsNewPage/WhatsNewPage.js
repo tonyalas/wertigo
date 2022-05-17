@@ -17,11 +17,18 @@ function WhatsNewPage() {
                 <div className='row justify-content-center'>
                     <div className='col'>
                         <div className='centeredText'>
+                            <h2>May 17, 2022</h2>
+                            <h4>Business of the Month: May 17, 2022</h4>
+                            <p className='whatsnewtext'>Sidelines Sports Bar & Grill is a brand new Bar that aims to build community by providing amazing food and beverages that bring people together.</p>
+                            <img src='/images/sidelines.png' alt='' className='business_image' />
+                            <Link target='_blank' rel='noopener noreferrer' className='businessHeaderLink' to={'/businessofthemonth'}><p className='whatsnewtext'>See the new Business of the Month here!</p></Link>
+                            <br></br>
+                            <hr></hr>
                             <h2>April 11, 2022</h2>
                             <h4>Business of the Week: April 11 - 18, 2022</h4>
                             <p className='whatsnewtext'>Demarco's specializes in bringing the best available fresh produce and goods to their local neighbourhood. They have just recently celebrated <b>4</b> years of being open!</p>
                             <img src='/images/demarcosfinefoods.jpeg' alt='' className='business_image' />
-                            <Link target='_blank' rel='noopener noreferrer' className='businessHeaderLink' to={'/businessoftheweek'}><p className='whatsnewtext'>See the new Business of the Week here!</p></Link>
+                            <Link target='_blank' rel='noopener noreferrer' className='businessHeaderLink' to={'/discover/DeMarcosFineFoods'}><p className='whatsnewtext'>Check out DeMarco's Fine Foods here!</p></Link>
                             <br></br>
                             <hr></hr>
                             <h2>March 14, 2022</h2>

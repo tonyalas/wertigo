@@ -18,7 +18,7 @@ This is where Wertigo tries to bridge that gap and provide a place to aggregate 
 
 You can find Wertigo at www.wertigo.ca
 
-## Launching on January 31, 2022!
+## Launched on January 31, 2022!
 
 Originally written using HTML, CSS and vanilla JavaScript, but was later upgraded to use React.
 

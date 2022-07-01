@@ -17,11 +17,18 @@ function WhatsNewPage() {
                 <div className='row justify-content-center'>
                     <div className='col'>
                         <div className='centeredText'>
+                            <h2>July 1, 2022</h2>
+                            <h4>Business of the Month: July 2022</h4>
+                            <p className='whatsnewtext'>Michael Difazio Reclaim Artistry is an all-local shop that makes beautiful <b>custom-made</b> furniture tailor made to your home.</p>
+                            <img src='/images/mikedifazio.png' alt='' className='business_image' />
+                            <Link target='_blank' rel='noopener noreferrer' className='businessHeaderLink' to={'/businessofthemonth'}><p className='whatsnewtext'>See the new Business of the Month here!</p></Link>
+                            <br></br>
+                            <hr></hr>
                             <h2>May 17, 2022</h2>
                             <h4>Business of the Month: May 17, 2022</h4>
                             <p className='whatsnewtext'>Sidelines Sports Bar & Grill is a brand new Bar that aims to build community by providing amazing food and beverages that bring people together.</p>
                             <img src='/images/sidelines.png' alt='' className='business_image' />
-                            <Link target='_blank' rel='noopener noreferrer' className='businessHeaderLink' to={'/businessofthemonth'}><p className='whatsnewtext'>See the new Business of the Month here!</p></Link>
+                            <Link target='_blank' rel='noopener noreferrer' className='businessHeaderLink' to={'/discover/Sidelines'}><p className='whatsnewtext'>Check out Sidelines here!</p></Link>
                             <br></br>
                             <hr></hr>
                             <h2>April 11, 2022</h2>

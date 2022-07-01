@@ -19,7 +19,7 @@ function BusinessOfTheWeekPage() {
     const handleShow3 = () => setShow3(true);
 
     // ! EDIT THIS NUMBER AND MATCH IT WITH THE NUMBER IN BusinessOfTheWeek.js component
-    const thisWeekBusiness = businessesData.find(x => x.id === 48)
+    const thisWeekBusiness = businessesData.find(x => x.id === 23)
 
     useEffect(() => {
         document.title = 'Wertigo - Business of the Week'
@@ -30,7 +30,7 @@ function BusinessOfTheWeekPage() {
             <div className='Jumbotron'>
                 <h1>Business of the Month</h1>
                 {/* EDIT THIS TO UPDATE THE WEEK BELOW */}
-                <h4>The featured business of the month starting May 17, 2022 is:</h4>
+                <h4>The featured business of the month starting July 1, 2022 is:</h4>
                 <h2 id='businessNameLarge'>{thisWeekBusiness.name}</h2>
                 <br></br>
                 {/* UPDATE THESE PICTURES */}
@@ -39,10 +39,10 @@ function BusinessOfTheWeekPage() {
                         <img className='sliding-image' src={thisWeekBusiness.picturePath} alt='' />
                     </Carousel.Item>
                     <Carousel.Item interval={2500}>
-                        <img className='sliding-image' src='/images/businessoftheweek/sidelines2.jpg' alt='' />
+                        <img className='sliding-image' src='/images/businessoftheweek/mike2.jpg' alt='' />
                     </Carousel.Item>
                     <Carousel.Item interval={2500}>
-                        <img className='sliding-image' src='/images/businessoftheweek/sidelines3.jpg' alt='' />
+                        <img className='sliding-image' src='/images/businessoftheweek/mike3.jpg' alt='' />
                     </Carousel.Item>
                 </Carousel>
             </div>
@@ -54,7 +54,7 @@ function BusinessOfTheWeekPage() {
                             <h1>{thisWeekBusiness.category}</h1>
                             <h2>{thisWeekBusiness.subcategory}</h2>
                             <div className='block-text'>
-                                <p id='informationText'>{thisWeekBusiness.description} Sidelines Sports Bar & Grill is a brand new Bar that aims to build community by providing amazing food and beverages that bring people together. We are providing an atmosphere that is  unique to the East-Side Windsor area. Our approach to delivering only the finest service to our customers starts and ends with our constant desire to exceed expectations.</p>
+                                <p id='informationText'>{thisWeekBusiness.description} <br></br><br></br>We are dedicated to building high quality custom furniture with a story behind all our materials. Every unique piece that leaves our shop is one-of-a-kind, with a history that is rich enough to share with all your guests. Our team is focused on enhancing the imperfections of the materials we use instead of covering them up allowing each material to tell its individual story. <br></br><br></br>Shop our pre-made products in-store/online OR <b>book a consultation to begin your <i>custom</i> piece!</b></p>
                             </div>
 
                             {(thisWeekBusiness.businessPicture1 != undefined) &&

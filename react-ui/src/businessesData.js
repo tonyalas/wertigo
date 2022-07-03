@@ -2,6 +2,76 @@
 // was "export default"
 module.exports = [
     {
+        id: 53,
+        name: 'Elite Piano Studios',
+        category: 'Contractors',
+        subcategory: 'Piano Instructor',
+        picturePath: '/images/elitepiano.jpg',
+        businessPicture1: 'https://res.cloudinary.com/wertigo/image/upload/v1656855009/businessPictures/ElitePianoStudios/ep1_n2urz6.jpg',
+        businessPicture2: 'https://res.cloudinary.com/wertigo/image/upload/v1656855010/businessPictures/ElitePianoStudios/ep3_x4ipls.jpg',
+        businessPicture3: 'https://res.cloudinary.com/wertigo/image/upload/v1656855009/businessPictures/ElitePianoStudios/ep2_avxl0r.jpg',
+        description: 'Elite Piano Studios is proud to offer state of the art facilities to our students. Lessons are taught in acoustically engineered rooms with 14 foot ceilings and modern design. All piano lessons are taught on Grand Piano\'s. Nowhere in Southwestern Ontario will you find music studios that offer the experience and quality of teaching that Elite Piano Studios provides.  Really beautiful and fun higher-end music school featuring piano, guitar, voice, drum & production lessons!',
+        phoneNumber: '519-999-8903',
+        phoneNumberDescription: '',
+        location1Name: '',
+        phoneNumber2: '',
+        phoneNumberDescription2: '',
+        location2Name: '',
+        publicEmail: 'lisa@elitepianostudios.com',
+        websiteURL: 'https://www.elitepianostudios.com',
+        facebookURL: 'https://www.facebook.com/ElitePianoStudios',
+        etsyURL: '',
+        instagramURL: '',
+        instagramUsername: '',
+        instagramURL2: '',
+        instagramUsername2: '',
+        address: '3315 Banwell Rd, Windsor, ON N8N 0B6',
+        googleMapsLink: 'https://goo.gl/maps/GBLuFnxP3syAv5HS9',
+        embeddedMapsLink: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11802.735474990466!2d-82.9000082!3d42.3066105!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xba579c3cc97880f2!2sElite%20Piano%20Studios!5e0!3m2!1sen!2sca!4v1656854789853!5m2!1sen!2sca',
+        address2: '',
+        googleMapsLink2: '',
+        embeddedMapsLink2: '',
+        hasHours: true,
+        hasMultipleLocations: false,
+        locationsHaveDifferentHours: false,
+        hoursMessage: '',
+        hoursDays: {
+            first: 'Monday - Friday:',
+            second: 'Saturday - Sunday:'
+        },
+        hoursTimes: {
+            first: '2:00pm to 7:00pm',
+            second: 'CLOSED'
+        },
+        openingHours: {
+            sunday: 'Closed',
+            monday: '14:00',
+            tuesday: '14:00',
+            wednesday: '14:00',
+            thursday: '14:00',
+            friday: '14:00',
+            saturday: 'Closed'
+        },
+        closingHours: {
+            sunday: 'Closed',
+            monday: '19:00',
+            tuesday: '19:00',
+            wednesday: '19:00',
+            thursday: '19:00',
+            friday: '19:00',
+            saturday: 'Closed'
+        },
+        openPastMidnight: {
+            sunday: false,
+            monday: false,
+            tuesday: false,
+            wednesday: false,
+            thursday: false,
+            friday: false,
+            saturday: false
+        },
+    },
+    {
         id: 52,
         name: 'Suzie\'s Grill Cafe',
         category: 'Restaurant',
